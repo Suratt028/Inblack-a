@@ -5,10 +5,16 @@
   "type": "commonjs",
   "description": "INBLACK GAMING Project A: game top-up queue optimizer",
   "scripts": {
-    "test": "node --test harness/tests/*.test.js",
+    "test": "node --test harness/tests/*.test.js mcp/test/*.test.js",
     "score": "node harness/score.js",
     "bench": "node harness/benchmark.js",
     "mcp": "node mcp/server.js"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  }
 }
