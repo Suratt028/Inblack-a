@@ -1,27 +1,33 @@
 'use strict';
 // Hand-built scenario fixtures for spec tests (T04).
-// ASSUMED scenario schema (not fixed in PLAN.md/DECISIONS_INPUT.md — see T04.md gaps).
-// All field names live here so a schema change is a one-file edit.
-//   order:    { order_id, game, value_thb, vip, arrive_minute, paid_minute|null, sla_minutes }
-//   supplier: { supplier_id, games:[..], cost_pct (fraction 0..1), wallet_thb, outages:[{start,end}] }
-//   shift:    { from, to, count }
+// Scenario schema = CLAUDE.md "I/O format" (authoritative, main 32850ca):
+//   orders:[{ id, game, value_thb, vip, arrive_minute, paid_minute|null, sla_minutes }]
+//   staff:[{ from, to, count }]
+//   suppliers:[{ id, games, cost_pct, wallet_thb, outages:[[start,end]] }]
+// Builders accept the readable aliases order_id / supplier_id / outages [{start,end}]
+// and translate them, so tests stay readable. Plan assignments use order_id/supplier_id.
 const path = require('node:path');
 const HARNESS = path.join(__dirname, '..');
 
 function order(o = {}) {
+  o = Object.assign({}, o);
+  if ('order_id' in o) { o.id = o.order_id; delete o.order_id; }
   return Object.assign({
-    order_id: 'O1', game: 'ROV', value_thb: 100, vip: false,
+    id: 'O1', game: 'ROV', value_thb: 100, vip: false,
     arrive_minute: 0, paid_minute: 0, sla_minutes: 30,
   }, o);
 }
 function supplier(s = {}) {
+  s = Object.assign({}, s);
+  if ('supplier_id' in s) { s.id = s.supplier_id; delete s.supplier_id; }
+  if (Array.isArray(s.outages)) s.outages = s.outages.map(w => Array.isArray(w) ? w : [w.start, w.end]);
   return Object.assign({
-    supplier_id: 'S1', games: ['ROV'], cost_pct: 0.1, wallet_thb: 1e9, outages: [],
+    id: 'S1', games: ['ROV'], cost_pct: 0.1, wallet_thb: 1e9, outages: [],
   }, s);
 }
 function shift(f = {}) { return Object.assign({ from: 0, to: 1440, count: 1 }, f); }
 function scenario({ orders = [order()], suppliers = [supplier()], shifts = [shift()] } = {}) {
-  return { seed: 0, orders, suppliers, shifts };
+  return { orders, staff: shifts, suppliers };
 }
 function a(order_id, supplier_id, start_minute) { return { order_id, supplier_id, start_minute }; }
 function plan(...assignments) { return { assignments }; }

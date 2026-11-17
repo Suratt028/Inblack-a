@@ -61,9 +61,9 @@ test('D5/D10 start 1435 (finish 1440) OK default, OUT_OF_DAY strict', () => {
   assert.equal(V(scenario(), plan(a('O1', 'S1', 1434)), true).violations.length, 0); // 1434+5=1439 not >1439
 });
 
-test('D5 start 1436 OUT_OF_DAY (finish 1441 > 1440); negative start OUT_OF_DAY', () => {
+test('D5 start 1436 OUT_OF_DAY (finish 1441 > 1440)', () => {
   assert.deepEqual(rules(V(scenario(), plan(a('O1', 'S1', 1436)))), ['OUT_OF_DAY']);
-  assert.deepEqual(rules(V(scenario(), plan(a('O1', 'S1', -1)))), ['OUT_OF_DAY']);
+  // negative start removed: always also BEFORE_PAID (paid>=0) → multi-cause, out of scope per Lead
 });
 
 test('R5 UNSUPPORTED_GAME', () => {

@@ -17,14 +17,14 @@ test('D15/R9 different seeds differ', () => {
 });
 
 for (const seed of SEEDS) {
-  test(`R9 seed ${seed}: ~300 orders, VIP, unpaid, ≥4 games, outages, ≥2 shifts`, () => {
+  test(`R9 seed ${seed}: ~300 orders, VIP, unpaid, ≥4 games, outages, ≥2 staff shifts`, () => {
     const sc = generate(seed);
     assert.ok(sc.orders.length >= 280 && sc.orders.length <= 320, `orders=${sc.orders.length}`);
     assert.ok(sc.orders.some(o => o.vip === true), 'has VIP');
     assert.ok(sc.orders.some(o => o.paid_minute === null || o.paid_minute === undefined), 'has unpaid');
     assert.ok(new Set(sc.orders.map(o => o.game)).size >= 4, '≥4 games');
     assert.ok(sc.suppliers.some(s => Array.isArray(s.outages) && s.outages.length > 0), 'has outages');
-    assert.ok(sc.shifts.length >= 2, '≥2 shifts');
+    assert.ok(sc.staff.length >= 2, '≥2 staff shifts');
     assert.ok(sc.suppliers.every(s => typeof s.wallet_thb === 'number'), 'wallets');
   });
 
@@ -32,17 +32,17 @@ for (const seed of SEEDS) {
     const sc = generate(seed);
     const ids = new Set();
     for (const o of sc.orders) {
-      assert.ok(!ids.has(o.order_id), `dup id ${o.order_id}`); ids.add(o.order_id);
+      assert.ok(!ids.has(o.id), `dup id ${o.id}`); ids.add(o.id);
       assert.ok(Number.isInteger(o.arrive_minute) && o.arrive_minute >= 0 && o.arrive_minute <= 1440);
       if (o.paid_minute !== null && o.paid_minute !== undefined) {
         assert.ok(Number.isInteger(o.paid_minute) && o.paid_minute <= 1440);
-        assert.ok(o.paid_minute >= o.arrive_minute, `${o.order_id} paid<arrive`);
+        assert.ok(o.paid_minute >= o.arrive_minute, `${o.id} paid<arrive`);
       }
     }
     for (const s of sc.suppliers) for (const w of s.outages) {
-      assert.ok(w.start >= 0 && w.end <= 1440 && w.start < w.end);
+      assert.ok(Array.isArray(w) && w[0] >= 0 && w[1] <= 1440 && w[0] < w[1]);
     }
-    for (const f of sc.shifts) assert.ok(f.from >= 0 && f.to <= 1440 && f.from < f.to && f.count >= 0);
+    for (const f of sc.staff) assert.ok(f.from >= 0 && f.to <= 1440 && f.from < f.to && f.count >= 0);
   });
 }
 
