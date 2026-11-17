@@ -10,10 +10,10 @@ const { runBenchmark, summarize, median, discoverStrategies, SEED_SETS, GENERATO
 
 const ROOT = path.resolve(__dirname, '..', '..');
 
-test('T07 D15: seed sets are tuning 101-110 and held-out 1-10; generator lock b073430', () => {
+test('T07 D15: seed sets are tuning 101-110 and held-out 1-10; generator lock 46d1736', () => {
   assert.deepEqual(SEED_SETS.tuning, [101, 102, 103, 104, 105, 106, 107, 108, 109, 110]);
   assert.deepEqual(SEED_SETS.heldout, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-  assert.equal(GENERATOR_LOCK, 'b073430');
+  assert.equal(GENERATOR_LOCK, '46d1736');
 });
 
 test('T07: strategy discovery includes fcfs first', () => {
