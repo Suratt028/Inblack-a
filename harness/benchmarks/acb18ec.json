@@ -1,0 +1,4574 @@
+{
+  "commit": "acb18ec",
+  "commitFull": "acb18ec67008b7a51bffb69affe474708b1b336c",
+  "dirty": false,
+  "generatorLock": "b2a5da2",
+  "generatorLockIntact": true,
+  "timestamp": "2026-11-17T18:25:47.585Z",
+  "seedSets": {
+    "tuning": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "heldout": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "bases": [
+    "paid",
+    "arrive"
+  ],
+  "modes": [
+    "default",
+    "strict"
+  ],
+  "results": {
+    "fcfs": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 195,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.626458389860076,
+                  "total": 3231.3999999999987,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.626458389860076,
+                  "total": 3231.3999999999987,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 58.82786154502113,
+                  "total": 3035.3999999999987,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 58.82786154502113,
+                  "total": 3035.3999999999987,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 268,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 54.46863538566158,
+                  "total": 4885.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 54.46863538566158,
+                  "total": 4885.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 47.64612108848088,
+                  "total": 4273.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.64612108848088,
+                  "total": 4273.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.63260972156677,
+                  "total": 4545.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.63260972156677,
+                  "total": 4545.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 74.64456254889795,
+                  "total": 5533.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 74.64456254889795,
+                  "total": 5533.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 70.93506353360132,
+                  "total": 5258.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.93506353360132,
+                  "total": 5258.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.03552040747932,
+                  "total": 6269.9999999999945,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.03552040747932,
+                  "total": 6269.9999999999945,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 66.02551214172414,
+                  "total": 5910.9999999999945,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 66.02551214172414,
+                  "total": 5910.9999999999945,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 84.95835418602996,
+                  "total": 9506.500000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.95835418602996,
+                  "total": 9506.500000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 82.33985129048409,
+                  "total": 9213.500000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 82.33985129048409,
+                  "total": 9213.500000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 233,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 73.8906460765617,
+                  "total": 6354.299999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.8906460765617,
+                  "total": 6354.299999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 69.46020745150938,
+                  "total": 5973.299999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.46020745150938,
+                  "total": 5973.299999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 217,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 50.379801667723854,
+                  "total": 3256.5,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 50.379801667723854,
+                  "total": 3256.5,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 47.579634585931124,
+                  "total": 3075.5,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.579634585931124,
+                  "total": 3075.5,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 262,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 77.47267170419812,
+                  "total": 8263.699999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.47267170419812,
+                  "total": 8263.699999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.39453996587476,
+                  "total": 8148.699999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.39453996587476,
+                  "total": 8148.699999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 241,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.79623327106631,
+                  "total": 3657.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.79623327106631,
+                  "total": 3657.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 39.810384093758806,
+                  "total": 3111.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 39.810384093758806,
+                  "total": 3111.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 66.33,
+            "mean": 65.08,
+            "min": 46.8,
+            "max": 84.96,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 62.43,
+            "mean": 61.27,
+            "min": 39.81,
+            "max": 82.34,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 74.89290351603641,
+                  "total": 7325.200000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 74.89290351603641,
+                  "total": 7325.200000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 73.57400648202113,
+                  "total": 7196.200000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.57400648202113,
+                  "total": 7196.200000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 270,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 58.43892944038925,
+                  "total": 6004.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 58.43892944038925,
+                  "total": 6004.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 57.16399026763986,
+                  "total": 5873.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 57.16399026763986,
+                  "total": 5873.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 243,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 48.54320942451518,
+                  "total": 5303.200000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 48.54320942451518,
+                  "total": 5303.200000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 44.69871026206679,
+                  "total": 4883.200000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 44.69871026206679,
+                  "total": 4883.200000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 272,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 56.53814035188754,
+                  "total": 5890.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 56.53814035188754,
+                  "total": 5890.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 52.92903696451366,
+                  "total": 5514.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 52.92903696451366,
+                  "total": 5514.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.82784040463831,
+                  "total": 5265.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.82784040463831,
+                  "total": 5265.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 68.1508784201889,
+                  "total": 5066.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 68.1508784201889,
+                  "total": 5066.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 213,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 32.162023518270054,
+                  "total": 3260.2000000000007,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 32.162023518270054,
+                  "total": 3260.2000000000007,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 31.037408255070627,
+                  "total": 3146.2000000000007,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 31.037408255070627,
+                  "total": 3146.2000000000007,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 244,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 73.32603039846639,
+                  "total": 5354.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.32603039846639,
+                  "total": 5354.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 70.90236888949745,
+                  "total": 5177.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.90236888949745,
+                  "total": 5177.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 221,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 59.88794012446503,
+                  "total": 5793.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.88794012446503,
+                  "total": 5793.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 58.75080116608432,
+                  "total": 5683.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 58.75080116608432,
+                  "total": 5683.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.56287859881569,
+                  "total": 6220.399999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.56287859881569,
+                  "total": 6220.399999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 69.3944687705606,
+                  "total": 6117.399999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.3944687705606,
+                  "total": 6117.399999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 246,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 35.355946509113,
+                  "total": 2680.9000000000033,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 35.355946509113,
+                  "total": 2680.9000000000033,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 34.037137657267984,
+                  "total": 2580.9000000000033,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 34.037137657267984,
+                  "total": 2580.9000000000033,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 59.16,
+            "mean": 58.05,
+            "min": 32.16,
+            "max": 74.89,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 57.96,
+            "mean": 56.06,
+            "min": 31.04,
+            "max": 73.57,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    },
+    "cheapest": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 209,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 80.98957323927284,
+                  "total": 4178.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.98957323927284,
+                  "total": 4178.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.24132718322414,
+                  "total": 3933.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.24132718322414,
+                  "total": 3933.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 287,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 61.69916279277168,
+                  "total": 5534.599999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.69916279277168,
+                  "total": 5534.599999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 54.3081056374926,
+                  "total": 4871.599999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 54.3081056374926,
+                  "total": 4871.599999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 249,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.558046248230276,
+                  "total": 4709.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.558046248230276,
+                  "total": 4709.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.682161396885306,
+                  "total": 4550.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.682161396885306,
+                  "total": 4550.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.26095988345432,
+                  "total": 6024.2,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.26095988345432,
+                  "total": 6024.2,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 77.30865729624736,
+                  "total": 5731.2,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.30865729624736,
+                  "total": 5731.2,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 75.2507651408529,
+                  "total": 6736.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.2507651408529,
+                  "total": 6736.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 71.24075687509772,
+                  "total": 6377.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.24075687509772,
+                  "total": 6377.899999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 87.50000000000006,
+                  "total": 9790.900000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 87.50000000000006,
+                  "total": 9790.900000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.8814971044542,
+                  "total": 9497.900000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.8814971044542,
+                  "total": 9497.900000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 250,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.73817386855201,
+                  "total": 6083.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.73817386855201,
+                  "total": 6083.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 62.447090562351725,
+                  "total": 5370.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.447090562351725,
+                  "total": 5370.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 234,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.62937236033981,
+                  "total": 4048.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.62937236033981,
+                  "total": 4048.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 59.318677578551714,
+                  "total": 3834.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.318677578551714,
+                  "total": 3834.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 78.58830367689797,
+                  "total": 8382.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.58830367689797,
+                  "total": 8382.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 77.51017193857459,
+                  "total": 8267.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.51017193857459,
+                  "total": 8267.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 240,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.72202461680188,
+                  "total": 3651.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.72202461680188,
+                  "total": 3651.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 39.736175439494374,
+                  "total": 3105.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 39.736175439494374,
+                  "total": 3105.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 72.99,
+            "mean": 70.09,
+            "min": 46.72,
+            "max": 87.5,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 66.84,
+            "mean": 65.67,
+            "min": 39.74,
+            "max": 84.88,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.73546401660381,
+                  "total": 8385.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.73546401660381,
+                  "total": 8385.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.41656698258853,
+                  "total": 8256.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.41656698258853,
+                  "total": 8256.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 285,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.01265206812649,
+                  "total": 6371.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.01265206812649,
+                  "total": 6371.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 60.912895377128926,
+                  "total": 6258.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 60.912895377128926,
+                  "total": 6258.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 270,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 66.17023808434102,
+                  "total": 7228.900000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 66.17023808434102,
+                  "total": 7228.900000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 61.51107124223094,
+                  "total": 6719.900000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.51107124223094,
+                  "total": 6719.900000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 295,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 52.625718701106706,
+                  "total": 5482.600000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 52.625718701106706,
+                  "total": 5482.600000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.37871588869369,
+                  "total": 4727.600000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.37871588869369,
+                  "total": 4727.600000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.62312679921439,
+                  "total": 6067.7,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.62312679921439,
+                  "total": 6067.7,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 78.8789044633969,
+                  "total": 5863.7,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.8789044633969,
+                  "total": 5863.7,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 226,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.804711546050065,
+                  "total": 4744.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.804711546050065,
+                  "total": 4744.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.46306526714548,
+                  "total": 4608.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.46306526714548,
+                  "total": 4608.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.95782555114339,
+                  "total": 6277.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.95782555114339,
+                  "total": 6277.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 83.45200602492129,
+                  "total": 6094.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 83.45200602492129,
+                  "total": 6094.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 268,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 76.99671263464761,
+                  "total": 7448.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.99671263464761,
+                  "total": 7448.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 75.78721028800629,
+                  "total": 7331.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.78721028800629,
+                  "total": 7331.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 80.70195339973226,
+                  "total": 7114.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.70195339973226,
+                  "total": 7114.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 79.53354357147717,
+                  "total": 7011.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 79.53354357147717,
+                  "total": 7011.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.51834463112918,
+                  "total": 3527.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.51834463112918,
+                  "total": 3527.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.01490254002587,
+                  "total": 3413.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.01490254002587,
+                  "total": 3413.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 71.58,
+            "mean": 68.51,
+            "min": 46.52,
+            "max": 85.96,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 68.65,
+            "mean": 66.03,
+            "min": 45.01,
+            "max": 84.42,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    },
+    "edf": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 196,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 63.93271057017715,
+                  "total": 3298.7999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 63.93271057017715,
+                  "total": 3298.7999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 60.948098763517976,
+                  "total": 3144.7999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 60.948098763517976,
+                  "total": 3144.7999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.99589757310236,
+                  "total": 5022.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.99589757310236,
+                  "total": 5022.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 49.84225722662565,
+                  "total": 4470.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 49.84225722662565,
+                  "total": 4470.999999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.903964134025486,
+                  "total": 4568.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.903964134025486,
+                  "total": 4568.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 75.27450292713198,
+                  "total": 5580.399999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.27450292713198,
+                  "total": 5580.399999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 73.2376507405509,
+                  "total": 5429.399999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.2376507405509,
+                  "total": 5429.399999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 71.29325559055464,
+                  "total": 6382.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.29325559055464,
+                  "total": 6382.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 67.91993387395834,
+                  "total": 6080.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 67.91993387395834,
+                  "total": 6080.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.68313433902915,
+                  "total": 9587.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.68313433902915,
+                  "total": 9587.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.49453063559025,
+                  "total": 9454.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.49453063559025,
+                  "total": 9454.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 231,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 75.25815154193218,
+                  "total": 6471.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.25815154193218,
+                  "total": 6471.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 71.13005256058422,
+                  "total": 6116.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.13005256058422,
+                  "total": 6116.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 217,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 50.893423474991906,
+                  "total": 3289.7,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 50.893423474991906,
+                  "total": 3289.7,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 49.28448769318835,
+                  "total": 3185.7,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 49.28448769318835,
+                  "total": 3185.7,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 262,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 77.51017193857456,
+                  "total": 8267.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.51017193857456,
+                  "total": 8267.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.82579266120408,
+                  "total": 8194.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.82579266120408,
+                  "total": 8194.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 241,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 47.499936027022194,
+                  "total": 3712.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.499936027022194,
+                  "total": 3712.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 39.77200030707031,
+                  "total": 3108.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 39.77200030707031,
+                  "total": 3108.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 67.61,
+            "mean": 65.89,
+            "min": 47.5,
+            "max": 85.68,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 64.43,
+            "mean": 62.74,
+            "min": 39.77,
+            "max": 84.49,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 74.90619472645673,
+                  "total": 7326.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 74.90619472645673,
+                  "total": 7326.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 73.94513797298823,
+                  "total": 7232.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.94513797298823,
+                  "total": 7232.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 270,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 57.92798053527976,
+                  "total": 5952.099999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 57.92798053527976,
+                  "total": 5952.099999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 56.74063260340627,
+                  "total": 5830.099999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 56.74063260340627,
+                  "total": 5830.099999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 243,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 50.49200435709914,
+                  "total": 5516.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 50.49200435709914,
+                  "total": 5516.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 48.29514769284292,
+                  "total": 5276.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 48.29514769284292,
+                  "total": 5276.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 274,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 57.7130186886284,
+                  "total": 6012.600000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 57.7130186886284,
+                  "total": 6012.600000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 54.007928509037114,
+                  "total": 5626.600000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 54.007928509037114,
+                  "total": 5626.600000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.79421022895427,
+                  "total": 5262.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.79421022895427,
+                  "total": 5262.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 68.62842691490224,
+                  "total": 5101.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 68.62842691490224,
+                  "total": 5101.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 31.753610606897638,
+                  "total": 3218.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 31.753610606897638,
+                  "total": 3218.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 30.85589140557177,
+                  "total": 3127.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 30.85589140557177,
+                  "total": 3127.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 244,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 73.02615363549228,
+                  "total": 5333.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.02615363549228,
+                  "total": 5333.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 71.57469533068604,
+                  "total": 5227.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.57469533068604,
+                  "total": 5227.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 225,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 60.56918973680404,
+                  "total": 5859.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 60.56918973680404,
+                  "total": 5859.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 59.48373891289517,
+                  "total": 5754.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.48373891289517,
+                  "total": 5754.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.50729405358803,
+                  "total": 6215.499999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.50729405358803,
+                  "total": 6215.499999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 69.48635342695736,
+                  "total": 6125.499999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.48635342695736,
+                  "total": 6125.499999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 245,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 35.201645873447134,
+                  "total": 2669.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 35.201645873447134,
+                  "total": 2669.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 34.05428217234197,
+                  "total": 2582.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 34.05428217234197,
+                  "total": 2582.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 59.25,
+            "mean": 58.29,
+            "min": 31.75,
+            "max": 74.91,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 58.11,
+            "mean": 56.71,
+            "min": 30.86,
+            "max": 73.95,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    },
+    "hybrid": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 208,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 83.34043955192062,
+                  "total": 4300.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 83.34043955192062,
+                  "total": 4300.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 81.11167099499981,
+                  "total": 4185.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.11167099499981,
+                  "total": 4185.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 275,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 69.10582700690054,
+                  "total": 6198.999999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.10582700690054,
+                  "total": 6198.999999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 67.79037490384935,
+                  "total": 6080.999999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 67.79037490384935,
+                  "total": 6080.999999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 248,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 56.62576687116564,
+                  "total": 4799.6,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 56.62576687116564,
+                  "total": 4799.6,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 55.162812647475214,
+                  "total": 4675.6,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.162812647475214,
+                  "total": 4675.6,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 251,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 83.23576226832495,
+                  "total": 6170.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 83.23576226832495,
+                  "total": 6170.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 81.8598753608331,
+                  "total": 6068.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.8598753608331,
+                  "total": 6068.5999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 262,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 77.51937984496125,
+                  "total": 6940.000000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.51937984496125,
+                  "total": 6940.000000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.17898710988987,
+                  "total": 6820.000000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.17898710988987,
+                  "total": 6820.000000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 268,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 89.1613641238293,
+                  "total": 9976.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 89.1613641238293,
+                  "total": 9976.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 88.00850790019307,
+                  "total": 9847.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 88.00850790019307,
+                  "total": 9847.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 237,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 83.36666821712639,
+                  "total": 7169.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 83.36666821712639,
+                  "total": 7169.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 81.79682775943067,
+                  "total": 7034.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.79682775943067,
+                  "total": 7034.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 229,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 63.33637587215157,
+                  "total": 4094.0000000000027,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 63.33637587215157,
+                  "total": 4094.0000000000027,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 61.820263308528986,
+                  "total": 3996.0000000000027,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.820263308528986,
+                  "total": 3996.0000000000027,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 264,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 78.79080494253088,
+                  "total": 8404.299999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.79080494253088,
+                  "total": 8404.299999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 78.19080119250744,
+                  "total": 8340.299999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.19080119250744,
+                  "total": 8340.299999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 227,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 54.47938790654827,
+                  "total": 4258,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 54.47938790654827,
+                  "total": 4258,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.570971621587034,
+                  "total": 4187,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.570971621587034,
+                  "total": 4187,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 78.16,
+            "mean": 73.9,
+            "min": 54.48,
+            "max": 89.16,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 77.18,
+            "mean": 72.55,
+            "min": 53.57,
+            "max": 88.01,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 86.3601509063583,
+                  "total": 8446.799999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 86.3601509063583,
+                  "total": 8446.799999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 85.39909415288982,
+                  "total": 8352.799999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.39909415288982,
+                  "total": 8352.799999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 285,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.087591240875895,
+                  "total": 6379.500000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.087591240875895,
+                  "total": 6379.500000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 61.02676399026763,
+                  "total": 6270.500000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.02676399026763,
+                  "total": 6270.500000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 268,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 69.92960905104947,
+                  "total": 7639.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.92960905104947,
+                  "total": 7639.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 68.48334508041411,
+                  "total": 7481.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 68.48334508041411,
+                  "total": 7481.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 279,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 66.84904157187968,
+                  "total": 6964.400000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 66.84904157187968,
+                  "total": 6964.400000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 65.43803572628404,
+                  "total": 6817.400000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 65.43803572628404,
+                  "total": 6817.400000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.87199009927629,
+                  "total": 6086.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.87199009927629,
+                  "total": 6086.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 80.05596061233825,
+                  "total": 5951.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.05596061233825,
+                  "total": 5951.200000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 216,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 47.01385052482044,
+                  "total": 4765.700000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.01385052482044,
+                  "total": 4765.700000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 46.39235261621023,
+                  "total": 4702.700000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.39235261621023,
+                  "total": 4702.700000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 86.32616732849519,
+                  "total": 6304.400000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 86.32616732849519,
+                  "total": 6304.400000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.83363001506234,
+                  "total": 6195.400000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.83363001506234,
+                  "total": 6195.400000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 269,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 77.60146380796823,
+                  "total": 7506.699999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.60146380796823,
+                  "total": 7506.699999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.66073976058054,
+                  "total": 7415.699999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.66073976058054,
+                  "total": 7415.699999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.05814824057899,
+                  "total": 7145.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.05814824057899,
+                  "total": 7145.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 80.05989518342899,
+                  "total": 7057.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.05989518342899,
+                  "total": 7057.599999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.61198005961015,
+                  "total": 3534.4000000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.61198005961015,
+                  "total": 3534.4000000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.34592356183894,
+                  "total": 3438.4000000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.34592356183894,
+                  "total": 3438.4000000000005,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 73.77,
+            "mean": 70.57,
+            "min": 46.61,
+            "max": 86.36,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 72.57,
+            "mean": 69.37,
+            "min": 45.35,
+            "max": 85.4,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    },
+    "profit": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 206,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 82.00511647738287,
+                  "total": 4231.299999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 82.00511647738287,
+                  "total": 4231.299999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 78.71041513236949,
+                  "total": 4061.2999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.71041513236949,
+                  "total": 4061.2999999999993,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 278,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 66.68004414568071,
+                  "total": 5981.399999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 66.68004414568071,
+                  "total": 5981.399999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 61.66348951540079,
+                  "total": 5531.399999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.66348951540079,
+                  "total": 5531.399999999996,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 249,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.558046248230276,
+                  "total": 4709.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.558046248230276,
+                  "total": 4709.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.682161396885306,
+                  "total": 4550.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.682161396885306,
+                  "total": 4550.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 250,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.75466047967198,
+                  "total": 6060.8,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.75466047967198,
+                  "total": 6060.8,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 78.62519221949447,
+                  "total": 5828.8,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.62519221949447,
+                  "total": 5828.8,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 75.30214686236398,
+                  "total": 6741.499999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.30214686236398,
+                  "total": 6741.499999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 71.29213859660878,
+                  "total": 6382.499999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.29213859660878,
+                  "total": 6382.499999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 87.51251161793098,
+                  "total": 9792.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 87.51251161793098,
+                  "total": 9792.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.89400872238512,
+                  "total": 9499.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.89400872238512,
+                  "total": 9499.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 240,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 80.37815712358713,
+                  "total": 6912.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.37815712358713,
+                  "total": 6912.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 75.79654867668263,
+                  "total": 6518.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.79654867668263,
+                  "total": 6518.199999999998,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 233,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.6603134330668,
+                  "total": 4050.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.6603134330668,
+                  "total": 4050.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 59.67449991491212,
+                  "total": 3857.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.67449991491212,
+                  "total": 3857.300000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 78.58830367689797,
+                  "total": 8382.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 78.58830367689797,
+                  "total": 8382.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 77.51017193857459,
+                  "total": 8267.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.51017193857459,
+                  "total": 8267.699999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 233,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 52.671511553519814,
+                  "total": 4116.700000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 52.671511553519814,
+                  "total": 4116.700000000002,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 48.53885718672435,
+                  "total": 3793.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 48.53885718672435,
+                  "total": 3793.7000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 76.95,
+            "mean": 72.31,
+            "min": 52.67,
+            "max": 87.51,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 73.54,
+            "mean": 69.04,
+            "min": 48.54,
+            "max": 84.89,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.73546401660381,
+                  "total": 8385.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.73546401660381,
+                  "total": 8385.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.41656698258853,
+                  "total": 8256.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.41656698258853,
+                  "total": 8256.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 285,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 62.01265206812649,
+                  "total": 6371.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 62.01265206812649,
+                  "total": 6371.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 60.912895377128926,
+                  "total": 6258.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 60.912895377128926,
+                  "total": 6258.800000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 67.95152269627546,
+                  "total": 7423.500000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 67.95152269627546,
+                  "total": 7423.500000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 64.13448424213027,
+                  "total": 7006.500000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 64.13448424213027,
+                  "total": 7006.500000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 282,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 63.17082769410926,
+                  "total": 6581.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 63.17082769410926,
+                  "total": 6581.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 59.043395628761466,
+                  "total": 6151.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.043395628761466,
+                  "total": 6151.2000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 81.53434313540852,
+                  "total": 6061.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 81.53434313540852,
+                  "total": 6061.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 79.00535392396888,
+                  "total": 5873.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 79.00535392396888,
+                  "total": 5873.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 226,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.804711546050065,
+                  "total": 4744.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.804711546050065,
+                  "total": 4744.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.46306526714548,
+                  "total": 4608.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.46306526714548,
+                  "total": 4608.5000000000055,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.95782555114339,
+                  "total": 6277.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.95782555114339,
+                  "total": 6277.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 83.45200602492129,
+                  "total": 6094.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 83.45200602492129,
+                  "total": 6094.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 268,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 76.99671263464761,
+                  "total": 7448.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.99671263464761,
+                  "total": 7448.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 75.78721028800629,
+                  "total": 7331.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.78721028800629,
+                  "total": 7331.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 80.70195339973226,
+                  "total": 7114.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 80.70195339973226,
+                  "total": 7114.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 79.53354357147717,
+                  "total": 7011.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 79.53354357147717,
+                  "total": 7011.199999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 46.51834463112918,
+                  "total": 3527.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 46.51834463112918,
+                  "total": 3527.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 45.01490254002587,
+                  "total": 3413.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 45.01490254002587,
+                  "total": 3413.300000000003,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 72.47,
+            "mean": 69.74,
+            "min": 46.52,
+            "max": 85.96,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 69.96,
+            "mean": 67.68,
+            "min": 45.01,
+            "max": 84.42,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    },
+    "vip": {
+      "tuning": {
+        "perSeed": [
+          {
+            "seed": 101,
+            "assignments": 196,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 63.88232102019459,
+                  "total": 3296.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 63.88232102019459,
+                  "total": 3296.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 61.05275398271252,
+                  "total": 3150.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 61.05275398271252,
+                  "total": 3150.199999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 102,
+            "assignments": 265,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 57.24557707100097,
+                  "total": 5135.0999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 57.24557707100097,
+                  "total": 5135.0999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 52.41853672675384,
+                  "total": 4702.0999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 52.41853672675384,
+                  "total": 4702.0999999999985,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 103,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 53.903964134025486,
+                  "total": 4568.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 53.903964134025486,
+                  "total": 4568.900000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 104,
+            "assignments": 253,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 75.2030107642917,
+                  "total": 5575.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 75.2030107642917,
+                  "total": 5575.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 72.95033318045704,
+                  "total": 5408.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 72.95033318045704,
+                  "total": 5408.099999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 105,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 71.23740589326,
+                  "total": 6377.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 71.23740589326,
+                  "total": 6377.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 68.07631302638335,
+                  "total": 6094.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 68.07631302638335,
+                  "total": 6094.599999999995,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 106,
+            "assignments": 266,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 85.68313433902915,
+                  "total": 9587.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 85.68313433902915,
+                  "total": 9587.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 84.48559376563959,
+                  "total": 9453.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 84.48559376563959,
+                  "total": 9453.600000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 107,
+            "assignments": 231,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 74.26973347597563,
+                  "total": 6386.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 74.26973347597563,
+                  "total": 6386.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 69.87418019442765,
+                  "total": 6008.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.87418019442765,
+                  "total": 6008.899999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 108,
+            "assignments": 219,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 51.773696994074825,
+                  "total": 3346.6000000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 51.773696994074825,
+                  "total": 3346.6000000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 50.07193799409029,
+                  "total": 3236.6000000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 50.07193799409029,
+                  "total": 3236.6000000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 109,
+            "assignments": 262,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 77.51017193857456,
+                  "total": 8267.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 77.51017193857456,
+                  "total": 8267.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 76.82579266120408,
+                  "total": 8194.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 76.82579266120408,
+                  "total": 8194.699999999992,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 110,
+            "assignments": 241,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 47.9477468717214,
+                  "total": 3747.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.9477468717214,
+                  "total": 3747.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 41.29455717904758,
+                  "total": 3227.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 41.29455717904758,
+                  "total": 3227.500000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 67.56,
+            "mean": 66.03,
+            "min": 47.95,
+            "max": 85.68,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 64.56,
+            "mean": 63.1,
+            "min": 41.29,
+            "max": 84.49,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "heldout": {
+        "perSeed": [
+          {
+            "seed": 1,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 74.90619472645673,
+                  "total": 7326.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 74.90619472645673,
+                  "total": 7326.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 73.87356991687888,
+                  "total": 7225.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 73.87356991687888,
+                  "total": 7225.500000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 2,
+            "assignments": 272,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 58.62871046228704,
+                  "total": 6024.099999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 58.62871046228704,
+                  "total": 6024.099999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 57.421897810218915,
+                  "total": 5900.099999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 57.421897810218915,
+                  "total": 5900.099999999997,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 3,
+            "assignments": 243,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 50.29062582954232,
+                  "total": 5494.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 50.29062582954232,
+                  "total": 5494.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 47.91069777659808,
+                  "total": 5234.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 47.91069777659808,
+                  "total": 5234.100000000009,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 4,
+            "assignments": 274,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 56.97871972816536,
+                  "total": 5936.100000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 56.97871972816536,
+                  "total": 5936.100000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 52.72650483293495,
+                  "total": 5493.100000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 52.72650483293495,
+                  "total": 5493.100000000001,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 5,
+            "assignments": 267,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.86147058032235,
+                  "total": 5267.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.86147058032235,
+                  "total": 5267.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 68.69568726627031,
+                  "total": 5106.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 68.69568726627031,
+                  "total": 5106.7000000000035,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 6,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 31.767421671533423,
+                  "total": 3220.2000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 31.767421671533423,
+                  "total": 3220.2000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 30.86970247020756,
+                  "total": 3129.2000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 30.86970247020756,
+                  "total": 3129.2000000000016,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 7,
+            "assignments": 243,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 72.46474051759553,
+                  "total": 5292.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 72.46474051759553,
+                  "total": 5292.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 70.84896617828291,
+                  "total": 5174.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.84896617828291,
+                  "total": 5174.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 8,
+            "assignments": 225,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 60.61054024438152,
+                  "total": 5863.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 60.61054024438152,
+                  "total": 5863.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 59.52508942047265,
+                  "total": 5758.1,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 59.52508942047265,
+                  "total": 5758.1,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 9,
+            "assignments": 212,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 70.52090659527643,
+                  "total": 6216.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 70.52090659527643,
+                  "total": 6216.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 69.49996596864577,
+                  "total": 6126.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 69.49996596864577,
+                  "total": 6126.699999999999,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          },
+          {
+            "seed": 10,
+            "assignments": 244,
+            "scores": {
+              "paid": {
+                "default": {
+                  "scorePct": 34.924696014559686,
+                  "total": 2648.200000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 34.924696014559686,
+                  "total": 2648.200000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              },
+              "arrive": {
+                "default": {
+                  "scorePct": 33.77733231345453,
+                  "total": 2561.200000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                },
+                "strict": {
+                  "scorePct": 33.77733231345453,
+                  "total": 2561.200000000004,
+                  "violations": 0,
+                  "duplicates": 0
+                }
+              }
+            }
+          }
+        ],
+        "summary": {
+          "paid": {
+            "median": 59.62,
+            "mean": 58.2,
+            "min": 31.77,
+            "max": 74.91,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          },
+          "arrive": {
+            "median": 58.47,
+            "mean": 56.51,
+            "min": 30.87,
+            "max": 73.87,
+            "violations": {
+              "default": 0,
+              "strict": 0
+            },
+            "duplicates": {
+              "default": 0,
+              "strict": 0
+            },
+            "gatePass": true
+          }
+        }
+      },
+      "gatePass": true
+    }
+  }
+}
