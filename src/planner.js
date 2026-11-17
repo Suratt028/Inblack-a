@@ -3,7 +3,14 @@
 // Usage: node src/planner.js scenario.json plan.json [--strategy fcfs] [--explain reasons.json]
 const fs = require('fs');
 const { Model } = require('./model/feasibility');
-const STRATEGIES = { fcfs: require('./strategies/fcfs').fcfs };
+const greedy = require('./strategies/greedy');
+const STRATEGIES = {
+  fcfs: require('./strategies/fcfs').fcfs,
+  edf: greedy.edf,
+  vip: greedy.vip,
+  cheapest: greedy.cheapest,
+  profit: greedy.profit,
+};
 
 function plan(scenario, { strategy = 'fcfs' } = {}) {
   const fn = STRATEGIES[strategy];
