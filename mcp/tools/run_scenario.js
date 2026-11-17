@@ -10,7 +10,7 @@ const config = {
   description: 'Builds a scenario (seed via harness/generator.js, inline object, or repo path), runs src/planner.js with the chosen strategy, and scores the plan with harness/scorer.js. Provide exactly one of seed, scenario, scenario_path.',
   inputSchema: {
     ...c.scenarioInput,
-    strategy: z.string().min(1).default('fcfs').describe('Planner strategy (default fcfs)'),
+    strategy: z.string().min(1).default(c.DEFAULT_STRATEGY).describe(`Planner strategy (default: planner default, currently ${c.DEFAULT_STRATEGY})`),
     ...c.slaInput,
   },
   outputSchema: {
@@ -34,7 +34,7 @@ const config = {
 
 async function compute(args) {
   const { scenario, source } = c.resolveScenario(args);
-  const strategy = args.strategy || 'fcfs';
+  const strategy = args.strategy || c.DEFAULT_STRATEGY;
   const { assignments } = c.plannerRun(scenario, strategy);
   const r = score(scenario, { assignments }, { slaBasis: args.sla_basis || 'paid', strict: !!args.strict });
   const data = {
