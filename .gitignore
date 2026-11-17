@@ -1,0 +1,4 @@
+node_modules/
+harness/worktrees/
+*.log
+.env

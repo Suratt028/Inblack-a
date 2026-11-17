@@ -1,0 +1,14 @@
+{
+  "name": "inblack-a",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "INBLACK GAMING Project A: game top-up queue optimizer",
+  "scripts": {
+    "test": "node --test harness/tests/",
+    "score": "node harness/score.js",
+    "bench": "node harness/benchmark.js",
+    "mcp": "node mcp/server.js"
+  },
+  "engines": { "node": ">=20" }
+}
