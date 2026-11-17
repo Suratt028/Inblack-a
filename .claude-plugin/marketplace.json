@@ -1,0 +1,11 @@
+{
+  "name": "inblack",
+  "owner": { "name": "inblack-a" },
+  "plugins": [
+    {
+      "name": "inblack-guard",
+      "source": "./plugins/inblack-guard",
+      "description": "Stop hook: blocks finishing while npm test fails."
+    }
+  ]
+}

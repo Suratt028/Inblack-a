@@ -1,0 +1,16 @@
+{
+  "description": "Block Stop while npm test fails",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/run-tests.js\"",
+            "timeout": 180
+          }
+        ]
+      }
+    ]
+  }
+}

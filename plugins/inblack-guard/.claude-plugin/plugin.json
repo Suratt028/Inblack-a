@@ -1,0 +1,7 @@
+{
+  "name": "inblack-guard",
+  "version": "0.1.0",
+  "description": "Stop hook for INBLACK Project A: runs npm test and blocks the agent from finishing while tests fail.",
+  "author": { "name": "inblack-a" },
+  "hooks": "./hooks/hooks.json"
+}
