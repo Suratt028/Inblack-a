@@ -29,3 +29,8 @@ Command: `npm ci && npm test` · total 71 · passed 71 · failed 0 (60 harness s
 
 ## 2026-11-17 — Lead: main after step-4 merges (9ae146d)
 Command: `npm ci && npm test` · total 349 · passed 343 · failed 0 · todo 6 (QA W1 test, one per strategy, todo until flag removed)
+
+## 2026-11-18 — Lead: main after step-5 merges (acb18ec)
+Command: `npm test` · total 350 · passed 350 · failed 0 · todo 0. `node src/planner.js harness/scenarios/seed-1.json …` → `strategy=hybrid`.
+Benchmark at acb18ec (backend-mcp 72ed90f, `npm run bench`): hybrid held-out median 73.77 (paid) / 72.57 (arrive) vs fcfs 59.16 / 57.96; tuning 78.16 / 77.18; 0 viol / 0 dup default+strict, all 20 seeds, all 6 strategies.
+Post-merge (0741c66): `npm test` · total 351 · passed 351 · failed 0 (adds QA test: CLI default = DEFAULT_STRATEGY).

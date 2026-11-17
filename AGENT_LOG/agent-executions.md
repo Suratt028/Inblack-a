@@ -36,3 +36,9 @@ _Real events only, appended as they happen._
 | 2026-11-17 | Lead | main | merge | agent/strategy 7939561, agent/backend b5a8be5, agent/qa 9ae146d (--no-ff); npm test 343 pass / 0 fail / 6 todo |
 | 2026-11-17 | Lead | main | history rewrite | user chose noreply e-mail before first push: `git filter-branch --env-filter` on main (49 commits, trees unchanged); backup branch backup/pre-email-rewrite + bundle; old→new hashes in AGENT_LOG/hash-map.md |
 | 2026-11-18 | Lead | main | history rewrite 2 | user chose to replace the session-1 personal author name with surat before first push: filter-branch on main ^origin/main (keeps GitHub-signed Initial commit), trees unchanged; backup branch backup/pre-name-rewrite; hash-map regenerated original→published; generator lock now b2a5da2 |
+| 2026-11-18 | strategy-optimizer | agent/strategy | T15 + T16 | STRATEGY.md cec8188/7c1d2ac; hybrid default 14fb7ee (held T16 commit until T17 phase 1 merged: npm test would fail) |
+| 2026-11-18 | backend-mcp | agent/backend | T17 | phase 1 604cb06 (MCP default follows DEFAULT_STRATEGY); phase 2 72ed90f benchmark of main acb18ec, all 6 strategies |
+| 2026-11-18 | qa-reviewer | agent/qa | T17 + T15/T16 reviews | APPROVE 6ed2862 (T17 ph1), a54cdd3 (T15/T16: every STRATEGY.md number and all 3 losing cases reproduced) |
+| 2026-11-18 | Lead | main | merges | 643a6bf (T17 ph1), acb18ec (T15/T16); npm test 350/350; CLI default = hybrid |
+| 2026-11-18 | qa-reviewer | agent/qa | T17 phase 2 review | APPROVE 9402642 (fresh bench = committed JSON except timestamp; 480 cells 0/0) + CLI default test |
+| 2026-11-18 | Lead | main | merges | d1a1032 (T17 phase 2 benchmark), 0741c66 (T17 phase 2 review + CLI default test); npm test 351/351 |
