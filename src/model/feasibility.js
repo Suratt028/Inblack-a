@@ -15,11 +15,14 @@
  *              (1-minute margin before/after shift boundaries; covers strict end-minute check).
  *   R-OUTAGE : outage treated as closed [a,b]; require s+5 <= a-1 or s >= b+1.
  *   R-GAME   : supplier.games includes order.game
- *   R-WALLET : cost = value_thb*cost_pct deducted from that supplier's wallet_thb,
- *              which must stay >= 0 (eps 1e-9); total <= wallet => every D4b prefix OK.
+ *   R-WALLET : cost = value_thb*cost_pct deducted from that supplier's wallet_thb (D4b order),
+ *              accepted only if remaining - cost >= WALLET_MARGIN (1e-6, conservative side).
  *   R-DUP    : each order_id at most once.
  */
-const DUR = 5, DAY_END = 1438, MINUTES = 1440, EPS = 1e-9;
+const DUR = 5, DAY_END = 1438, MINUTES = 1440;
+// D4/D4b: conservative wallet margin. Accept only if remaining - cost >= WALLET_MARGIN, so float
+// rounding at exact exhaustion (e.g. 117 - 45.9 = 71.09999.. < 71.1) can never overspend.
+const WALLET_MARGIN = 1e-6;
 
 function normalize(sc) {
   return {
@@ -56,7 +59,7 @@ class Model {
     if (!sup.games.includes(o.game)) return 'UNSUPPORTED_GAME';
     for (const w of sup.outages) if (!(s + DUR <= w.start - 1 || s >= w.end + 1)) return 'OUTAGE_MARGIN';
     const c = this.cost(o, sup);
-    if (c > this.supWallet.get(sup.id) + EPS) return 'WALLET';
+    if (c > this.supWallet.get(sup.id) - WALLET_MARGIN) return 'WALLET';
     return null;
   }
   check(o, sup, s) {
@@ -73,4 +76,4 @@ class Model {
   }
 }
 
-module.exports = { Model, normalize, DUR, DAY_END, MINUTES };
+module.exports = { Model, normalize, DUR, DAY_END, MINUTES, WALLET_MARGIN };

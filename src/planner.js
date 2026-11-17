@@ -1,9 +1,17 @@
 #!/usr/bin/env node
 'use strict';
-// Usage: node src/planner.js scenario.json plan.json [--strategy fcfs] [--explain reasons.json]
+// Usage: node src/planner.js scenario.json plan.json [--strategy fcfs|edf|vip|cheapest|profit|hybrid] [--explain reasons.json]
 const fs = require('fs');
 const { Model } = require('./model/feasibility');
-const STRATEGIES = { fcfs: require('./strategies/fcfs').fcfs };
+const greedy = require('./strategies/greedy');
+const STRATEGIES = {
+  fcfs: require('./strategies/fcfs').fcfs,
+  edf: greedy.edf,
+  vip: greedy.vip,
+  cheapest: greedy.cheapest,
+  profit: greedy.profit,
+  hybrid: require('./strategies/hybrid').hybrid,
+};
 
 function plan(scenario, { strategy = 'fcfs' } = {}) {
   const fn = STRATEGIES[strategy];
@@ -29,4 +37,7 @@ function main(argv) {
 }
 
 if (require.main === module) main(process.argv.slice(2));
-module.exports = { plan };
+// Best strategy on tuning seeds 101-110 that passes the gate (T06). The CLI/plan()
+// default stays 'fcfs' until the default switch is coordinated with mcp/ tests.
+const RECOMMENDED_STRATEGY = 'hybrid';
+module.exports = { plan, STRATEGIES, STRATEGY_NAMES: Object.keys(STRATEGIES), RECOMMENDED_STRATEGY };
