@@ -23,3 +23,14 @@ _Real events only, appended as they happen._
 | 2026-11-17 12:56Z | headless Claude Code (`claude -p`) | demo/hook-block worktree | T10 + T11 demo | used skill game-queue-quality-check; Stop blocked by inblack-guard (9/60 failing, planted bug); agent restored D6 value, 60/60, stop allowed — see hook-events.md |
 | 2026-11-17 12:59Z | headless Claude Code (`claude -p`) | main | T08 demo | called run_scenario, explain_order, score_plan via inblack-queue MCP — see mcp-calls.md |
 | 2026-11-17 | User | — | Checkpoint 2 | approved; generator locked at b073430 (D15) |
+| 2026-11-17 | backend-mcp | agent/backend | T07 | completed 698e106, 7c3efc7: benchmark, npm test 76/76; fcfs held-out median 59.17 paid / 57.96 arrive |
+| 2026-11-17 | strategy-optimizer | agent/strategy | T06 | completed 211dd18, 10d5630, 4a3692f: edf, vip, cheapest, profit, hybrid; claims hybrid held-out 73.77 / 72.57 |
+| 2026-11-17 | qa-reviewer | agent/qa | T09 | phase 1 a205aff, dd6563a: planner spec tests; T06 review REJECT (F1 wallet float) b1e4232 |
+| 2026-11-17 | strategy-optimizer | agent/strategy | T06 | resumed to fix F1 |
+| 2026-11-17 | qa-reviewer | agent/qa | T07 review | REJECT (median of rounded values) dd725a1 |
+| 2026-11-17 | backend-mcp | agent/backend | T07 | resumed to fix median rounding |
+| 2026-11-17 | strategy-optimizer | agent/strategy | T06 | F1 fixed 024f753; sent to QA round 2 |
+| 2026-11-17 | backend-mcp | agent/backend | T07 | fix 43790e3, 78f386e (unrounded aggregation), npm test 78/78 |
+| 2026-11-17 | qa-reviewer | agent/qa | T06 + T07 round 2 | APPROVE d7deeb1 (T06), aa3abfa (T07) |
+| 2026-11-17 | code-reviewer | main (read-only) | step 4 merge gate | PASS: 3 branches merged in scratch, npm test 343 pass / 0 fail / 6 todo, benchmark hybrid held-out 73.77 / 72.57 |
+| 2026-11-17 | Lead | main | merge | agent/strategy 7939561, agent/backend b5a8be5, agent/qa 9ae146d (--no-ff); npm test 343 pass / 0 fail / 6 todo |

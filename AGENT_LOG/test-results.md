@@ -26,3 +26,6 @@ Command: `npm test` · total 60 · passed 60 · failed 0 · 0.52 s
 
 ## 2026-11-17 — Lead: main after merging T08 (ea8ea47)
 Command: `npm ci && npm test` · total 71 · passed 71 · failed 0 (60 harness spec + 11 MCP integration with real SDK client)
+
+## 2026-11-17 — Lead: main after step-4 merges (9ae146d)
+Command: `npm ci && npm test` · total 349 · passed 343 · failed 0 · todo 6 (QA W1 test, one per strategy, todo until flag removed)
