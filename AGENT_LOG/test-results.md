@@ -34,3 +34,7 @@ Command: `npm ci && npm test` · total 349 · passed 343 · failed 0 · todo 6 (
 Command: `npm test` · total 350 · passed 350 · failed 0 · todo 0. `node src/planner.js harness/scenarios/seed-1.json …` → `strategy=hybrid`.
 Benchmark at acb18ec (backend-mcp 72ed90f, `npm run bench`): hybrid held-out median 73.77 (paid) / 72.57 (arrive) vs fcfs 59.16 / 57.96; tuning 78.16 / 77.18; 0 viol / 0 dup default+strict, all 20 seeds, all 6 strategies.
 Post-merge (0741c66): `npm test` · total 351 · passed 351 · failed 0 (adds QA test: CLI default = DEFAULT_STRATEGY).
+
+## 2026-11-18 — GitHub Actions run 44161948021 (pages.yml, commit 9529503)
+build: npm test 361/361, secret scan clean, benchmark, site data (history via GitHub REST API: 1 point, first run) → deploy: success.
+Live check https://suratt028.github.io/Inblack-a/: index 73.77% / 72.57% vs FCFS 59.16% / 57.96%, profit 65,852.30, over-SLA 1, paid-not-done 89, violations 0, duplicates 0; replay seed 1 86.36% vs 74.89%; team 3 rejections (T06, T07, T08), 17 tasks. All values equal the data built in CI from the benchmark of 9529503.

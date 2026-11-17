@@ -43,3 +43,7 @@ _Real events only, appended as they happen._
 | 2026-11-18 | qa-reviewer | agent/qa | T17 phase 2 review | APPROVE 9402642 (fresh bench = committed JSON except timestamp; 480 cells 0/0) + CLI default test |
 | 2026-11-18 | Lead | main | merges | d1a1032 (T17 phase 2 benchmark), 0741c66 (T17 phase 2 review + CLI default test); npm test 351/351 |
 | 2026-11-18 | User | — | Checkpoint 3 | approved benchmark acb18ec; GitHub Pages enabled (Actions source) by Lead with user approval |
+| 2026-11-18 | backend-mcp | agent/backend | T12 | 42bc2db builder + pages.yml, c6c853a scan prints file names only, 9cc76e2 least-privilege job permissions |
+| 2026-11-18 | qa-reviewer | agent/qa | T12 review | APPROVE c3280fc (264 cells = benchmark, 3011 replay orders = score.js, token never sent to blob host); 40dbc9f reword key-header example |
+| 2026-11-18 | code-reviewer | main (read-only) | step 6 merge gate | round 1 FAIL (secret scan would fail on review-file example) → fixed → round 2 PASS |
+| 2026-11-18 | Lead | main | site + deploy | site/ 0b6e58b; push 9529503 → Actions run 44161948021 build+deploy success; live site numbers = benchmark |
