@@ -44,7 +44,7 @@ Independent comparison script:
 - Step order: checkout (fetch-depth 0, needed by the benchmark lock diff) → `npm ci` → `npm test` → secret scan → `benchmark.js --out-dir $RUNNER_TEMP/bench` (flag exists, benchmark.js:160) → builder with `--bench` pointing at that fresh output → assemble `_site` → upload `bench-summary` artifact (single file, so the zip root holds `bench-summary.json`, which is what `fetchHistory` looks for) → `upload-pages-artifact@v3` → `deploy-pages@v4`.
 - Secret scan, run with the step script extracted verbatim, on a `git init` copy of the branch:
   - Clean tree: `secret scan: clean`, exit 0.
-  - Each of 5 planted fake patterns in a tracked file (`ghp_…`, `AKIA…`, `sk-ant-…`, `github_pat_…`, `-----BEGIN RSA PRIVATE KEY-----`) produces `::error::possible secret found`, exit 1.
+  - Each of 5 planted fake patterns in a tracked file (`ghp_…`, `AKIA…`, `sk-ant-…`, `github_pat_…`, an RSA private-key PEM header line) produces `::error::possible secret found`, exit 1.
 
 ## Non-blocking notes (backend-mcp)
 - **N1 (secret scan):**
