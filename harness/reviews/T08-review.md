@@ -80,3 +80,40 @@ This text is shown to every MCP client in tools/list. Fix: cite D1 (and D2 for t
 
 Send back with F1-F3 fixed and a test for F1 and F2. I will rerun `npm test`, the probe script and the
 score.js comparison.
+
+---
+
+## Round 2 — agent/backend @ 25f97ac (fix on top of 4f2eafe)
+
+### VERDICT: APPROVE
+
+### How it was run
+```
+git archive agent/backend | tar -x -C <scratch>/be2 ; npm ci ; npm test
+  -> tests 71, pass 71, fail 0
+node mcp/server.js  (127.0.0.1:3000, url http://localhost:3000/mcp)
+```
+Same SDK client probe as round 1 (Client + StreamableHTTPClientTransport), plus `harness/score.js --json`.
+The planner plan for seed-1 is byte-identical to round 1 (`cmp` OK).
+
+### Findings re-checked
+| ID | Round 2 evidence | Status |
+|---|---|---|
+| F1 | `callTool({name:'nope'})` -> stderr `{"tool":"nope","args":{"x":1},...,"ok":false,"error":"MCP error -32602: Tool nope not found"}`. 18 tool calls in the probe gave 18 log lines (19 lines minus the `listening` line), covering ok, isError, schema-error (-32602 seed -1) and unknown-tool. Fix wraps the CallTool request handler (`mcp/server.js` `logToolCalls`); per-tool logging removed from `wrap()`, so no double lines. | fixed |
+| F2 | O010 assigned at 600: reason `"unpaid (paid_minute null): must never be processed, but the plan assigned it; no profit, no SLA or unprocessed penalty. 1 rejected assignment(s): UNPAID ... => violation penalty 100.00"`, penalties total 100 (D6). O010 unassigned still says "no penalty" with total 0. | fixed |
+| F3 | tools/list `sla_basis` description: `SLA clock basis (D1): paid_minute (default) or arrive_minute; lateness at finish per D2`. | fixed |
+| R1 | `../plan1.json` (exists) and `../nope-zzz.json` (missing) both -> "must point to a file inside the repository". No existence oracle any more. `..foo.json` (a name inside the repo) is correctly treated as inside -> "not found". | fixed |
+| R2 | `CLAUDE.md` -> `scenario_path is not valid JSON` (no file bytes echoed). | fixed |
+| R3 | O010 with `sla_basis:"arrive"` -> `slaDeadline: null`. | fixed |
+| R4 | `vip:"yes"` -> `invalid input: scenario.orders[0].vip must be a boolean`. | fixed |
+
+### Regression checks
+- initialize `{"name":"inblack-a","version":"0.1.0"}`, ping `{}`, tools/list 3 tools, each with outputSchema.
+- run_scenario seed 1 vs `score.js --json`: paid 74.89290351603641 / 7325.200000000003, arrive 73.57400648202113 / 7196.200000000003, overSla 24. Same under `--strict`. Identical.
+- D2: O184 arrive basis still late 8 (finish 1155 vs deadline 1147), VIP x2 -> 16.
+- D8: plan with O002 twice -> total 0, scorePct 0.
+
+### Note (non-blocking)
+The log line now records the raw request arguments, before defaults are filled in (e.g. `{"seed":1,"order_id":"O010"}`
+with no `strategy`/`sla_basis`). That is fine: it is still one line per call with no secrets. If you want to see which
+basis was used, add the effective `slaBasis` to the line later.
