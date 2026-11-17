@@ -23,3 +23,6 @@ Earlier QA runs (from harness/tasks/T04.md): run 1 = 59/60 (test bug #45: start 
 
 ## 2026-11-17 19:26 — Lead (session 2, local repo restored from bundle, HEAD 428dda2 + step-1 docs)
 Command: `npm test` · total 60 · passed 60 · failed 0 · 0.52 s
+
+## 2026-11-17 — Lead: main after merging T08 (ea8ea47)
+Command: `npm ci && npm test` · total 71 · passed 71 · failed 0 (60 harness spec + 11 MCP integration with real SDK client)

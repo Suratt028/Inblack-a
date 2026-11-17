@@ -16,3 +16,9 @@ _Real events only, appended as they happen._
 | 2026-11-17 (session 2) | Lead | main | step 1 | added code-reviewer + committer sub-agents, commit gate in CLAUDE.md, HARNESS.md |
 | 2026-11-17 19:2x | code-reviewer | main (read-only) | step 1 review | round 1 FAIL (HARNESS ownership table vs PLAN §3; contradictory claim rule) → fixed → round 2 PASS. Could not run commands (Bash tool broken: "Top-level not found: C:\Program Files\Git\bin"); relied on Lead's logged npm test run |
 | 2026-11-17 | Lead (acting as committer) | main | step 1 commit | committer sub-agent has only the Bash tool, which is broken in this environment (stub folder C:\Program Files\Git); Lead committed via PowerShell following committer.md rules exactly |
+| 2026-11-17 | qa-reviewer | agent/qa | T08 review | REJECT (F1–F3) → 4896a07 |
+| 2026-11-17 | backend-mcp | agent/backend | T08 | resumed to fix F1–F3 |
+| 2026-11-17 | code-reviewer | main (read-only) | T08 merge gate | PASS: merged both branches in scratch worktree, npm test 71/71, MCP smoke test |
+| 2026-11-17 | Lead | main | merge | agent/backend (fe928b3) + agent/qa (ea8ea47) merged --no-ff; npm test 71/71 |
+| 2026-11-17 12:56Z | headless Claude Code (`claude -p`) | demo/hook-block worktree | T10 + T11 demo | used skill game-queue-quality-check; Stop blocked by inblack-guard (9/60 failing, planted bug); agent restored D6 value, 60/60, stop allowed — see hook-events.md |
+| 2026-11-17 12:59Z | headless Claude Code (`claude -p`) | main | T08 demo | called run_scenario, explain_order, score_plan via inblack-queue MCP — see mcp-calls.md |
