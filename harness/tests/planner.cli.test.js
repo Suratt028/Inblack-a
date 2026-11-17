@@ -68,3 +68,17 @@ test('R10 CLI: planner does not modify the scenario file', () => {
   for (const s of STRATS) runCli(SEED1, s);
   assert.equal(fs.readFileSync(SEED1, 'utf8'), before);
 });
+
+// T16/T17: the no-flag CLI must run the exported DEFAULT_STRATEGY (T16 acceptance: `hybrid`),
+// the same name MCP (T17) and the benchmark follow. Byte-compare against an explicit --strategy run.
+test('T16 CLI default (no --strategy) uses exported DEFAULT_STRATEGY (hybrid) — byte-identical plan on seed-1', () => {
+  const { DEFAULT_STRATEGY } = require(PLANNER);
+  assert.equal(typeof DEFAULT_STRATEGY, 'string', 'planner must export DEFAULT_STRATEGY');
+  assert.equal(DEFAULT_STRATEGY, 'hybrid', 'T16 acceptance: recommended default is hybrid');
+  assert.ok(STRATS.includes(DEFAULT_STRATEGY), `DEFAULT_STRATEGY ${DEFAULT_STRATEGY} not in ${STRATS.join(',')}`);
+  const noFlag = runCli(SEED1), explicit = runCli(SEED1, DEFAULT_STRATEGY), base = runCli(SEED1, 'fcfs');
+  for (const r of [noFlag, explicit, base]) assert.equal(r.status, 0, r.stderr);
+  assert.equal(noFlag.raw, explicit.raw, 'no-flag plan differs from --strategy DEFAULT_STRATEGY');
+  // discriminating: on seed-1 the default must not silently be the fcfs baseline
+  assert.notEqual(noFlag.raw, base.raw, 'no-flag plan equals fcfs plan on seed-1');
+});
