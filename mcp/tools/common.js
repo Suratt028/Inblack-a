@@ -4,7 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const z = require('zod');
 const { generate } = require('../../harness/generator');
-const { plan: runPlan } = require('../../src/planner');
+const planner = require('../../src/planner');
+const runPlan = planner.plan;
+// T17: MCP default strategy follows the planner's exported default (fallback fcfs if not exported).
+const DEFAULT_STRATEGY = typeof planner.DEFAULT_STRATEGY === 'string' && planner.DEFAULT_STRATEGY ? planner.DEFAULT_STRATEGY : 'fcfs';
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const MAX_FILE_BYTES = 20 * 1024 * 1024;
@@ -159,7 +162,7 @@ function wrap(name, compute) {
 const f2 = (x) => (Math.round(x * 100) / 100).toFixed(2);
 
 module.exports = {
-  z, REPO_ROOT, ToolInputError, bad,
+  z, REPO_ROOT, ToolInputError, bad, DEFAULT_STRATEGY,
   scenarioInput, slaInput, planInput, countsOut, totalsOut, violationOut, lostOrderOut,
   resolveScenario, resolvePlan, resolveRepoPath, checkScenario, plannerRun, topLost, summarizeArgs, wrap, logLine, f2,
 };

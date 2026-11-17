@@ -88,6 +88,23 @@ test('run_scenario seed 1 equals score.js --json (paid, arrive, strict)', async 
   sameSummary(viaPath.structuredContent, cli.paid);
 });
 
+test('T17: default strategy follows planner DEFAULT_STRATEGY (fallback fcfs)', async () => {
+  const planner = require('../../src/planner');
+  const expected = typeof planner.DEFAULT_STRATEGY === 'string' && planner.DEFAULT_STRATEGY ? planner.DEFAULT_STRATEGY : 'fcfs';
+  assert.ok(planner.STRATEGY_NAMES.includes(expected), `planner default ${expected} is a known strategy`);
+  const { tools } = await client.listTools();
+  for (const n of ['run_scenario', 'explain_order']) {
+    const p = tools.find((t) => t.name === n).inputSchema.properties.strategy;
+    assert.equal(p.default, expected, n);
+    assert.match(p.description, new RegExp(`currently ${expected}`));
+  }
+  const r = await client.callTool({ name: 'run_scenario', arguments: { seed: 1 } });
+  assert.equal(r.structuredContent.strategy, expected);
+  // the CLI planner (used for cli.*) runs the same default: identical assignments
+  const scenario = JSON.parse(fs.readFileSync(path.join(ROOT, SCEN), 'utf8'));
+  assert.deepEqual(planner.plan(scenario, { strategy: expected }).assignments, plan.assignments);
+});
+
 test('score_plan seed 1 + planner plan equals score.js --json', async () => {
   const scenario = JSON.parse(fs.readFileSync(path.join(ROOT, SCEN), 'utf8'));
   const r = await client.callTool({ name: 'score_plan', arguments: { scenario, plan } });
