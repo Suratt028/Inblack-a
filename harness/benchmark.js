@@ -14,7 +14,7 @@ const { score } = require('./scorer');
 const ROOT = path.resolve(__dirname, '..');
 const PLANNER = path.join(ROOT, 'src', 'planner.js');
 const SCEN_DIR = path.join(ROOT, 'harness', 'scenarios');
-const GENERATOR_LOCK = 'b073430';
+const GENERATOR_LOCK = '46d1736';
 const LOCKED_PATHS = ['harness/generator.js', 'harness/generator.config.json', 'harness/scenarios'];
 const SEED_SETS = {
   tuning: [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
