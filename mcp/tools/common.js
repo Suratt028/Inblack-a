@@ -28,7 +28,7 @@ const scenarioInput = {
     .describe('Path to a scenario JSON file inside the repository (relative to repo root)'),
 };
 const slaInput = {
-  sla_basis: z.enum(['paid', 'arrive']).default('paid').describe('SLA clock basis (D2); default paid'),
+  sla_basis: z.enum(['paid', 'arrive']).default('paid').describe('SLA clock basis (D1): paid_minute (default) or arrive_minute; lateness at finish per D2'),
   strict: z.boolean().default(false).describe('Strict boundary checker (D10); default false'),
 };
 const planInput = {
@@ -55,16 +55,21 @@ const lostOrderOut = z.object({
 // ---------- resolution ----------
 function resolveRepoPath(p, what) {
   if (typeof p !== 'string' || !p.trim()) bad(`${what} must be a non-empty string`);
+  const outside = (root, target) => {
+    const rel = path.relative(root, target);
+    return rel === '' || rel === '..' || rel.startsWith('..' + path.sep) || path.isAbsolute(rel);
+  };
   const abs = path.resolve(REPO_ROOT, p);
+  const insideMsg = `${what} must point to a file inside the repository: ${p}`;
+  // Lexical containment first, so paths outside the repo never reveal whether they exist.
+  if (outside(REPO_ROOT, abs)) bad(insideMsg);
   let real;
   try { real = fs.realpathSync(abs); } catch { bad(`${what} not found: ${p}`); }
-  const rootReal = fs.realpathSync(REPO_ROOT);
-  const rel = path.relative(rootReal, real);
-  if (rel === '' || rel.startsWith('..') || path.isAbsolute(rel)) bad(`${what} must point to a file inside the repository: ${p}`);
+  if (outside(fs.realpathSync(REPO_ROOT), real)) bad(insideMsg); // symlink escaping the repo
   const st = fs.statSync(real);
   if (!st.isFile()) bad(`${what} is not a file: ${p}`);
   if (st.size > MAX_FILE_BYTES) bad(`${what} is too large (${st.size} bytes > ${MAX_FILE_BYTES})`);
-  try { return JSON.parse(fs.readFileSync(real, 'utf8')); } catch (e) { bad(`${what} is not valid JSON: ${e.message}`); }
+  try { return JSON.parse(fs.readFileSync(real, 'utf8')); } catch { bad(`${what} is not valid JSON`); }
 }
 
 function checkScenario(sc) {
@@ -77,6 +82,7 @@ function checkScenario(sc) {
     for (const f of ['arrive_minute', 'value_thb', 'sla_minutes']) if (typeof o[f] !== 'number' || !Number.isFinite(o[f])) bad(`${at}.${f} must be a number`);
     if (o.paid_minute !== null && (typeof o.paid_minute !== 'number' || !Number.isFinite(o.paid_minute))) bad(`${at}.paid_minute must be a number or null`);
     if (typeof o.game !== 'string') bad(`${at}.game must be a string`);
+    if (o.vip !== undefined && typeof o.vip !== 'boolean') bad(`${at}.vip must be a boolean`);
   });
   sc.staff.forEach((s, i) => {
     for (const f of ['from', 'to', 'count']) if (typeof s[f] !== 'number' || !Number.isFinite(s[f])) bad(`scenario.staff[${i}].${f} must be a number`);
@@ -136,18 +142,15 @@ function summarizeArgs(args) {
 
 function logLine(obj) { process.stderr.write(JSON.stringify({ ts: new Date().toISOString(), ...obj }) + '\n'); }
 
-// Wrap a tool handler: compute -> {structuredContent, content:[text]}; log one JSON line per call.
+// Wrap a tool handler: compute -> {structuredContent, content:[text]}; errors -> isError result.
+// Logging is done once per tools/call in mcp/server.js (covers unknown tools and schema errors too).
 function wrap(name, compute) {
   return async (args) => {
-    const t0 = process.hrtime.bigint();
-    const ms = () => Number(process.hrtime.bigint() - t0) / 1e6;
     try {
       const { data, text } = await compute(args);
-      logLine({ tool: name, args: summarizeArgs(args), duration_ms: Math.round(ms() * 100) / 100, ok: true });
       return { structuredContent: data, content: [{ type: 'text', text: text + '\n' + JSON.stringify(data) }] };
     } catch (e) {
       const msg = e instanceof ToolInputError ? `invalid input: ${e.message}` : `error: ${e.message}`;
-      logLine({ tool: name, args: summarizeArgs(args), duration_ms: Math.round(ms() * 100) / 100, ok: false, error: msg });
       return { isError: true, content: [{ type: 'text', text: msg }] };
     }
   };

@@ -5,25 +5,44 @@
 const { McpServer } = require('@modelcontextprotocol/sdk/server/mcp.js');
 const { StreamableHTTPServerTransport } = require('@modelcontextprotocol/sdk/server/streamableHttp.js');
 const { createMcpExpressApp } = require('@modelcontextprotocol/sdk/server/express.js');
+const { CallToolRequestSchema } = require('@modelcontextprotocol/sdk/types.js');
 const { summarizeArgs, logLine } = require('./tools/common');
 const pkg = require('../package.json');
 
 const TOOLS = [require('./tools/run_scenario'), require('./tools/score_plan'), require('./tools/explain_order')];
 
-// Schema-level input errors are rejected by the SDK before our handler runs; log them too
-// so every tools/call produces exactly one log line.
-class LoggingMcpServer extends McpServer {
-  async validateToolInput(tool, args, toolName) {
-    const t0 = Date.now();
-    try { return await super.validateToolInput(tool, args, toolName); } catch (e) {
-      logLine({ tool: toolName, args: summarizeArgs(args), duration_ms: Date.now() - t0, ok: false, error: e.message });
-      throw e;
-    }
-  }
+// Wrap the whole tools/call request handler so every call logs exactly one JSON line,
+// including unknown tool names and schema-level input errors (rejected by the SDK before
+// any tool handler runs). Installed before registerTool, which registers the handler lazily.
+function logToolCalls(lowLevel) {
+  const orig = lowLevel.setRequestHandler.bind(lowLevel);
+  lowLevel.setRequestHandler = (schema, handler) => {
+    if (schema !== CallToolRequestSchema) return orig(schema, handler);
+    return orig(schema, async (request, extra) => {
+      const t0 = process.hrtime.bigint();
+      const base = () => ({
+        tool: request.params && request.params.name,
+        args: summarizeArgs(request.params && request.params.arguments),
+        duration_ms: Math.round(Number(process.hrtime.bigint() - t0) / 1e4) / 100,
+      });
+      try {
+        const result = await handler(request, extra);
+        if (result && result.isError) {
+          const t = Array.isArray(result.content) && result.content[0] && result.content[0].text;
+          logLine({ ...base(), ok: false, error: typeof t === 'string' ? t : 'tool error' });
+        } else logLine({ ...base(), ok: true });
+        return result;
+      } catch (e) {
+        logLine({ ...base(), ok: false, error: e && e.message ? e.message : String(e) });
+        throw e;
+      }
+    });
+  };
 }
 
 function createMcpServer() {
-  const server = new LoggingMcpServer({ name: 'inblack-a', version: pkg.version });
+  const server = new McpServer({ name: 'inblack-a', version: pkg.version });
+  logToolCalls(server.server);
   for (const t of TOOLS) server.registerTool(t.name, t.config, t.handler);
   return server;
 }

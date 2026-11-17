@@ -60,16 +60,20 @@ async function compute(args) {
   const viol = r.violations.filter((x) => x.order_id === o.id);
   const paid = o.paid_minute !== null && o.paid_minute !== undefined;
   const clock = slaBasis === 'paid' ? o.paid_minute : o.arrive_minute;
-  const slaDeadline = paid || slaBasis === 'arrive' ? clock + o.sla_minutes : null;
+  const slaDeadline = paid ? clock + o.sla_minutes : null; // unpaid orders have no SLA under either basis
   const assigned = row.status === 'done';
   const start = assigned ? row.start_minute : null;
   const finish = assigned ? start + DURATION : null;
   const pen = { sla: row.slaPenalty, unprocessed: row.unprocessedPenalty, violation: row.violationPenalty };
   pen.total = pen.sla + pen.unprocessed + pen.violation;
 
+  // "no penalty" only when nothing was charged; otherwise the violation part below explains the charge (D6).
+  const noPen = pen.total === 0 ? 'no penalty' : 'no SLA or unprocessed penalty';
   const parts = [];
-  if (!paid) parts.push('unpaid (paid_minute null): never processed; no profit and no penalty');
-  else if (row.status === 'impossible') parts.push(`no supplier supports game ${o.game}: impossible, excluded from maxProfit, no penalty`);
+  if (!paid) parts.push(viol.length
+    ? `unpaid (paid_minute null): must never be processed, but the plan assigned it; no profit, ${noPen}`
+    : `unpaid (paid_minute null): never processed; no profit and ${noPen}`);
+  else if (row.status === 'impossible') parts.push(`no supplier supports game ${o.game}: impossible, excluded from maxProfit, ${noPen}`);
   else if (!assigned) parts.push(`paid but not assigned: lost ${UNPROCESSED_RATE * 100}% of value = ${c.f2(row.unprocessedPenalty)} THB`);
   else if (row.lateMinutes > 0) parts.push(`done by ${row.supplier_id} at ${start}-${finish}, late by ${row.lateMinutes} min past deadline ${slaDeadline} (${slaBasis} basis) => SLA penalty ${c.f2(row.slaPenalty)}${o.vip ? ' (VIP x2)' : ''}; profit ${c.f2(row.profit)}`);
   else parts.push(`done by ${row.supplier_id} at ${start}-${finish}, within SLA deadline ${slaDeadline} (${slaBasis} basis); profit ${c.f2(row.profit)}`);
