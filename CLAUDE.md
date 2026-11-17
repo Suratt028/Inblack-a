@@ -7,7 +7,7 @@ Planner that decides which paid game top-up order runs, when it starts, and whic
 - `src/planner.js` — `node src/planner.js scenario.json plan.json`. Strategy modules in `src/strategies/`. MUST NOT import from `harness/`.
 - `harness/generator.js` — seeded scenarios. `harness/validator.js` + `harness/scorer.js` — independent rule check and score. `harness/score.js` — one-command report. `harness/benchmark.js` — tuning seeds 101–110, held-out seeds 1–10.
 - `mcp/server.js` — MCP (official SDK, Streamable HTTP, `http://localhost:3000/mcp`), tools `run_scenario`, `score_plan`, `explain_order`.
-- `.claude/agents/` (3 subagents), `.claude/skills/` (2 skills), `plugins/inblack-guard/` (Stop hook runs tests).
+- `.claude/agents/` (3 team subagents + 2 gate: `code-reviewer`, `committer`), `.claude/skills/` (2 skills), `plugins/inblack-guard/` (Stop hook runs tests).
 - `site/` — `index.html`, `replay.html`, `team.html`; data from Actions (REST API).
 
 ## Rules
@@ -25,7 +25,13 @@ Authoritative business rules and interpretations: `PLAN.md` §2 and `harness/DEC
 Public repo. No tokens/passwords in any file, commit or log. Actions use `GITHUB_TOKEN` only.
 
 ## Agent ownership
-See `PLAN.md` §3. One owner per file; touching another agent's files = rejection at merge. Tasks: `harness/tasks/Txx.md`.
+See `PLAN.md` §3 and `HARNESS.md`. One owner per file; touching another agent's files = rejection at merge. Tasks: `harness/tasks/Txx.md`.
+
+## Commit gate (every step)
+1. Never commit while `npm test` fails.
+2. After each step: sub-agent `code-reviewer` (read-only) must return `VERDICT: PASS`, max 3 fix rounds, then ask the user.
+3. Only then sub-agent `committer` commits (Conventional Commits, `Step:` + `Reviewed-by: code-reviewer (PASS)` lines). Push only when the user says so.
+4. Points where the user overrules the agent go in `DECISIONS.md`, written by the user only.
 
 ## Completion criteria
 `npm test` green; held-out median score % ≥ 65 under both SLA bases; 0 duplicates and 0 violations (default and strict) on every seed; MCP initialize/ping/tools/list/tools/call pass; site pages show numbers equal to benchmark output.
