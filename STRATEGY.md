@@ -3,7 +3,7 @@
 Owner: strategy-optimizer (T15/T16). All numbers below come from real runs on branch `agent/strategy`
 (base `af6eb55`, generator lock `b2a5da2`, intact). Rules: `PLAN.md` §2 and `harness/DECISIONS_INPUT.md` (D1–D15).
 
-## Approach: `hybrid` (made the default of `node src/planner.js` / `plan()` by T16)
+## Approach: `hybrid` (default of `node src/planner.js` / `plan()`, `DEFAULT_STRATEGY`)
 `src/planner.js` uses its own feasibility model (`src/model/feasibility.js`, no `harness/` import). That model
 is more conservative than both checkers (D10): a 1-minute margin around shift and outage boundaries,
 finish ≤ 1438, and a wallet check with a 1e-6 margin (D4/D4b).
@@ -48,9 +48,7 @@ Held-out medians are 4.4–4.6 points below the tuning medians (D15).
 ## Gate status
 - Held-out median ≥ 65 % under both SLA bases: **met** (73.77 paid, 72.57 arrive).
 - 0 duplicates, 0 violations under both default and strict on all 20 seeds: **met** (fcfs and hybrid).
-- `npm test` on this branch: 347/349 pass. The 2 failures are in `mcp/test/mcp.test.js`. That test compares the
-  CLI-default plan (now `hybrid`) with MCP's default, which `mcp/tools/*.js` still hard-codes as `'fcfs'`. The fix
-  belongs to backend-mcp (T17: follow `DEFAULT_STRATEGY`).
+- `npm test` on agent/strategy after merging main 643a6bf (T17: MCP default follows `DEFAULT_STRATEGY`): 350/350 pass.
 
 ## 3 cases where `hybrid` still loses points
 
