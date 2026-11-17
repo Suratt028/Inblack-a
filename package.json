@@ -5,7 +5,7 @@
   "type": "commonjs",
   "description": "INBLACK GAMING Project A: game top-up queue optimizer",
   "scripts": {
-    "test": "node --test harness/tests/*.test.js mcp/test/*.test.js harness/benchmarks/*.test.js",
+    "test": "node --test harness/tests/*.test.js mcp/test/*.test.js harness/benchmarks/*.test.js harness/reports/*.test.js",
     "score": "node harness/score.js",
     "bench": "node harness/benchmark.js",
     "mcp": "node mcp/server.js"

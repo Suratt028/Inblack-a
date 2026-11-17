@@ -1,0 +1,78 @@
+# T12: test + benchmark + site data (GitHub REST API history) + GitHub Pages deploy.
+# Uses only the built-in GITHUB_TOKEN; no other secrets.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # benchmark.js reads HEAD and diffs the generator lock commit
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - name: Secret scan (tracked files)
+        run: |
+          # This workflow file is excluded because it contains the patterns themselves.
+          if git grep -nIE 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY' -- . ':(exclude).github/workflows/pages.yml'; then
+            echo "::error::possible secret found in tracked files"
+            exit 1
+          fi
+          echo "secret scan: clean"
+
+      - name: Benchmark (tuning 101-110, held-out 1-10)
+        run: node harness/benchmark.js --out-dir "$RUNNER_TEMP/bench"
+
+      - name: Build site data (REST API history)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node harness/reports/build-site-data.js --bench "$RUNNER_TEMP/bench/latest.json" --out _site/data
+
+      - name: Assemble site
+        run: |
+          if [ -d site ]; then cp -R site/. _site/; else echo "site/ not present on this commit; publishing data only"; fi
+          touch _site/.nojekyll
+          find _site -maxdepth 2 -type f | sort
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bench-summary
+          path: _site/data/bench-summary.json
+          retention-days: 90
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
