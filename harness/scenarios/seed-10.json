@@ -1,0 +1,2890 @@
+{
+  "orders": [
+    {
+      "id": "O001",
+      "arrive_minute": 18,
+      "paid_minute": 32,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O002",
+      "arrive_minute": 50,
+      "paid_minute": 58,
+      "game": "rov",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O003",
+      "arrive_minute": 57,
+      "paid_minute": 57,
+      "game": "freefire",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 34
+    },
+    {
+      "id": "O004",
+      "arrive_minute": 59,
+      "paid_minute": 67,
+      "game": "pubgm",
+      "value_thb": 480,
+      "vip": false,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O005",
+      "arrive_minute": 62,
+      "paid_minute": 66,
+      "game": "genshin",
+      "value_thb": 240,
+      "vip": true,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O006",
+      "arrive_minute": 83,
+      "paid_minute": 90,
+      "game": "pubgm",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O007",
+      "arrive_minute": 104,
+      "paid_minute": 117,
+      "game": "valorant",
+      "value_thb": 350,
+      "vip": true,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O008",
+      "arrive_minute": 109,
+      "paid_minute": 110,
+      "game": "pubgm",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 45
+    },
+    {
+      "id": "O009",
+      "arrive_minute": 109,
+      "paid_minute": 110,
+      "game": "genshin",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 53
+    },
+    {
+      "id": "O010",
+      "arrive_minute": 117,
+      "paid_minute": 123,
+      "game": "valorant",
+      "value_thb": 490,
+      "vip": false,
+      "sla_minutes": 36
+    },
+    {
+      "id": "O011",
+      "arrive_minute": 140,
+      "paid_minute": 146,
+      "game": "pubgm",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 40
+    },
+    {
+      "id": "O012",
+      "arrive_minute": 161,
+      "paid_minute": 169,
+      "game": "genshin",
+      "value_thb": 360,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O013",
+      "arrive_minute": 194,
+      "paid_minute": 206,
+      "game": "rov",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 60
+    },
+    {
+      "id": "O014",
+      "arrive_minute": 213,
+      "paid_minute": 224,
+      "game": "freefire",
+      "value_thb": 910,
+      "vip": true,
+      "sla_minutes": 11
+    },
+    {
+      "id": "O015",
+      "arrive_minute": 233,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 200,
+      "vip": true,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O016",
+      "arrive_minute": 295,
+      "paid_minute": 307,
+      "game": "freefire",
+      "value_thb": 330,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O017",
+      "arrive_minute": 323,
+      "paid_minute": 335,
+      "game": "freefire",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O018",
+      "arrive_minute": 335,
+      "paid_minute": 338,
+      "game": "valorant",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O019",
+      "arrive_minute": 418,
+      "paid_minute": 419,
+      "game": "pubgm",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O020",
+      "arrive_minute": 437,
+      "paid_minute": 443,
+      "game": "genshin",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O021",
+      "arrive_minute": 442,
+      "paid_minute": null,
+      "game": "valorant",
+      "value_thb": 610,
+      "vip": false,
+      "sla_minutes": 39
+    },
+    {
+      "id": "O022",
+      "arrive_minute": 458,
+      "paid_minute": 462,
+      "game": "freefire",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O023",
+      "arrive_minute": 503,
+      "paid_minute": 506,
+      "game": "valorant",
+      "value_thb": 170,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O024",
+      "arrive_minute": 513,
+      "paid_minute": 525,
+      "game": "valorant",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O025",
+      "arrive_minute": 518,
+      "paid_minute": 533,
+      "game": "genshin",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O026",
+      "arrive_minute": 519,
+      "paid_minute": 532,
+      "game": "genshin",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O027",
+      "arrive_minute": 520,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O028",
+      "arrive_minute": 542,
+      "paid_minute": 551,
+      "game": "freefire",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O029",
+      "arrive_minute": 544,
+      "paid_minute": 546,
+      "game": "rov",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O030",
+      "arrive_minute": 579,
+      "paid_minute": 594,
+      "game": "rov",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 10
+    },
+    {
+      "id": "O031",
+      "arrive_minute": 584,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 42
+    },
+    {
+      "id": "O032",
+      "arrive_minute": 592,
+      "paid_minute": 598,
+      "game": "rov",
+      "value_thb": 170,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O033",
+      "arrive_minute": 595,
+      "paid_minute": 604,
+      "game": "pubgm",
+      "value_thb": 200,
+      "vip": false,
+      "sla_minutes": 10
+    },
+    {
+      "id": "O034",
+      "arrive_minute": 604,
+      "paid_minute": 608,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 49
+    },
+    {
+      "id": "O035",
+      "arrive_minute": 618,
+      "paid_minute": 633,
+      "game": "freefire",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O036",
+      "arrive_minute": 621,
+      "paid_minute": 624,
+      "game": "pubgm",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 45
+    },
+    {
+      "id": "O037",
+      "arrive_minute": 621,
+      "paid_minute": 629,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O038",
+      "arrive_minute": 634,
+      "paid_minute": 634,
+      "game": "valorant",
+      "value_thb": 340,
+      "vip": false,
+      "sla_minutes": 26
+    },
+    {
+      "id": "O039",
+      "arrive_minute": 646,
+      "paid_minute": 659,
+      "game": "freefire",
+      "value_thb": 1210,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O040",
+      "arrive_minute": 651,
+      "paid_minute": 666,
+      "game": "rov",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O041",
+      "arrive_minute": 667,
+      "paid_minute": 679,
+      "game": "rov",
+      "value_thb": 1540,
+      "vip": false,
+      "sla_minutes": 44
+    },
+    {
+      "id": "O042",
+      "arrive_minute": 668,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O043",
+      "arrive_minute": 669,
+      "paid_minute": 682,
+      "game": "freefire",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O044",
+      "arrive_minute": 669,
+      "paid_minute": 675,
+      "game": "rov",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O045",
+      "arrive_minute": 674,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 230,
+      "vip": false,
+      "sla_minutes": 47
+    },
+    {
+      "id": "O046",
+      "arrive_minute": 674,
+      "paid_minute": 683,
+      "game": "pubgm",
+      "value_thb": 120,
+      "vip": true,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O047",
+      "arrive_minute": 675,
+      "paid_minute": 685,
+      "game": "freefire",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O048",
+      "arrive_minute": 678,
+      "paid_minute": 692,
+      "game": "pubgm",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O049",
+      "arrive_minute": 678,
+      "paid_minute": 682,
+      "game": "genshin",
+      "value_thb": 480,
+      "vip": true,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O050",
+      "arrive_minute": 679,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 690,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O051",
+      "arrive_minute": 682,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 280,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O052",
+      "arrive_minute": 683,
+      "paid_minute": 696,
+      "game": "pubgm",
+      "value_thb": 120,
+      "vip": true,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O053",
+      "arrive_minute": 686,
+      "paid_minute": 691,
+      "game": "freefire",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O054",
+      "arrive_minute": 687,
+      "paid_minute": 701,
+      "game": "genshin",
+      "value_thb": 330,
+      "vip": true,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O055",
+      "arrive_minute": 692,
+      "paid_minute": 698,
+      "game": "valorant",
+      "value_thb": 390,
+      "vip": false,
+      "sla_minutes": 22
+    },
+    {
+      "id": "O056",
+      "arrive_minute": 696,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 310,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O057",
+      "arrive_minute": 699,
+      "paid_minute": 711,
+      "game": "rov",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O058",
+      "arrive_minute": 700,
+      "paid_minute": 710,
+      "game": "rov",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O059",
+      "arrive_minute": 701,
+      "paid_minute": 715,
+      "game": "genshin",
+      "value_thb": 1240,
+      "vip": false,
+      "sla_minutes": 51
+    },
+    {
+      "id": "O060",
+      "arrive_minute": 704,
+      "paid_minute": 714,
+      "game": "pubgm",
+      "value_thb": 210,
+      "vip": true,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O061",
+      "arrive_minute": 711,
+      "paid_minute": 718,
+      "game": "valorant",
+      "value_thb": 410,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O062",
+      "arrive_minute": 712,
+      "paid_minute": 713,
+      "game": "rov",
+      "value_thb": 220,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O063",
+      "arrive_minute": 712,
+      "paid_minute": 725,
+      "game": "rov",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 32
+    },
+    {
+      "id": "O064",
+      "arrive_minute": 714,
+      "paid_minute": 720,
+      "game": "valorant",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O065",
+      "arrive_minute": 714,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 180,
+      "vip": true,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O066",
+      "arrive_minute": 715,
+      "paid_minute": 722,
+      "game": "rov",
+      "value_thb": 610,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O067",
+      "arrive_minute": 717,
+      "paid_minute": 719,
+      "game": "rov",
+      "value_thb": 370,
+      "vip": false,
+      "sla_minutes": 49
+    },
+    {
+      "id": "O068",
+      "arrive_minute": 719,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 130,
+      "vip": true,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O069",
+      "arrive_minute": 720,
+      "paid_minute": 720,
+      "game": "pubgm",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 43
+    },
+    {
+      "id": "O070",
+      "arrive_minute": 720,
+      "paid_minute": 722,
+      "game": "genshin",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O071",
+      "arrive_minute": 721,
+      "paid_minute": 726,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O072",
+      "arrive_minute": 721,
+      "paid_minute": 729,
+      "game": "rov",
+      "value_thb": 1080,
+      "vip": false,
+      "sla_minutes": 46
+    },
+    {
+      "id": "O073",
+      "arrive_minute": 722,
+      "paid_minute": 724,
+      "game": "freefire",
+      "value_thb": 620,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O074",
+      "arrive_minute": 724,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O075",
+      "arrive_minute": 736,
+      "paid_minute": 740,
+      "game": "genshin",
+      "value_thb": 380,
+      "vip": false,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O076",
+      "arrive_minute": 740,
+      "paid_minute": 751,
+      "game": "freefire",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 43
+    },
+    {
+      "id": "O077",
+      "arrive_minute": 740,
+      "paid_minute": 743,
+      "game": "pubgm",
+      "value_thb": 380,
+      "vip": false,
+      "sla_minutes": 59
+    },
+    {
+      "id": "O078",
+      "arrive_minute": 741,
+      "paid_minute": 752,
+      "game": "genshin",
+      "value_thb": 50,
+      "vip": true,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O079",
+      "arrive_minute": 743,
+      "paid_minute": 744,
+      "game": "freefire",
+      "value_thb": 580,
+      "vip": false,
+      "sla_minutes": 40
+    },
+    {
+      "id": "O080",
+      "arrive_minute": 744,
+      "paid_minute": 758,
+      "game": "genshin",
+      "value_thb": 400,
+      "vip": true,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O081",
+      "arrive_minute": 747,
+      "paid_minute": 754,
+      "game": "freefire",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O082",
+      "arrive_minute": 748,
+      "paid_minute": 763,
+      "game": "rov",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O083",
+      "arrive_minute": 750,
+      "paid_minute": 763,
+      "game": "rov",
+      "value_thb": 440,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O084",
+      "arrive_minute": 756,
+      "paid_minute": 767,
+      "game": "valorant",
+      "value_thb": 890,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O085",
+      "arrive_minute": 756,
+      "paid_minute": 766,
+      "game": "pubgm",
+      "value_thb": 620,
+      "vip": true,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O086",
+      "arrive_minute": 757,
+      "paid_minute": 760,
+      "game": "rov",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O087",
+      "arrive_minute": 758,
+      "paid_minute": 769,
+      "game": "genshin",
+      "value_thb": 330,
+      "vip": true,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O088",
+      "arrive_minute": 759,
+      "paid_minute": 772,
+      "game": "freefire",
+      "value_thb": 400,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O089",
+      "arrive_minute": 764,
+      "paid_minute": 772,
+      "game": "pubgm",
+      "value_thb": 170,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O090",
+      "arrive_minute": 766,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O091",
+      "arrive_minute": 767,
+      "paid_minute": 770,
+      "game": "rov",
+      "value_thb": 620,
+      "vip": false,
+      "sla_minutes": 47
+    },
+    {
+      "id": "O092",
+      "arrive_minute": 768,
+      "paid_minute": 779,
+      "game": "rov",
+      "value_thb": 400,
+      "vip": true,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O093",
+      "arrive_minute": 768,
+      "paid_minute": 771,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 39
+    },
+    {
+      "id": "O094",
+      "arrive_minute": 770,
+      "paid_minute": 778,
+      "game": "freefire",
+      "value_thb": 220,
+      "vip": false,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O095",
+      "arrive_minute": 771,
+      "paid_minute": 777,
+      "game": "valorant",
+      "value_thb": 610,
+      "vip": true,
+      "sla_minutes": 22
+    },
+    {
+      "id": "O096",
+      "arrive_minute": 772,
+      "paid_minute": 780,
+      "game": "valorant",
+      "value_thb": 430,
+      "vip": true,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O097",
+      "arrive_minute": 773,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 310,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O098",
+      "arrive_minute": 773,
+      "paid_minute": 776,
+      "game": "freefire",
+      "value_thb": 380,
+      "vip": false,
+      "sla_minutes": 60
+    },
+    {
+      "id": "O099",
+      "arrive_minute": 773,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 410,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O100",
+      "arrive_minute": 773,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O101",
+      "arrive_minute": 775,
+      "paid_minute": 790,
+      "game": "rov",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O102",
+      "arrive_minute": 775,
+      "paid_minute": 790,
+      "game": "pubgm",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O103",
+      "arrive_minute": 778,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 200,
+      "vip": false,
+      "sla_minutes": 31
+    },
+    {
+      "id": "O104",
+      "arrive_minute": 778,
+      "paid_minute": 786,
+      "game": "rov",
+      "value_thb": 540,
+      "vip": false,
+      "sla_minutes": 34
+    },
+    {
+      "id": "O105",
+      "arrive_minute": 782,
+      "paid_minute": 782,
+      "game": "rov",
+      "value_thb": 290,
+      "vip": false,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O106",
+      "arrive_minute": 783,
+      "paid_minute": 789,
+      "game": "freefire",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 40
+    },
+    {
+      "id": "O107",
+      "arrive_minute": 783,
+      "paid_minute": 783,
+      "game": "freefire",
+      "value_thb": 260,
+      "vip": true,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O108",
+      "arrive_minute": 786,
+      "paid_minute": 787,
+      "game": "rov",
+      "value_thb": 870,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O109",
+      "arrive_minute": 787,
+      "paid_minute": 790,
+      "game": "pubgm",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O110",
+      "arrive_minute": 796,
+      "paid_minute": 811,
+      "game": "rov",
+      "value_thb": 980,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O111",
+      "arrive_minute": 799,
+      "paid_minute": 813,
+      "game": "pubgm",
+      "value_thb": 400,
+      "vip": false,
+      "sla_minutes": 35
+    },
+    {
+      "id": "O112",
+      "arrive_minute": 799,
+      "paid_minute": 808,
+      "game": "genshin",
+      "value_thb": 430,
+      "vip": true,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O113",
+      "arrive_minute": 813,
+      "paid_minute": 825,
+      "game": "pubgm",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 41
+    },
+    {
+      "id": "O114",
+      "arrive_minute": 815,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 1010,
+      "vip": false,
+      "sla_minutes": 42
+    },
+    {
+      "id": "O115",
+      "arrive_minute": 815,
+      "paid_minute": 828,
+      "game": "pubgm",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 36
+    },
+    {
+      "id": "O116",
+      "arrive_minute": 816,
+      "paid_minute": 821,
+      "game": "pubgm",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O117",
+      "arrive_minute": 816,
+      "paid_minute": 831,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O118",
+      "arrive_minute": 817,
+      "paid_minute": 827,
+      "game": "freefire",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O119",
+      "arrive_minute": 817,
+      "paid_minute": 831,
+      "game": "pubgm",
+      "value_thb": 280,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O120",
+      "arrive_minute": 819,
+      "paid_minute": 834,
+      "game": "freefire",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O121",
+      "arrive_minute": 820,
+      "paid_minute": 835,
+      "game": "valorant",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 32
+    },
+    {
+      "id": "O122",
+      "arrive_minute": 828,
+      "paid_minute": 834,
+      "game": "freefire",
+      "value_thb": 670,
+      "vip": false,
+      "sla_minutes": 18
+    },
+    {
+      "id": "O123",
+      "arrive_minute": 830,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 46
+    },
+    {
+      "id": "O124",
+      "arrive_minute": 833,
+      "paid_minute": 833,
+      "game": "freefire",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 41
+    },
+    {
+      "id": "O125",
+      "arrive_minute": 838,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O126",
+      "arrive_minute": 839,
+      "paid_minute": 841,
+      "game": "freefire",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 40
+    },
+    {
+      "id": "O127",
+      "arrive_minute": 841,
+      "paid_minute": 844,
+      "game": "freefire",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O128",
+      "arrive_minute": 844,
+      "paid_minute": 844,
+      "game": "rov",
+      "value_thb": 120,
+      "vip": true,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O129",
+      "arrive_minute": 846,
+      "paid_minute": 860,
+      "game": "valorant",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O130",
+      "arrive_minute": 849,
+      "paid_minute": 850,
+      "game": "rov",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O131",
+      "arrive_minute": 851,
+      "paid_minute": 856,
+      "game": "rov",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O132",
+      "arrive_minute": 851,
+      "paid_minute": 863,
+      "game": "pubgm",
+      "value_thb": 200,
+      "vip": true,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O133",
+      "arrive_minute": 851,
+      "paid_minute": 852,
+      "game": "genshin",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O134",
+      "arrive_minute": 854,
+      "paid_minute": 857,
+      "game": "rov",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O135",
+      "arrive_minute": 859,
+      "paid_minute": 862,
+      "game": "rov",
+      "value_thb": 210,
+      "vip": true,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O136",
+      "arrive_minute": 859,
+      "paid_minute": 871,
+      "game": "rov",
+      "value_thb": 370,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O137",
+      "arrive_minute": 863,
+      "paid_minute": 876,
+      "game": "freefire",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O138",
+      "arrive_minute": 877,
+      "paid_minute": 891,
+      "game": "genshin",
+      "value_thb": 50,
+      "vip": false,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O139",
+      "arrive_minute": 888,
+      "paid_minute": 903,
+      "game": "freefire",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 31
+    },
+    {
+      "id": "O140",
+      "arrive_minute": 902,
+      "paid_minute": 909,
+      "game": "pubgm",
+      "value_thb": 400,
+      "vip": false,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O141",
+      "arrive_minute": 908,
+      "paid_minute": 909,
+      "game": "freefire",
+      "value_thb": 510,
+      "vip": false,
+      "sla_minutes": 49
+    },
+    {
+      "id": "O142",
+      "arrive_minute": 915,
+      "paid_minute": 924,
+      "game": "genshin",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O143",
+      "arrive_minute": 935,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 450,
+      "vip": false,
+      "sla_minutes": 52
+    },
+    {
+      "id": "O144",
+      "arrive_minute": 940,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 150,
+      "vip": true,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O145",
+      "arrive_minute": 947,
+      "paid_minute": 961,
+      "game": "rov",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O146",
+      "arrive_minute": 955,
+      "paid_minute": 959,
+      "game": "pubgm",
+      "value_thb": 400,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O147",
+      "arrive_minute": 961,
+      "paid_minute": 963,
+      "game": "rov",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O148",
+      "arrive_minute": 973,
+      "paid_minute": 984,
+      "game": "valorant",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 52
+    },
+    {
+      "id": "O149",
+      "arrive_minute": 995,
+      "paid_minute": 1005,
+      "game": "rov",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O150",
+      "arrive_minute": 1003,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O151",
+      "arrive_minute": 1017,
+      "paid_minute": 1028,
+      "game": "freefire",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 39
+    },
+    {
+      "id": "O152",
+      "arrive_minute": 1029,
+      "paid_minute": 1031,
+      "game": "valorant",
+      "value_thb": 170,
+      "vip": false,
+      "sla_minutes": 49
+    },
+    {
+      "id": "O153",
+      "arrive_minute": 1038,
+      "paid_minute": 1045,
+      "game": "pubgm",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 51
+    },
+    {
+      "id": "O154",
+      "arrive_minute": 1044,
+      "paid_minute": 1055,
+      "game": "rov",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 44
+    },
+    {
+      "id": "O155",
+      "arrive_minute": 1046,
+      "paid_minute": 1055,
+      "game": "pubgm",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 45
+    },
+    {
+      "id": "O156",
+      "arrive_minute": 1054,
+      "paid_minute": 1057,
+      "game": "rov",
+      "value_thb": 280,
+      "vip": false,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O157",
+      "arrive_minute": 1060,
+      "paid_minute": 1066,
+      "game": "pubgm",
+      "value_thb": 330,
+      "vip": false,
+      "sla_minutes": 60
+    },
+    {
+      "id": "O158",
+      "arrive_minute": 1063,
+      "paid_minute": 1075,
+      "game": "rov",
+      "value_thb": 170,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O159",
+      "arrive_minute": 1064,
+      "paid_minute": 1073,
+      "game": "freefire",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O160",
+      "arrive_minute": 1068,
+      "paid_minute": 1077,
+      "game": "rov",
+      "value_thb": 290,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O161",
+      "arrive_minute": 1072,
+      "paid_minute": 1077,
+      "game": "valorant",
+      "value_thb": 360,
+      "vip": true,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O162",
+      "arrive_minute": 1073,
+      "paid_minute": 1078,
+      "game": "rov",
+      "value_thb": 230,
+      "vip": false,
+      "sla_minutes": 42
+    },
+    {
+      "id": "O163",
+      "arrive_minute": 1078,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 220,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O164",
+      "arrive_minute": 1081,
+      "paid_minute": 1090,
+      "game": "rov",
+      "value_thb": 480,
+      "vip": false,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O165",
+      "arrive_minute": 1081,
+      "paid_minute": 1081,
+      "game": "freefire",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 36
+    },
+    {
+      "id": "O166",
+      "arrive_minute": 1084,
+      "paid_minute": 1086,
+      "game": "freefire",
+      "value_thb": 380,
+      "vip": false,
+      "sla_minutes": 34
+    },
+    {
+      "id": "O167",
+      "arrive_minute": 1084,
+      "paid_minute": 1089,
+      "game": "freefire",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O168",
+      "arrive_minute": 1084,
+      "paid_minute": 1093,
+      "game": "rov",
+      "value_thb": 350,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O169",
+      "arrive_minute": 1086,
+      "paid_minute": 1097,
+      "game": "rov",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O170",
+      "arrive_minute": 1086,
+      "paid_minute": 1098,
+      "game": "rov",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O171",
+      "arrive_minute": 1089,
+      "paid_minute": 1089,
+      "game": "freefire",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 58
+    },
+    {
+      "id": "O172",
+      "arrive_minute": 1102,
+      "paid_minute": 1110,
+      "game": "rov",
+      "value_thb": 250,
+      "vip": true,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O173",
+      "arrive_minute": 1111,
+      "paid_minute": 1116,
+      "game": "genshin",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O174",
+      "arrive_minute": 1111,
+      "paid_minute": 1113,
+      "game": "valorant",
+      "value_thb": 490,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O175",
+      "arrive_minute": 1112,
+      "paid_minute": 1126,
+      "game": "pubgm",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O176",
+      "arrive_minute": 1114,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O177",
+      "arrive_minute": 1115,
+      "paid_minute": 1122,
+      "game": "freefire",
+      "value_thb": 1120,
+      "vip": false,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O178",
+      "arrive_minute": 1117,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 330,
+      "vip": false,
+      "sla_minutes": 46
+    },
+    {
+      "id": "O179",
+      "arrive_minute": 1118,
+      "paid_minute": 1132,
+      "game": "freefire",
+      "value_thb": 200,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O180",
+      "arrive_minute": 1122,
+      "paid_minute": 1124,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O181",
+      "arrive_minute": 1123,
+      "paid_minute": 1127,
+      "game": "freefire",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O182",
+      "arrive_minute": 1124,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 440,
+      "vip": false,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O183",
+      "arrive_minute": 1125,
+      "paid_minute": 1140,
+      "game": "genshin",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O184",
+      "arrive_minute": 1131,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O185",
+      "arrive_minute": 1131,
+      "paid_minute": 1136,
+      "game": "genshin",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O186",
+      "arrive_minute": 1131,
+      "paid_minute": 1142,
+      "game": "valorant",
+      "value_thb": 230,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O187",
+      "arrive_minute": 1131,
+      "paid_minute": 1137,
+      "game": "rov",
+      "value_thb": 690,
+      "vip": false,
+      "sla_minutes": 10
+    },
+    {
+      "id": "O188",
+      "arrive_minute": 1132,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 52
+    },
+    {
+      "id": "O189",
+      "arrive_minute": 1135,
+      "paid_minute": 1149,
+      "game": "freefire",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O190",
+      "arrive_minute": 1135,
+      "paid_minute": 1138,
+      "game": "freefire",
+      "value_thb": 560,
+      "vip": false,
+      "sla_minutes": 58
+    },
+    {
+      "id": "O191",
+      "arrive_minute": 1137,
+      "paid_minute": 1151,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 31
+    },
+    {
+      "id": "O192",
+      "arrive_minute": 1138,
+      "paid_minute": 1144,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": true,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O193",
+      "arrive_minute": 1141,
+      "paid_minute": 1144,
+      "game": "valorant",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 58
+    },
+    {
+      "id": "O194",
+      "arrive_minute": 1145,
+      "paid_minute": 1156,
+      "game": "pubgm",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O195",
+      "arrive_minute": 1147,
+      "paid_minute": 1152,
+      "game": "freefire",
+      "value_thb": 260,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O196",
+      "arrive_minute": 1148,
+      "paid_minute": 1157,
+      "game": "valorant",
+      "value_thb": 390,
+      "vip": false,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O197",
+      "arrive_minute": 1148,
+      "paid_minute": 1157,
+      "game": "valorant",
+      "value_thb": 650,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O198",
+      "arrive_minute": 1149,
+      "paid_minute": 1158,
+      "game": "pubgm",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 44
+    },
+    {
+      "id": "O199",
+      "arrive_minute": 1154,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O200",
+      "arrive_minute": 1155,
+      "paid_minute": 1170,
+      "game": "pubgm",
+      "value_thb": 650,
+      "vip": false,
+      "sla_minutes": 39
+    },
+    {
+      "id": "O201",
+      "arrive_minute": 1155,
+      "paid_minute": 1159,
+      "game": "rov",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O202",
+      "arrive_minute": 1157,
+      "paid_minute": 1168,
+      "game": "valorant",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 11
+    },
+    {
+      "id": "O203",
+      "arrive_minute": 1158,
+      "paid_minute": 1167,
+      "game": "rov",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 10
+    },
+    {
+      "id": "O204",
+      "arrive_minute": 1161,
+      "paid_minute": 1163,
+      "game": "rov",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O205",
+      "arrive_minute": 1163,
+      "paid_minute": 1165,
+      "game": "freefire",
+      "value_thb": 450,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O206",
+      "arrive_minute": 1164,
+      "paid_minute": 1177,
+      "game": "freefire",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O207",
+      "arrive_minute": 1164,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 370,
+      "vip": true,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O208",
+      "arrive_minute": 1166,
+      "paid_minute": 1169,
+      "game": "freefire",
+      "value_thb": 940,
+      "vip": false,
+      "sla_minutes": 47
+    },
+    {
+      "id": "O209",
+      "arrive_minute": 1168,
+      "paid_minute": 1179,
+      "game": "freefire",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 38
+    },
+    {
+      "id": "O210",
+      "arrive_minute": 1172,
+      "paid_minute": 1178,
+      "game": "rov",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O211",
+      "arrive_minute": 1176,
+      "paid_minute": 1180,
+      "game": "rov",
+      "value_thb": 390,
+      "vip": false,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O212",
+      "arrive_minute": 1176,
+      "paid_minute": 1191,
+      "game": "pubgm",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O213",
+      "arrive_minute": 1176,
+      "paid_minute": 1182,
+      "game": "genshin",
+      "value_thb": 330,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O214",
+      "arrive_minute": 1177,
+      "paid_minute": 1178,
+      "game": "rov",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O215",
+      "arrive_minute": 1177,
+      "paid_minute": 1187,
+      "game": "pubgm",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O216",
+      "arrive_minute": 1177,
+      "paid_minute": 1185,
+      "game": "valorant",
+      "value_thb": 90,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O217",
+      "arrive_minute": 1178,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 200,
+      "vip": false,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O218",
+      "arrive_minute": 1179,
+      "paid_minute": 1186,
+      "game": "rov",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O219",
+      "arrive_minute": 1187,
+      "paid_minute": 1195,
+      "game": "pubgm",
+      "value_thb": 110,
+      "vip": true,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O220",
+      "arrive_minute": 1188,
+      "paid_minute": 1203,
+      "game": "rov",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O221",
+      "arrive_minute": 1189,
+      "paid_minute": 1200,
+      "game": "rov",
+      "value_thb": 290,
+      "vip": true,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O222",
+      "arrive_minute": 1191,
+      "paid_minute": 1201,
+      "game": "pubgm",
+      "value_thb": 400,
+      "vip": false,
+      "sla_minutes": 31
+    },
+    {
+      "id": "O223",
+      "arrive_minute": 1193,
+      "paid_minute": 1199,
+      "game": "freefire",
+      "value_thb": 300,
+      "vip": false,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O224",
+      "arrive_minute": 1193,
+      "paid_minute": 1199,
+      "game": "pubgm",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O225",
+      "arrive_minute": 1197,
+      "paid_minute": 1200,
+      "game": "valorant",
+      "value_thb": 460,
+      "vip": true,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O226",
+      "arrive_minute": 1198,
+      "paid_minute": 1206,
+      "game": "pubgm",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 39
+    },
+    {
+      "id": "O227",
+      "arrive_minute": 1201,
+      "paid_minute": 1202,
+      "game": "freefire",
+      "value_thb": 380,
+      "vip": true,
+      "sla_minutes": 16
+    },
+    {
+      "id": "O228",
+      "arrive_minute": 1201,
+      "paid_minute": 1207,
+      "game": "pubgm",
+      "value_thb": 280,
+      "vip": false,
+      "sla_minutes": 41
+    },
+    {
+      "id": "O229",
+      "arrive_minute": 1201,
+      "paid_minute": 1203,
+      "game": "freefire",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O230",
+      "arrive_minute": 1203,
+      "paid_minute": 1205,
+      "game": "valorant",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 55
+    },
+    {
+      "id": "O231",
+      "arrive_minute": 1203,
+      "paid_minute": 1215,
+      "game": "rov",
+      "value_thb": 50,
+      "vip": false,
+      "sla_minutes": 51
+    },
+    {
+      "id": "O232",
+      "arrive_minute": 1206,
+      "paid_minute": 1212,
+      "game": "valorant",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O233",
+      "arrive_minute": 1206,
+      "paid_minute": 1210,
+      "game": "valorant",
+      "value_thb": 800,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O234",
+      "arrive_minute": 1207,
+      "paid_minute": 1218,
+      "game": "valorant",
+      "value_thb": 440,
+      "vip": false,
+      "sla_minutes": 45
+    },
+    {
+      "id": "O235",
+      "arrive_minute": 1207,
+      "paid_minute": null,
+      "game": "pubgm",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O236",
+      "arrive_minute": 1209,
+      "paid_minute": 1221,
+      "game": "rov",
+      "value_thb": 610,
+      "vip": false,
+      "sla_minutes": 41
+    },
+    {
+      "id": "O237",
+      "arrive_minute": 1213,
+      "paid_minute": null,
+      "game": "valorant",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 47
+    },
+    {
+      "id": "O238",
+      "arrive_minute": 1213,
+      "paid_minute": 1226,
+      "game": "rov",
+      "value_thb": 450,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O239",
+      "arrive_minute": 1215,
+      "paid_minute": 1227,
+      "game": "freefire",
+      "value_thb": 620,
+      "vip": false,
+      "sla_minutes": 35
+    },
+    {
+      "id": "O240",
+      "arrive_minute": 1217,
+      "paid_minute": 1224,
+      "game": "rov",
+      "value_thb": 490,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O241",
+      "arrive_minute": 1218,
+      "paid_minute": 1225,
+      "game": "rov",
+      "value_thb": 270,
+      "vip": false,
+      "sla_minutes": 45
+    },
+    {
+      "id": "O242",
+      "arrive_minute": 1219,
+      "paid_minute": 1232,
+      "game": "rov",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O243",
+      "arrive_minute": 1221,
+      "paid_minute": 1234,
+      "game": "freefire",
+      "value_thb": 50,
+      "vip": false,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O244",
+      "arrive_minute": 1225,
+      "paid_minute": 1234,
+      "game": "freefire",
+      "value_thb": 400,
+      "vip": true,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O245",
+      "arrive_minute": 1226,
+      "paid_minute": 1238,
+      "game": "valorant",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 25
+    },
+    {
+      "id": "O246",
+      "arrive_minute": 1226,
+      "paid_minute": 1238,
+      "game": "genshin",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 51
+    },
+    {
+      "id": "O247",
+      "arrive_minute": 1228,
+      "paid_minute": 1240,
+      "game": "genshin",
+      "value_thb": 330,
+      "vip": false,
+      "sla_minutes": 56
+    },
+    {
+      "id": "O248",
+      "arrive_minute": 1230,
+      "paid_minute": 1240,
+      "game": "valorant",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O249",
+      "arrive_minute": 1230,
+      "paid_minute": 1240,
+      "game": "valorant",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O250",
+      "arrive_minute": 1230,
+      "paid_minute": 1239,
+      "game": "freefire",
+      "value_thb": 80,
+      "vip": false,
+      "sla_minutes": 36
+    },
+    {
+      "id": "O251",
+      "arrive_minute": 1231,
+      "paid_minute": 1236,
+      "game": "valorant",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O252",
+      "arrive_minute": 1234,
+      "paid_minute": 1235,
+      "game": "pubgm",
+      "value_thb": 260,
+      "vip": false,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O253",
+      "arrive_minute": 1235,
+      "paid_minute": 1244,
+      "game": "genshin",
+      "value_thb": 220,
+      "vip": false,
+      "sla_minutes": 47
+    },
+    {
+      "id": "O254",
+      "arrive_minute": 1235,
+      "paid_minute": 1235,
+      "game": "rov",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 43
+    },
+    {
+      "id": "O255",
+      "arrive_minute": 1237,
+      "paid_minute": 1237,
+      "game": "rov",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 34
+    },
+    {
+      "id": "O256",
+      "arrive_minute": 1240,
+      "paid_minute": 1250,
+      "game": "freefire",
+      "value_thb": 380,
+      "vip": false,
+      "sla_minutes": 26
+    },
+    {
+      "id": "O257",
+      "arrive_minute": 1240,
+      "paid_minute": 1252,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 41
+    },
+    {
+      "id": "O258",
+      "arrive_minute": 1241,
+      "paid_minute": 1255,
+      "game": "rov",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O259",
+      "arrive_minute": 1242,
+      "paid_minute": 1255,
+      "game": "genshin",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 36
+    },
+    {
+      "id": "O260",
+      "arrive_minute": 1242,
+      "paid_minute": 1247,
+      "game": "valorant",
+      "value_thb": 560,
+      "vip": false,
+      "sla_minutes": 50
+    },
+    {
+      "id": "O261",
+      "arrive_minute": 1244,
+      "paid_minute": 1254,
+      "game": "valorant",
+      "value_thb": 520,
+      "vip": false,
+      "sla_minutes": 10
+    },
+    {
+      "id": "O262",
+      "arrive_minute": 1246,
+      "paid_minute": 1256,
+      "game": "rov",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O263",
+      "arrive_minute": 1248,
+      "paid_minute": 1251,
+      "game": "rov",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 35
+    },
+    {
+      "id": "O264",
+      "arrive_minute": 1249,
+      "paid_minute": 1256,
+      "game": "valorant",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O265",
+      "arrive_minute": 1249,
+      "paid_minute": 1253,
+      "game": "genshin",
+      "value_thb": 150,
+      "vip": true,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O266",
+      "arrive_minute": 1250,
+      "paid_minute": 1262,
+      "game": "freefire",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O267",
+      "arrive_minute": 1253,
+      "paid_minute": 1260,
+      "game": "genshin",
+      "value_thb": 760,
+      "vip": true,
+      "sla_minutes": 17
+    },
+    {
+      "id": "O268",
+      "arrive_minute": 1254,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 110,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O269",
+      "arrive_minute": 1258,
+      "paid_minute": 1270,
+      "game": "pubgm",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 40
+    },
+    {
+      "id": "O270",
+      "arrive_minute": 1260,
+      "paid_minute": 1261,
+      "game": "genshin",
+      "value_thb": 210,
+      "vip": false,
+      "sla_minutes": 58
+    },
+    {
+      "id": "O271",
+      "arrive_minute": 1261,
+      "paid_minute": 1273,
+      "game": "pubgm",
+      "value_thb": 100,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O272",
+      "arrive_minute": 1265,
+      "paid_minute": 1278,
+      "game": "rov",
+      "value_thb": 150,
+      "vip": false,
+      "sla_minutes": 54
+    },
+    {
+      "id": "O273",
+      "arrive_minute": 1265,
+      "paid_minute": 1280,
+      "game": "valorant",
+      "value_thb": 140,
+      "vip": true,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O274",
+      "arrive_minute": 1267,
+      "paid_minute": 1268,
+      "game": "rov",
+      "value_thb": 120,
+      "vip": true,
+      "sla_minutes": 30
+    },
+    {
+      "id": "O275",
+      "arrive_minute": 1268,
+      "paid_minute": 1268,
+      "game": "rov",
+      "value_thb": 390,
+      "vip": false,
+      "sla_minutes": 24
+    },
+    {
+      "id": "O276",
+      "arrive_minute": 1268,
+      "paid_minute": 1270,
+      "game": "freefire",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 29
+    },
+    {
+      "id": "O277",
+      "arrive_minute": 1271,
+      "paid_minute": 1273,
+      "game": "rov",
+      "value_thb": 530,
+      "vip": false,
+      "sla_minutes": 28
+    },
+    {
+      "id": "O278",
+      "arrive_minute": 1274,
+      "paid_minute": 1283,
+      "game": "freefire",
+      "value_thb": 340,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O279",
+      "arrive_minute": 1275,
+      "paid_minute": 1275,
+      "game": "valorant",
+      "value_thb": 70,
+      "vip": false,
+      "sla_minutes": 35
+    },
+    {
+      "id": "O280",
+      "arrive_minute": 1275,
+      "paid_minute": 1278,
+      "game": "freefire",
+      "value_thb": 340,
+      "vip": false,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O281",
+      "arrive_minute": 1276,
+      "paid_minute": null,
+      "game": "freefire",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 60
+    },
+    {
+      "id": "O282",
+      "arrive_minute": 1278,
+      "paid_minute": 1279,
+      "game": "valorant",
+      "value_thb": 610,
+      "vip": false,
+      "sla_minutes": 27
+    },
+    {
+      "id": "O283",
+      "arrive_minute": 1279,
+      "paid_minute": 1288,
+      "game": "freefire",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 58
+    },
+    {
+      "id": "O284",
+      "arrive_minute": 1282,
+      "paid_minute": 1292,
+      "game": "rov",
+      "value_thb": 800,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O285",
+      "arrive_minute": 1284,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 19
+    },
+    {
+      "id": "O286",
+      "arrive_minute": 1284,
+      "paid_minute": 1295,
+      "game": "freefire",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 43
+    },
+    {
+      "id": "O287",
+      "arrive_minute": 1285,
+      "paid_minute": 1292,
+      "game": "genshin",
+      "value_thb": 370,
+      "vip": false,
+      "sla_minutes": 37
+    },
+    {
+      "id": "O288",
+      "arrive_minute": 1288,
+      "paid_minute": null,
+      "game": "valorant",
+      "value_thb": 220,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O289",
+      "arrive_minute": 1290,
+      "paid_minute": 1295,
+      "game": "pubgm",
+      "value_thb": 370,
+      "vip": true,
+      "sla_minutes": 23
+    },
+    {
+      "id": "O290",
+      "arrive_minute": 1292,
+      "paid_minute": 1305,
+      "game": "pubgm",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 53
+    },
+    {
+      "id": "O291",
+      "arrive_minute": 1293,
+      "paid_minute": 1296,
+      "game": "freefire",
+      "value_thb": 140,
+      "vip": false,
+      "sla_minutes": 21
+    },
+    {
+      "id": "O292",
+      "arrive_minute": 1294,
+      "paid_minute": 1306,
+      "game": "rov",
+      "value_thb": 190,
+      "vip": false,
+      "sla_minutes": 31
+    },
+    {
+      "id": "O293",
+      "arrive_minute": 1296,
+      "paid_minute": 1297,
+      "game": "valorant",
+      "value_thb": 180,
+      "vip": false,
+      "sla_minutes": 15
+    },
+    {
+      "id": "O294",
+      "arrive_minute": 1303,
+      "paid_minute": 1306,
+      "game": "rov",
+      "value_thb": 370,
+      "vip": false,
+      "sla_minutes": 57
+    },
+    {
+      "id": "O295",
+      "arrive_minute": 1320,
+      "paid_minute": null,
+      "game": "valorant",
+      "value_thb": 60,
+      "vip": false,
+      "sla_minutes": 33
+    },
+    {
+      "id": "O296",
+      "arrive_minute": 1323,
+      "paid_minute": 1336,
+      "game": "genshin",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 51
+    },
+    {
+      "id": "O297",
+      "arrive_minute": 1326,
+      "paid_minute": 1333,
+      "game": "pubgm",
+      "value_thb": 280,
+      "vip": true,
+      "sla_minutes": 12
+    },
+    {
+      "id": "O298",
+      "arrive_minute": 1326,
+      "paid_minute": 1335,
+      "game": "pubgm",
+      "value_thb": 160,
+      "vip": false,
+      "sla_minutes": 22
+    },
+    {
+      "id": "O299",
+      "arrive_minute": 1339,
+      "paid_minute": 1344,
+      "game": "rov",
+      "value_thb": 430,
+      "vip": false,
+      "sla_minutes": 14
+    },
+    {
+      "id": "O300",
+      "arrive_minute": 1349,
+      "paid_minute": 1359,
+      "game": "freefire",
+      "value_thb": 130,
+      "vip": false,
+      "sla_minutes": 42
+    },
+    {
+      "id": "O301",
+      "arrive_minute": 1351,
+      "paid_minute": 1364,
+      "game": "rov",
+      "value_thb": 310,
+      "vip": false,
+      "sla_minutes": 48
+    },
+    {
+      "id": "O302",
+      "arrive_minute": 1353,
+      "paid_minute": 1364,
+      "game": "pubgm",
+      "value_thb": 120,
+      "vip": false,
+      "sla_minutes": 34
+    },
+    {
+      "id": "O303",
+      "arrive_minute": 1355,
+      "paid_minute": 1363,
+      "game": "rov",
+      "value_thb": 160,
+      "vip": true,
+      "sla_minutes": 13
+    },
+    {
+      "id": "O304",
+      "arrive_minute": 1379,
+      "paid_minute": 1393,
+      "game": "freefire",
+      "value_thb": 650,
+      "vip": false,
+      "sla_minutes": 26
+    },
+    {
+      "id": "O305",
+      "arrive_minute": 1398,
+      "paid_minute": null,
+      "game": "genshin",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 42
+    },
+    {
+      "id": "O306",
+      "arrive_minute": 1399,
+      "paid_minute": 1413,
+      "game": "freefire",
+      "value_thb": 250,
+      "vip": false,
+      "sla_minutes": 20
+    },
+    {
+      "id": "O307",
+      "arrive_minute": 1424,
+      "paid_minute": null,
+      "game": "rov",
+      "value_thb": 240,
+      "vip": false,
+      "sla_minutes": 45
+    }
+  ],
+  "staff": [
+    {
+      "from": 0,
+      "to": 480,
+      "count": 1
+    },
+    {
+      "from": 420,
+      "to": 1020,
+      "count": 2
+    },
+    {
+      "from": 660,
+      "to": 840,
+      "count": 1
+    },
+    {
+      "from": 960,
+      "to": 1440,
+      "count": 3
+    },
+    {
+      "from": 1140,
+      "to": 1320,
+      "count": 1
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "S1",
+      "games": [
+        "rov",
+        "pubgm",
+        "genshin",
+        "valorant"
+      ],
+      "wallet_thb": 19822,
+      "cost_pct": 0.96,
+      "outages": [
+        [
+          194,
+          221
+        ],
+        [
+          763,
+          844
+        ]
+      ]
+    },
+    {
+      "id": "S2",
+      "games": [
+        "freefire",
+        "genshin"
+      ],
+      "wallet_thb": 25477,
+      "cost_pct": 0.96,
+      "outages": [
+        [
+          537,
+          559
+        ],
+        [
+          551,
+          637
+        ]
+      ]
+    },
+    {
+      "id": "S3",
+      "games": [
+        "rov",
+        "freefire",
+        "genshin",
+        "valorant"
+      ],
+      "wallet_thb": 9309,
+      "cost_pct": 0.94,
+      "outages": [
+        [
+          1020,
+          1070
+        ]
+      ]
+    },
+    {
+      "id": "S4",
+      "games": [
+        "rov",
+        "pubgm",
+        "genshin"
+      ],
+      "wallet_thb": 17994,
+      "cost_pct": 0.97,
+      "outages": [
+        [
+          1159,
+          1207
+        ]
+      ]
+    },
+    {
+      "id": "S5",
+      "games": [
+        "rov",
+        "freefire",
+        "pubgm",
+        "genshin"
+      ],
+      "wallet_thb": 5945,
+      "cost_pct": 0.89,
+      "outages": [
+        [
+          509,
+          596
+        ],
+        [
+          1195,
+          1225
+        ]
+      ]
+    }
+  ]
+}

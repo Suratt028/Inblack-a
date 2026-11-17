@@ -1,0 +1,50 @@
+{
+  "_doc": {
+    "orders": "count range inclusive [min,max]",
+    "arrival.components": "mixture of arrival-time distributions; weight = share of orders; type uniform [from,to) or normal (mean, sd) in minutes; clamped to [0, maxArriveMinute]",
+    "games": "game ids and relative order frequency",
+    "vipRate": "probability an order is VIP",
+    "unpaidRate": "probability paid_minute is null",
+    "paidDelay": "paid_minute = arrive + int in [min,max] (D12: always >= arrive), capped at 1439",
+    "value": "value_thb = min + exponential(mean) rounded to roundTo, capped at max (skewed toward small)",
+    "sla": "sla_minutes inclusive ranges for normal / vip orders",
+    "staff.shifts": "each shift: from,to fixed; count drawn from inclusive [countMin,countMax]",
+    "suppliers": "count; each supports gamesPerSupplier [min,max] games; costPct uniform range rounded to 0.01; outages count [min,max] with length [min,max]",
+    "suppliers.uncoveredGameProb": "probability one game is left with no supplier (exercises D3b impossible orders)",
+    "wallet.totalFactor": "total wallet across suppliers = factor x total cost of paid orders at cheapest supporting supplier",
+    "wallet.cheapestCapFraction": "a supplier that is cheapest for game g gets wallet <= fraction x cost of all paid g orders at its price, so it cannot afford them all; excess goes to other suppliers"
+  },
+  "orders": { "min": 280, "max": 320 },
+  "maxArriveMinute": 1430,
+  "arrival": {
+    "components": [
+      { "type": "uniform", "from": 0, "to": 1430, "weight": 0.22 },
+      { "type": "uniform", "from": 480, "to": 1380, "weight": 0.18 },
+      { "type": "normal", "mean": 750, "sd": 55, "weight": 0.22 },
+      { "type": "normal", "mean": 1200, "sd": 80, "weight": 0.38 }
+    ]
+  },
+  "games": { "rov": 0.3, "freefire": 0.22, "pubgm": 0.2, "genshin": 0.16, "valorant": 0.12 },
+  "vipRate": 0.15,
+  "unpaidRate": 0.10,
+  "paidDelay": { "min": 0, "max": 15 },
+  "value": { "min": 50, "mean": 280, "max": 2000, "roundTo": 10 },
+  "sla": { "normal": [10, 60], "vip": [10, 30] },
+  "staff": {
+    "shifts": [
+      { "from": 0, "to": 480, "countMin": 1, "countMax": 1 },
+      { "from": 420, "to": 1020, "countMin": 2, "countMax": 3 },
+      { "from": 660, "to": 840, "countMin": 0, "countMax": 1 },
+      { "from": 960, "to": 1440, "countMin": 2, "countMax": 3 },
+      { "from": 1140, "to": 1320, "countMin": 0, "countMax": 1 }
+    ]
+  },
+  "suppliers": {
+    "count": 5,
+    "gamesPerSupplier": [2, 4],
+    "costPct": [0.85, 0.97],
+    "outages": { "count": [0, 2], "length": [20, 90] },
+    "uncoveredGameProb": 0.05
+  },
+  "wallet": { "totalFactor": [1.1, 1.4], "cheapestCapFraction": 0.8 }
+}
