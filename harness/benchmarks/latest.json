@@ -1,10 +1,10 @@
 {
-  "commit": "698e106",
-  "commitFull": "698e10640211d842895c5108b0ea98b0944c9a2f",
+  "commit": "43790e3",
+  "commitFull": "43790e35a8c7f599cb19bf387b393fb3408c6a2b",
   "dirty": false,
   "generatorLock": "b073430",
   "generatorLockIntact": true,
-  "timestamp": "2026-11-17T13:13:43.141Z",
+  "timestamp": "2026-11-17T13:30:13.159Z",
   "seedSets": {
     "tuning": [
       101,
@@ -49,28 +49,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 62.63,
-                  "total": 3231.4,
+                  "scorePct": 62.626458389860076,
+                  "total": 3231.3999999999987,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 62.63,
-                  "total": 3231.4,
+                  "scorePct": 62.626458389860076,
+                  "total": 3231.3999999999987,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 58.83,
-                  "total": 3035.4,
+                  "scorePct": 58.82786154502113,
+                  "total": 3035.3999999999987,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 58.83,
-                  "total": 3035.4,
+                  "scorePct": 58.82786154502113,
+                  "total": 3035.3999999999987,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -83,28 +83,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 54.47,
-                  "total": 4886,
+                  "scorePct": 54.46863538566158,
+                  "total": 4885.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 54.47,
-                  "total": 4886,
+                  "scorePct": 54.46863538566158,
+                  "total": 4885.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 47.65,
-                  "total": 4274,
+                  "scorePct": 47.64612108848088,
+                  "total": 4273.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 47.65,
-                  "total": 4274,
+                  "scorePct": 47.64612108848088,
+                  "total": 4273.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -117,28 +117,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 55.53,
-                  "total": 4706.9,
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 55.53,
-                  "total": 4706.9,
+                  "scorePct": 55.532090608777715,
+                  "total": 4706.900000000001,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 53.63,
-                  "total": 4545.9,
+                  "scorePct": 53.63260972156677,
+                  "total": 4545.900000000001,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 53.63,
-                  "total": 4545.9,
+                  "scorePct": 53.63260972156677,
+                  "total": 4545.900000000001,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -151,28 +151,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 74.64,
-                  "total": 5533.7,
+                  "scorePct": 74.64456254889795,
+                  "total": 5533.699999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 74.64,
-                  "total": 5533.7,
+                  "scorePct": 74.64456254889795,
+                  "total": 5533.699999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 70.94,
-                  "total": 5258.7,
+                  "scorePct": 70.93506353360132,
+                  "total": 5258.699999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 70.94,
-                  "total": 5258.7,
+                  "scorePct": 70.93506353360132,
+                  "total": 5258.699999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -185,28 +185,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 70.04,
-                  "total": 6270,
+                  "scorePct": 70.03552040747932,
+                  "total": 6269.9999999999945,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 70.04,
-                  "total": 6270,
+                  "scorePct": 70.03552040747932,
+                  "total": 6269.9999999999945,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 66.03,
-                  "total": 5911,
+                  "scorePct": 66.02551214172414,
+                  "total": 5910.9999999999945,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 66.03,
-                  "total": 5911,
+                  "scorePct": 66.02551214172414,
+                  "total": 5910.9999999999945,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -219,28 +219,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 84.96,
-                  "total": 9506.5,
+                  "scorePct": 84.95835418602996,
+                  "total": 9506.500000000005,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 84.96,
-                  "total": 9506.5,
+                  "scorePct": 84.95835418602996,
+                  "total": 9506.500000000005,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 82.34,
-                  "total": 9213.5,
+                  "scorePct": 82.33985129048409,
+                  "total": 9213.500000000005,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 82.34,
-                  "total": 9213.5,
+                  "scorePct": 82.33985129048409,
+                  "total": 9213.500000000005,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -253,28 +253,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 73.89,
-                  "total": 6354.3,
+                  "scorePct": 73.8906460765617,
+                  "total": 6354.299999999998,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 73.89,
-                  "total": 6354.3,
+                  "scorePct": 73.8906460765617,
+                  "total": 6354.299999999998,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 69.46,
-                  "total": 5973.3,
+                  "scorePct": 69.46020745150938,
+                  "total": 5973.299999999998,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 69.46,
-                  "total": 5973.3,
+                  "scorePct": 69.46020745150938,
+                  "total": 5973.299999999998,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -287,13 +287,13 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 50.38,
+                  "scorePct": 50.379801667723854,
                   "total": 3256.5,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 50.38,
+                  "scorePct": 50.379801667723854,
                   "total": 3256.5,
                   "violations": 0,
                   "duplicates": 0
@@ -301,13 +301,13 @@
               },
               "arrive": {
                 "default": {
-                  "scorePct": 47.58,
+                  "scorePct": 47.579634585931124,
                   "total": 3075.5,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 47.58,
+                  "scorePct": 47.579634585931124,
                   "total": 3075.5,
                   "violations": 0,
                   "duplicates": 0
@@ -321,28 +321,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 77.47,
-                  "total": 8263.7,
+                  "scorePct": 77.47267170419812,
+                  "total": 8263.699999999993,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 77.47,
-                  "total": 8263.7,
+                  "scorePct": 77.47267170419812,
+                  "total": 8263.699999999993,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 76.39,
-                  "total": 8148.7,
+                  "scorePct": 76.39453996587476,
+                  "total": 8148.699999999993,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 76.39,
-                  "total": 8148.7,
+                  "scorePct": 76.39453996587476,
+                  "total": 8148.699999999993,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -355,28 +355,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 46.8,
-                  "total": 3657.5,
+                  "scorePct": 46.79623327106631,
+                  "total": 3657.500000000001,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 46.8,
-                  "total": 3657.5,
+                  "scorePct": 46.79623327106631,
+                  "total": 3657.500000000001,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 39.81,
-                  "total": 3111.5,
+                  "scorePct": 39.810384093758806,
+                  "total": 3111.500000000001,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 39.81,
-                  "total": 3111.5,
+                  "scorePct": 39.810384093758806,
+                  "total": 3111.500000000001,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -386,7 +386,7 @@
         ],
         "summary": {
           "paid": {
-            "median": 66.34,
+            "median": 66.33,
             "mean": 65.08,
             "min": 46.8,
             "max": 84.96,
@@ -425,28 +425,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 74.89,
-                  "total": 7325.2,
+                  "scorePct": 74.89290351603641,
+                  "total": 7325.200000000003,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 74.89,
-                  "total": 7325.2,
+                  "scorePct": 74.89290351603641,
+                  "total": 7325.200000000003,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 73.57,
-                  "total": 7196.2,
+                  "scorePct": 73.57400648202113,
+                  "total": 7196.200000000003,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 73.57,
-                  "total": 7196.2,
+                  "scorePct": 73.57400648202113,
+                  "total": 7196.200000000003,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -459,28 +459,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 58.44,
-                  "total": 6004.6,
+                  "scorePct": 58.43892944038925,
+                  "total": 6004.5999999999985,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 58.44,
-                  "total": 6004.6,
+                  "scorePct": 58.43892944038925,
+                  "total": 6004.5999999999985,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 57.16,
-                  "total": 5873.6,
+                  "scorePct": 57.16399026763986,
+                  "total": 5873.5999999999985,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 57.16,
-                  "total": 5873.6,
+                  "scorePct": 57.16399026763986,
+                  "total": 5873.5999999999985,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -493,28 +493,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 48.54,
-                  "total": 5303.2,
+                  "scorePct": 48.54320942451518,
+                  "total": 5303.200000000009,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 48.54,
-                  "total": 5303.2,
+                  "scorePct": 48.54320942451518,
+                  "total": 5303.200000000009,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 44.7,
-                  "total": 4883.2,
+                  "scorePct": 44.69871026206679,
+                  "total": 4883.200000000009,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 44.7,
-                  "total": 4883.2,
+                  "scorePct": 44.69871026206679,
+                  "total": 4883.200000000009,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -527,28 +527,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 56.54,
-                  "total": 5890.2,
+                  "scorePct": 56.53814035188754,
+                  "total": 5890.200000000002,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 56.54,
-                  "total": 5890.2,
+                  "scorePct": 56.53814035188754,
+                  "total": 5890.200000000002,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 52.93,
-                  "total": 5514.2,
+                  "scorePct": 52.92903696451366,
+                  "total": 5514.200000000002,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 52.93,
-                  "total": 5514.2,
+                  "scorePct": 52.92903696451366,
+                  "total": 5514.200000000002,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -561,28 +561,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 70.83,
-                  "total": 5265.2,
+                  "scorePct": 70.82784040463831,
+                  "total": 5265.2000000000035,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 70.83,
-                  "total": 5265.2,
+                  "scorePct": 70.82784040463831,
+                  "total": 5265.2000000000035,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 68.15,
-                  "total": 5066.2,
+                  "scorePct": 68.1508784201889,
+                  "total": 5066.2000000000035,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 68.15,
-                  "total": 5066.2,
+                  "scorePct": 68.1508784201889,
+                  "total": 5066.2000000000035,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -595,28 +595,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 32.16,
-                  "total": 3260.2,
+                  "scorePct": 32.162023518270054,
+                  "total": 3260.2000000000007,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 32.16,
-                  "total": 3260.2,
+                  "scorePct": 32.162023518270054,
+                  "total": 3260.2000000000007,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 31.04,
-                  "total": 3146.2,
+                  "scorePct": 31.037408255070627,
+                  "total": 3146.2000000000007,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 31.04,
-                  "total": 3146.2,
+                  "scorePct": 31.037408255070627,
+                  "total": 3146.2000000000007,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -629,28 +629,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 73.33,
-                  "total": 5355,
+                  "scorePct": 73.32603039846639,
+                  "total": 5354.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 73.33,
-                  "total": 5355,
+                  "scorePct": 73.32603039846639,
+                  "total": 5354.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 70.9,
-                  "total": 5178,
+                  "scorePct": 70.90236888949745,
+                  "total": 5177.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 70.9,
-                  "total": 5178,
+                  "scorePct": 70.90236888949745,
+                  "total": 5177.999999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -663,28 +663,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 59.89,
-                  "total": 5793.2,
+                  "scorePct": 59.88794012446503,
+                  "total": 5793.199999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 59.89,
-                  "total": 5793.2,
+                  "scorePct": 59.88794012446503,
+                  "total": 5793.199999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 58.75,
-                  "total": 5683.2,
+                  "scorePct": 58.75080116608432,
+                  "total": 5683.199999999999,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 58.75,
-                  "total": 5683.2,
+                  "scorePct": 58.75080116608432,
+                  "total": 5683.199999999999,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -697,28 +697,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 70.56,
-                  "total": 6220.4,
+                  "scorePct": 70.56287859881569,
+                  "total": 6220.399999999998,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 70.56,
-                  "total": 6220.4,
+                  "scorePct": 70.56287859881569,
+                  "total": 6220.399999999998,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 69.39,
-                  "total": 6117.4,
+                  "scorePct": 69.3944687705606,
+                  "total": 6117.399999999998,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 69.39,
-                  "total": 6117.4,
+                  "scorePct": 69.3944687705606,
+                  "total": 6117.399999999998,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -731,28 +731,28 @@
             "scores": {
               "paid": {
                 "default": {
-                  "scorePct": 35.36,
-                  "total": 2680.9,
+                  "scorePct": 35.355946509113,
+                  "total": 2680.9000000000033,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 35.36,
-                  "total": 2680.9,
+                  "scorePct": 35.355946509113,
+                  "total": 2680.9000000000033,
                   "violations": 0,
                   "duplicates": 0
                 }
               },
               "arrive": {
                 "default": {
-                  "scorePct": 34.04,
-                  "total": 2580.9,
+                  "scorePct": 34.037137657267984,
+                  "total": 2580.9000000000033,
                   "violations": 0,
                   "duplicates": 0
                 },
                 "strict": {
-                  "scorePct": 34.04,
-                  "total": 2580.9,
+                  "scorePct": 34.037137657267984,
+                  "total": 2580.9000000000033,
                   "violations": 0,
                   "duplicates": 0
                 }
@@ -762,7 +762,7 @@
         ],
         "summary": {
           "paid": {
-            "median": 59.17,
+            "median": 59.16,
             "mean": 58.05,
             "min": 32.16,
             "max": 74.89,
