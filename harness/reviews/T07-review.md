@@ -77,3 +77,36 @@ NODE_PATH=<repo>/node_modules npm test
 node harness/benchmark.js --out-dir <scratch>/bench1 ; node harness/benchmark.js --out-dir <scratch>/bench2
 node <scratch>/cmp.js <scratch>/combo <scratch>/bench1/latest.json <scratch>
 ```
+
+---
+
+# Round 2 — agent/backend `43790e3` (fix) + `78f386e` (regenerated output)
+
+**VERDICT: APPROVE**
+
+## F1 fix verified
+- `harness/benchmark.js` `scoreAll` now stores the unrounded scorer `scorePct`/`total` per seed; `summarize`
+  rounds only the aggregates (median, mean, min, max) to 2 decimals.
+- New tests in `harness/benchmarks/benchmark.test.js` cover rounding-first vs exact (`[66.335, 66.3349, ...]` → 66.33,
+  `[0.005, 0.0049]` → 0) and that the fcfs held-out median equals the rounded exact median. The score.js cross-check
+  now compares exact values.
+- Scratch tree = agent/strategy `024f753` (approved T06 round 2) + `git archive 78f386e harness/benchmark.js harness/benchmarks package.json`
+  + QA planner tests:
+  ```
+  NODE_PATH=<repo>/node_modules npm test  ->  ℹ tests 349  ℹ pass 343  ℹ fail 0  ℹ todo 6
+  ```
+  The 7 T07 tests pass. The 6 `todo` are QA's W1 test, which passes there and stays flagged only until T06 is on main.
+- Benchmark run twice (`--out-dir` two dirs): `runs equal except timestamp: true` (determinism re-checked).
+- `cmp2.js` (exact compare against `node harness/score.js --json` for every strategy/seed/basis/mode, then exact
+  medians): `per-seed cells checked 480, mismatches 0`, and **no median differs** (round 1 had 9/24 wrong).
+  Held-out medians: fcfs 59.16/57.96, edf 59.25/58.11, vip 59.62/58.47, cheapest 71.58/68.65, profit 72.47/69.96,
+  hybrid 73.77/72.57 (paid/arrive). These equal the T06 round-2 table and my own gate.
+- Committed `harness/benchmarks/43790e3.json` (= `latest.json`): commit 43790e3, dirty false, generatorLockIntact true;
+  fcfs medians 66.33/62.43 (tuning) and 59.16/57.96 (held-out) equal my exact values. The stale `698e106.json` was removed.
+- Lock: `git diff --name-only b073430 78f386e -- harness/generator.js harness/generator.config.json harness/scenarios` → empty.
+- Ownership: the diff only touches `harness/benchmark.js`, `harness/benchmarks/**`, `harness/tasks/T07.md`, `package.json`.
+
+## Remaining (non-blocking, from round 1)
+- The "gate" column still means only 0 dup / 0 viol. The ≥ 65 target must be read from the median columns.
+- The committed benchmark only contains fcfs (main has no other strategies yet). After T06 merges, re-run
+  `npm run bench` on main so `latest.json` includes hybrid.
