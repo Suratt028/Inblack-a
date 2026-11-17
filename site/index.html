@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INBLACK Queue Planner</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">INBLACK · Project A</span>
+  <nav><a href="./" aria-current="page">ผลการจัดคิว</a><a href="replay.html">Replay</a><a href="team.html">ทีม Agent</a></nav>
+</div></header>
+
+<main class="wrap">
+  <h1>ผลการจัดคิว</h1>
+  <p class="sub">ข้อมูลสุ่ม 10 ชุด (held-out seed 1–10) ชุดละราว 300 ออเดอร์ · ระบบของเราเทียบกับวิธีมาก่อนได้ก่อน (FCFS)</p>
+
+  <section id="kpis"></section>
+
+  <h2>คะแนน % ตาม commit</h2>
+  <div class="card chart" id="history"></div>
+
+  <h2>ค่ากลางคะแนน % ทุกกลยุทธ์</h2>
+  <div id="medians"></div>
+
+  <h2>คะแนน % รายชุดข้อมูล</h2>
+  <div id="perseed"></div>
+
+  <p class="foot" id="foot"></p>
+</main>
+
+<script src="assets/common.js"></script>
+<script>
+'use strict';
+const { esc, pct, num, signed, r2, getJSON, load, footer } = Site;
+
+load(document.getElementById('kpis'), async () => {
+  const s = await getJSON('data/summary.json');
+  footer(s);
+  const d = s.defaultStrategy;
+  const md = s.medians[d].heldout, mf = s.medians.fcfs.heldout;
+  const kd = s.kpis[d], kf = s.kpis.fcfs;
+  const card = (label, value, cmp) => `<div class="card kpi"><div class="label">${label}</div><div class="value">${value}</div><div class="cmp">${cmp}</div></div>`;
+  const better = (a, b, lowerIsBetter) => ((lowerIsBetter ? a < b : a > b) ? 'up' : a === b ? '' : 'down');
+  document.getElementById('kpis').innerHTML = `<div class="grid">
+    ${card(`คะแนน % (ฐาน paid)`, pct(md.paid.median), `FCFS ${pct(mf.paid.median)} · <span class="${better(md.paid.median, mf.paid.median)}">${signed(r2(md.paid.median) - r2(mf.paid.median))}</span>`)}
+    ${card(`คะแนน % (ฐาน arrive)`, pct(md.arrive.median), `FCFS ${pct(mf.arrive.median)} · <span class="${better(md.arrive.median, mf.arrive.median)}">${signed(r2(md.arrive.median) - r2(mf.arrive.median))}</span>`)}
+    ${card('กำไร (บาท, 10 ชุด)', num(kd.profit, 2), `FCFS ${num(kf.profit, 2)}`)}
+    ${card('ออเดอร์เกิน SLA', num(kd.overSla), `FCFS ${num(kf.overSla)}`)}
+    ${card('ออเดอร์ชำระแล้วแต่ไม่ได้ทำ', num(kd.paidNotDone), `FCFS ${num(kf.paidNotDone)}`)}
+    ${card('ผิดกติกา / ส่งซ้ำ', `${num(kd.violations)} / ${num(kd.duplicates)}`, `FCFS ${num(kf.violations)} / ${num(kf.duplicates)}`)}
+  </div>
+  <p class="sub" style="margin-top:8px">กลยุทธ์ที่ใช้: <b>${esc(d)}</b> · คะแนน % = ค่ากลางของ 10 ชุด · กำไร/เกิน SLA/ไม่ได้ทำ = ผลรวม 10 ชุด (ฐาน paid, ตัวตรวจปกติ)</p>`;
+});
+
+load(document.getElementById('medians'), async () => {
+  const s = await getJSON('data/summary.json');
+  const d = s.defaultStrategy;
+  const head = `<tr><th>กลยุทธ์</th><th class="num">held-out paid</th><th class="num">held-out arrive</th><th class="num">tuning paid</th><th class="num">tuning arrive</th><th>gate</th></tr>`;
+  const rows = s.strategies.map((k) => {
+    const m = s.medians[k];
+    const gate = m.heldout.paid.gatePass && m.heldout.arrive.gatePass && m.tuning.paid.gatePass && m.tuning.arrive.gatePass;
+    return `<tr><td>${esc(k)}${k === d ? ' <span class="badge pass">ค่าเริ่มต้น</span>' : ''}${k === 'fcfs' ? ' <span class="badge">baseline</span>' : ''}</td>
+      <td class="num">${pct(m.heldout.paid.median)}</td><td class="num">${pct(m.heldout.arrive.median)}</td>
+      <td class="num">${pct(m.tuning.paid.median)}</td><td class="num">${pct(m.tuning.arrive.median)}</td>
+      <td><span class="badge ${gate ? 'pass' : 'fail'}">${gate ? '0 ผิด / 0 ซ้ำ' : 'ไม่ผ่าน'}</span></td></tr>`;
+  }).join('');
+  document.getElementById('medians').innerHTML = `<div class="table-wrap"><table>${head}${rows}</table></div>`;
+});
+
+load(document.getElementById('perseed'), async () => {
+  const s = await getJSON('data/summary.json');
+  const d = s.defaultStrategy;
+  const ps = s.perSeed.filter((r) => r.set === 'heldout').sort((a, b) => a.seed - b.seed);
+  const prow = ps.map((r) => {
+    const a = r.scores[d], f = r.scores.fcfs;
+    return `<tr><td>seed ${esc(r.seed)}</td><td class="num">${pct(f.paid)}</td><td class="num">${pct(a.paid)}</td><td class="num ${a.paid >= f.paid ? 'up' : 'down'}">${signed(r2(a.paid) - r2(f.paid))}</td>
+      <td class="num">${pct(f.arrive)}</td><td class="num">${pct(a.arrive)}</td><td><a href="replay.html?seed=${encodeURIComponent(r.seed)}">ดูคิว</a></td></tr>`;
+  }).join('');
+  document.getElementById('perseed').innerHTML = `<div class="table-wrap"><table>
+    <tr><th>ชุดข้อมูล</th><th class="num">FCFS paid</th><th class="num">${esc(d)} paid</th><th class="num">ต่าง</th><th class="num">FCFS arrive</th><th class="num">${esc(d)} arrive</th><th></th></tr>${prow}</table></div>`;
+});
+
+load(document.getElementById('history'), async () => {
+  const h = await getJSON('data/history.json');
+  const pts = h.points || [];
+  const el = document.getElementById('history');
+  if (!pts.length) { el.innerHTML = '<div class="state">ยังไม่มีประวัติ workflow</div>'; return; }
+  const series = [
+    { key: 'heldoutMedianPaid', label: 'ระบบของเรา (paid)', color: 'var(--hybrid)' },
+    { key: 'heldoutMedianArrive', label: 'ระบบของเรา (arrive)', color: 'var(--arrive)' },
+    { key: 'fcfsHeldoutMedianPaid', label: 'FCFS (paid)', color: 'var(--fcfs)' },
+  ];
+  const W = 760, H = 240, L = 40, R = 12, T = 12, B = 40;
+  const vals = pts.flatMap((p) => series.map((s) => p[s.key])).filter((v) => v != null);
+  const lo = Math.floor(Math.min(50, ...vals) / 10) * 10, hi = Math.ceil(Math.max(80, ...vals) / 10) * 10;
+  const x = (i) => L + (pts.length === 1 ? (W - L - R) / 2 : (i * (W - L - R)) / (pts.length - 1));
+  const y = (v) => T + ((hi - v) * (H - T - B)) / (hi - lo);
+  let g = '';
+  for (let v = lo; v <= hi; v += 10) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const target = `<line x1="${L}" x2="${W - R}" y1="${y(65)}" y2="${y(65)}" stroke="var(--warn)" stroke-dasharray="4 4"/><text x="${W - R}" y="${y(65) - 4}" text-anchor="end">เกณฑ์ 65%</text>`;
+  const lines = series.map((s) => {
+    const p = pts.map((pt, i) => (pt[s.key] == null ? null : `${x(i)},${y(pt[s.key])}`)).filter(Boolean);
+    const dots = pts.map((pt, i) => (pt[s.key] == null ? '' : `<circle cx="${x(i)}" cy="${y(pt[s.key])}" r="3" fill="${s.color}"><title>${esc(pt.shortSha)} · ${s.label}: ${pct(pt[s.key])}</title></circle>`)).join('');
+    return `<polyline fill="none" stroke="${s.color}" stroke-width="2" points="${p.join(' ')}"/>${dots}`;
+  }).join('');
+  const step = Math.max(1, Math.ceil(pts.length / 8));
+  const xl = pts.map((pt, i) => (i % step === 0 || i === pts.length - 1 ? `<a href="${/^https:\/\//.test(pt.runUrl || '') ? esc(pt.runUrl) : '#'}"><text x="${x(i)}" y="${H - B + 16}" text-anchor="middle">${esc(pt.shortSha)}</text></a>` : '')).join('');
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="คะแนน % ตาม commit">${g}${target}${lines}${xl}</svg>
+    <div class="legend">${series.map((s) => `<span><i style="background:${s.color}"></i>${s.label}</span>`).join('')}</div>
+    <p class="sub" style="margin:8px 0 0">${pts.length} commit · ดึงผล workflow ด้วย ${esc(h.source || 'GitHub REST API')}</p>`;
+});
+</script>
+</body>
+</html>

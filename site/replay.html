@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Queue Replay</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">INBLACK · Project A</span>
+  <nav><a href="./">ผลการจัดคิว</a><a href="replay.html" aria-current="page">Replay</a><a href="team.html">ทีม Agent</a></nav>
+</div></header>
+
+<main class="wrap">
+  <h1>Replay การจัดคิว</h1>
+  <p class="sub">เลือกข้อมูลตัวอย่าง แล้วดูคิว การใช้ supplier และเหตุผลของแต่ละออเดอร์</p>
+
+  <div class="controls">
+    <label>ข้อมูลตัวอย่าง <select id="seed" aria-label="เลือกข้อมูลตัวอย่าง"></select></label>
+    <label>สถานะ <select id="status" aria-label="กรองสถานะ">
+      <option value="">ทั้งหมด</option><option value="done">ทำแล้ว</option><option value="late">เกิน SLA</option>
+      <option value="paidNotDone">ชำระแล้วแต่ไม่ได้ทำ</option><option value="unpaid">ยังไม่ชำระ</option>
+      <option value="violation">ผิดกติกา</option><option value="impossible">ไม่มี supplier รองรับ</option>
+    </select></label>
+    <input type="search" id="q" placeholder="ค้นหาออเดอร์ / เกม / supplier" aria-label="ค้นหา">
+  </div>
+
+  <section id="view"></section>
+  <p class="foot" id="foot"></p>
+</main>
+
+<script src="assets/common.js"></script>
+<script>
+'use strict';
+const { esc, pct, num, getJSON, load, footer } = Site;
+const view = document.getElementById('view');
+const seedSel = document.getElementById('seed'), statusSel = document.getElementById('status'), q = document.getElementById('q');
+let current = null;
+
+const hhmm = (m) => (m == null ? '–' : `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`);
+const statusLabel = { done: 'ทำแล้ว', paidNotDone: 'ไม่ได้ทำ', unpaid: 'ยังไม่ชำระ', violation: 'ผิดกติกา', impossible: 'ไม่มี supplier' };
+
+function render() {
+  const r = current;
+  const st = statusSel.value, term = q.value.trim().toLowerCase();
+  const orders = r.orders.filter((o) => {
+    if (st === 'late' ? !(o.lateMinutes > 0) : st && o.status !== st) return false;
+    if (term && ![o.id, o.game, o.supplier_id, o.reason].some((v) => String(v ?? '').toLowerCase().includes(term))) return false;
+    return true;
+  }).sort((a, b) => (a.start ?? 1e9) - (b.start ?? 1e9) || a.arrive - b.arrive || (a.id < b.id ? -1 : 1));
+
+  const c = (k) => r.orders.filter((o) => o.status === k).length;
+  const late = r.orders.filter((o) => o.lateMinutes > 0).length;
+  const profit = r.orders.reduce((s, o) => s + (o.profit || 0), 0);
+  const kpi = (label, value, cmp = '') => `<div class="card kpi"><div class="label">${label}</div><div class="value">${value}</div><div class="cmp">${cmp}</div></div>`;
+
+  const sup = r.suppliers.map((s) => {
+    const n = r.orders.filter((o) => o.status === 'done' && o.supplier_id === s.id).length;
+    const share = s.wallet_thb ? Math.min(100, (100 * s.used_thb) / s.wallet_thb) : 0;
+    return `<tr><td>${esc(s.id)}</td><td>${esc(s.games.join(', '))}</td><td class="num">${(s.cost_pct * 100).toFixed(0)}%</td>
+      <td class="num">${n}</td><td class="num">${num(s.used_thb, 2)} / ${num(s.wallet_thb, 0)}</td>
+      <td><div class="bar" title="${share.toFixed(1)}%"><span style="width:${share}%"></span></div></td>
+      <td>${s.outages.length ? s.outages.map(([a, b]) => `${hhmm(a)}–${hhmm(b)}`).join(', ') : '–'}</td></tr>`;
+  }).join('');
+
+  const rows = orders.slice(0, 400).map((o) => {
+    const pen = (o.slaPenalty || 0) + (o.unprocessedPenalty || 0) + (o.violationPenalty || 0);
+    return `<tr><td>${esc(o.id)}${o.vip ? ' <span class="badge">VIP</span>' : ''}</td><td>${esc(o.game)}</td><td class="num">${num(o.value)}</td>
+      <td class="num">${hhmm(o.arrive)}</td><td class="num">${hhmm(o.paid)}</td><td class="num">${hhmm(o.start)}</td><td class="num">${hhmm(o.finish)}</td>
+      <td>${esc(o.supplier_id || '–')}</td><td><span class="badge ${esc(o.status)}">${esc(statusLabel[o.status] || o.status)}</span>${o.lateMinutes > 0 ? ` <span class="badge violation">เกิน ${esc(o.lateMinutes)} นาที</span>` : ''}</td>
+      <td class="num">${num(o.profit, 2)}</td><td class="num">${pen ? '−' + num(pen, 2) : '0'}</td><td class="wrapc">${esc(o.reason || '')}</td></tr>`;
+  }).join('');
+
+  view.innerHTML = `<div class="grid">
+      ${kpi('คะแนน %', pct(r.scorePct), `FCFS ${pct(r.scorePctFcfs)}`)}
+      ${kpi('ทำแล้ว', num(c('done')), `จาก ${num(r.orders.length)} ออเดอร์`)}
+      ${kpi('เกิน SLA', num(late))}
+      ${kpi('ชำระแล้วแต่ไม่ได้ทำ', num(c('paidNotDone')))}
+      ${kpi('ผิดกติกา', num(c('violation')))}
+      ${kpi('กำไร (บาท)', num(profit, 2))}
+    </div>
+    <h2>การใช้ supplier</h2>
+    <div class="table-wrap"><table><tr><th>supplier</th><th>เกม</th><th class="num">cost</th><th class="num">ออเดอร์</th><th class="num">ใช้ wallet (บาท)</th><th>สัดส่วน</th><th>ล่ม</th></tr>${sup}</table></div>
+    <h2>คิว (${num(orders.length)} ออเดอร์${orders.length > 400 ? ', แสดง 400 แรก' : ''})</h2>
+    <div class="table-wrap"><table><tr><th>ออเดอร์</th><th>เกม</th><th class="num">ยอด</th><th class="num">มาถึง</th><th class="num">ชำระ</th><th class="num">เริ่ม</th><th class="num">เสร็จ</th><th>supplier</th><th>สถานะ</th><th class="num">กำไร</th><th class="num">เสียคะแนน</th><th>เหตุผล</th></tr>
+    ${rows || '<tr><td colspan="12" class="state">ไม่มีออเดอร์ตามเงื่อนไข</td></tr>'}</table></div>
+    <p class="sub" style="margin-top:8px">กลยุทธ์ <b>${esc(r.strategy)}</b> · กะพนักงาน: ${r.staff.map((s) => `${hhmm(s.from)}–${hhmm(s.to)} ×${esc(s.count)}`).join(', ')}</p>`;
+}
+
+async function openSeed(id) {
+  await load(view, async () => {
+    current = await getJSON(`data/replay/${id}.json`);
+    render();
+  });
+}
+
+load(view, async () => {
+  const idx = await getJSON('data/replay/index.json');
+  try { footer(await getJSON('data/summary.json')); } catch { /* footer is optional */ }
+  seedSel.innerHTML = idx.map((s) => `<option value="${esc(s.id)}">seed ${esc(s.seed)} (${esc(s.orders)} ออเดอร์)</option>`).join('');
+  const want = new URLSearchParams(location.search).get('seed');
+  if (want && idx.some((s) => String(s.seed) === want)) seedSel.value = `seed-${want}`;
+  await openSeed(seedSel.value);
+});
+seedSel.addEventListener('change', () => { history.replaceState(null, '', `?seed=${seedSel.value.replace('seed-', '')}`); openSeed(seedSel.value); });
+statusSel.addEventListener('change', () => current && render());
+q.addEventListener('input', () => current && render());
+</script>
+</body>
+</html>

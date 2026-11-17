@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Team</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">INBLACK · Project A</span>
+  <nav><a href="./">ผลการจัดคิว</a><a href="replay.html">Replay</a><a href="team.html" aria-current="page">ทีม Agent</a></nav>
+</div></header>
+
+<main class="wrap">
+  <h1>ทีม Agent</h1>
+  <p class="sub">งานทั้งหมดใน <code>harness/tasks/</code> · Agent ที่รับ · สถานะ · งานที่ถูกตีกลับ</p>
+
+  <section id="agents"></section>
+  <h2>งานที่ถูกตีกลับ</h2>
+  <section id="rejected"></section>
+  <h2>งานทั้งหมด</h2>
+  <div class="controls">
+    <label>Agent <select id="owner" aria-label="กรอง agent"><option value="">ทั้งหมด</option></select></label>
+  </div>
+  <section id="tasks"></section>
+  <p class="foot" id="foot"></p>
+</main>
+
+<script src="assets/common.js"></script>
+<script>
+'use strict';
+const { esc, plain, getJSON, load, footer } = Site;
+const statusClass = (s) => (/done/.test(s) ? 'done' : /reject/.test(s) ? 'rejected' : /review/.test(s) ? 'review' : /progress/.test(s) ? 'in_progress' : /claim/.test(s) ? 'claimed' : 'planned');
+
+load(document.getElementById('agents'), async () => {
+  const t = await getJSON('data/team.json');
+  footer(t);
+  const rejCount = (name) => t.rejections.filter((r) => r.agent === name).length;
+  document.getElementById('agents').innerHTML = `<div class="grid">${t.agents.map((a) => {
+    const done = a.tasks.filter((id) => statusClass((t.tasks.find((x) => x.id === id) || {}).status || '') === 'done').length;
+    return `<div class="card kpi"><div class="label">${esc(a.name)}</div><div class="value">${a.tasks.length} งาน</div><div class="cmp">เสร็จ ${done} · ถูกตีกลับ ${rejCount(a.name)} ครั้ง</div></div>`;
+  }).join('')}</div>`;
+});
+
+load(document.getElementById('rejected'), async () => {
+  const t = await getJSON('data/team.json');
+  document.getElementById('rejected').innerHTML = t.rejections.length ? `<div class="table-wrap"><table>
+    <tr><th>งาน</th><th>Agent</th><th>ผู้ตีกลับ</th><th>วันที่</th><th>เหตุผล</th><th>บันทึกรีวิว</th></tr>
+    ${t.rejections.map((r) => {
+      const why = String(r.body || '').split(/\r?\n/).filter((l) => /^- /.test(l) && !/^- Action:/i.test(l)).map((l) => esc(plain(l.slice(2)))).join('<br>') || esc(plain(r.summary));
+      return `<tr><td>${esc(r.task)}<br><span class="sub">${esc(plain(r.summary))}</span></td><td>${esc(r.agent)}</td><td>${esc(r.reviewer)}</td><td>${esc(r.date)}</td><td class="wrapc">${why}</td><td>${esc(plain(r.review || ''))}</td></tr>`;
+    }).join('')}
+    </table></div>` : '<div class="state">ยังไม่มีงานที่ถูกตีกลับ</div>';
+});
+
+load(document.getElementById('tasks'), async () => {
+  const t = await getJSON('data/team.json');
+  const sel = document.getElementById('owner');
+  [...new Set(t.tasks.map((x) => x.owner))].sort().forEach((o) => sel.insertAdjacentHTML('beforeend', `<option>${esc(o)}</option>`));
+  const draw = () => {
+    const rows = t.tasks.filter((x) => !sel.value || x.owner === sel.value).map((x) => {
+      const rejected = t.rejections.some((r) => r.task === x.id);
+      return `<tr><td>${esc(x.id)}</td><td class="wrapc">${esc(x.title)}</td><td>${esc(x.owner)}</td>
+        <td><span class="badge ${statusClass(x.status)}">${esc(x.status)}</span>${rejected ? ' <span class="badge rejected">เคยถูกตีกลับ</span>' : ''}</td>
+        <td>${esc(x.branch)}</td><td>${esc(x.dependencies)}</td></tr>`;
+    }).join('');
+    document.getElementById('tasks').innerHTML = `<div class="table-wrap"><table><tr><th>id</th><th>งาน</th><th>Agent</th><th>สถานะ</th><th>branch</th><th>ขึ้นกับ</th></tr>${rows}</table></div>`;
+  };
+  sel.addEventListener('change', draw);
+  draw();
+});
+</script>
+</body>
+</html>

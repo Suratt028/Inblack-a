@@ -4,3 +4,5 @@ harness/worktrees/
 .env
 .env.*
 *.bundle
+site/data/
+_site/
