@@ -35,3 +35,4 @@ _Real events only, appended as they happen._
 | 2026-11-17 | code-reviewer | main (read-only) | step 4 merge gate | PASS: 3 branches merged in scratch, npm test 343 pass / 0 fail / 6 todo, benchmark hybrid held-out 73.77 / 72.57 |
 | 2026-11-17 | Lead | main | merge | agent/strategy 7939561, agent/backend b5a8be5, agent/qa 9ae146d (--no-ff); npm test 343 pass / 0 fail / 6 todo |
 | 2026-11-17 | Lead | main | history rewrite | user chose noreply e-mail before first push: `git filter-branch --env-filter` on main (49 commits, trees unchanged); backup branch backup/pre-email-rewrite + bundle; old→new hashes in AGENT_LOG/hash-map.md |
+| 2026-11-18 | Lead | main | history rewrite 2 | user chose to replace the session-1 personal author name with surat before first push: filter-branch on main ^origin/main (keeps GitHub-signed Initial commit), trees unchanged; backup branch backup/pre-name-rewrite; hash-map regenerated original→published; generator lock now b2a5da2 |
