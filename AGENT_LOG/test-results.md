@@ -16,3 +16,7 @@ Command: `node src/planner.js harness/scenarios/seed-N.json /tmp/pN.json && node
 | 9 | 70.56 | 0 | 0 | 69.39 | 0 |
 | 10 | 35.36 | 0 | 0 | 34.04 | 0 |
 Result: 0 violations / 0 duplicates in all 20 runs. (Baseline only; no optimization yet.)
+
+## 2026-11-17 18:42 — Lead: full suite on main after merging agent/qa
+Command: `npm test` (= node --test harness/tests/*.test.js) · total 60 · passed 60 · failed 0 · 0.48 s
+Earlier QA runs (from harness/tasks/T04.md): run 1 = 59/60 (test bug #45: start −1 is two-cause BEFORE_PAID+OUT_OF_DAY → test corrected), run 2 = 60/60.

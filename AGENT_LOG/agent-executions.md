@@ -10,3 +10,5 @@ _Real events only, appended as they happen._
 | 2026-11-17 18:40 | strategy-optimizer | agent/strategy | T05 | completed 7935684 → Lead review CHANGES REQUESTED (wrong scenario format: shifts/day-wallet; 6-min occupancy); resumed |
 | 2026-11-17 18:41 | qa-reviewer | agent/qa | T04 | completed 1d5c16a (60 tests) → Lead review CHANGES REQUESTED (fixture field names off-spec); resumed to fix + run against backend impl |
 | 2026-11-17 18:41 | backend-mcp | agent/backend | T03 | resumed: fix npm test glob (found by QA) |
+| 2026-11-17 18:42 | qa-reviewer | agent/qa | T04 + T03 review | completed 0e18b7d, 5cafbaa: 60/60 pass vs backend impl; verdict APPROVE |
+| 2026-11-17 18:42 | Lead | main | merge | agent/backend, agent/strategy, agent/qa merged --no-ff; npm test 60/60 |
