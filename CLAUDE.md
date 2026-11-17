@@ -29,3 +29,13 @@ See `PLAN.md` §3. One owner per file; touching another agent's files = rejectio
 
 ## Completion criteria
 `npm test` green; held-out median score % ≥ 65 under both SLA bases; 0 duplicates and 0 violations (default and strict) on every seed; MCP initialize/ping/tools/list/tools/call pass; site pages show numbers equal to benchmark output.
+
+## I/O format (from challenge PDF — authoritative)
+scenario.json:
+```json
+{ "orders":   [{ "id":"O1", "arrive_minute":10, "paid_minute":12, "game":"rov", "value_thb":430, "vip":false, "sla_minutes":10 }],
+  "staff":    [{ "from":480, "to":1020, "count":2 }],
+  "suppliers":[{ "id":"S1", "games":["rov"], "wallet_thb":45000, "cost_pct":0.94, "outages":[[300,420]] }] }
+```
+`paid_minute` null = unpaid. Wallet is PER SUPPLIER (no day-level wallet). Outages are `[start,end]` arrays.
+plan.json: `{ "assignments": [{ "order_id":"O1", "supplier_id":"S1", "start_minute":12 }] }`
