@@ -21,9 +21,9 @@ grep -rnE "require\(['\"][./]*harness|from ['\"][./]*harness" src/ && echo "FAIL
 ## 3. Every seed, both bases, both checkers
 For each seed in tuning `101..110` and held-out `1..10`:
 ```bash
-node src/planner.js harness/scenarios/seed-$N.json $TMP/p$N.json
-node harness/score.js harness/scenarios/seed-$N.json $TMP/p$N.json --json
-node harness/score.js harness/scenarios/seed-$N.json $TMP/p$N.json --json --strict --sla-basis arrive
+node src/planner.js harness/scenarios/seed-$N.json ${TMP:-/tmp}/p$N.json
+node harness/score.js harness/scenarios/seed-$N.json ${TMP:-/tmp}/p$N.json --json
+node harness/score.js harness/scenarios/seed-$N.json ${TMP:-/tmp}/p$N.json --json --strict --sla-basis arrive
 ```
 From each JSON read `scorePct`, `counts.violations`, `counts.duplicates`.
 Gate: **duplicates = 0 and violations = 0 in all runs.** Any non-zero → FAIL, list `violations[]` (rule + detail).

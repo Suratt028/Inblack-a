@@ -14,7 +14,7 @@
 | เทสต์ + รีวิว | `qa-reviewer` | `harness/worktrees/qa` · `agent/qa` | `harness/tests/**`, `harness/reviews/**`, `harness/WRONG_CASES.md` — ตีกลับงานได้ |
 | ประตูก่อนคอมมิท | `code-reviewer` | อ่านอย่างเดียว | ตรวจ diff + รันเทสต์ทุกขั้น ให้ `VERDICT: PASS/FAIL` |
 | คอมมิท | `committer` | `main` | คอมมิทเฉพาะเมื่อได้ PASS |
-| Lead (เซสชันหลัก) | — | `main` | แจกงาน, merge, `CLAUDE.md`, `.mcp.json`, `.claude/**`, `plugins/**`, `site/**`, `HARNESS.md`, `README.md`, `AGENT_SETUP.md`, `PLAN.md`, `harness/DECISIONS_INPUT.md`, `AGENT_LOG/**` |
+| Lead (เซสชันหลัก) | — | `main` | แจกงาน, merge, `CLAUDE.md`, `.mcp.json`, `.claude/**`, `.claude-plugin/**`, `plugins/**`, `site/**`, `HARNESS.md`, `README.md`, `AGENT_SETUP.md`, `PLAN.md`, `harness/DECISIONS_INPUT.md`, `AGENT_LOG/**` |
 | ผู้ใช้ | — | — | ตัดสินใจ และเขียน `DECISIONS.md` เอง |
 
 ตารางนี้สรุปจาก `PLAN.md` §3 — ถ้าขัดกัน **`PLAN.md` §3 เป็นตัวจริง**

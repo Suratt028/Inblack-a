@@ -12,14 +12,14 @@ Goal: raise **held-out median score %** (seeds 1–10) under both SLA bases, wit
   - one order = 1 staff for exactly 5 minutes, occupying `[s, s+5)` (D10); start ≥ max(arrive, paid) (D12); `paid_minute: null` is never processed.
   - supplier must support the game, be outside its outages, and have wallet for `value_thb × cost_pct` (wallet per supplier, D4).
   - keep a **1-minute margin** from shift, outage and day boundaries so the strict checker also passes (D10).
-  - SLA lateness is measured at finish (D2): `late = max(0, start+5 − (clock+sla))`, VIP costs 2/min.
-  - paid-not-done costs 5% of `value_thb`; a violation costs 100 and earns nothing (D6).
+  - SLA clock starts at `paid_minute` by default, `arrive_minute` as the alternative basis (D1); lateness is measured at finish (D2): `late = max(0, start+5 − (clock+sla))`; −1/min normal, −2/min VIP.
+  - paid-not-done costs 5% of `value_thb`; a violation costs 100, earns nothing, and a paid order with a violation still gets the 5% not-done penalty (D6).
 - `src/` must **not** import from `harness/` — the planner keeps its own feasibility model (`src/model/feasibility.js`) so the scorer cross-checks it.
 - Only `strategy-optimizer` writes `src/**` and `STRATEGY.md`, in its worktree on `agent/strategy`.
 
 ## Loop
-1. Baseline: `node src/planner.js harness/scenarios/seed-N.json $TMP/p.json` then
-   `node harness/score.js harness/scenarios/seed-N.json $TMP/p.json [--sla-basis arrive] [--strict]`.
+1. Baseline: `node src/planner.js harness/scenarios/seed-N.json ${TMP:-/tmp}/p.json` then
+   `node harness/score.js harness/scenarios/seed-N.json ${TMP:-/tmp}/p.json [--sla-basis arrive] [--strict]`.
    Or call MCP `run_scenario {seed: N, strategy}` when the `inblack-queue` server is running (`npm run mcp`).
 2. Find where points go: the score report's "Top 10 orders where points were lost", or MCP `explain_order` for one order.
 3. Classify the loss: late (queue order / staff capacity), not done (no capacity, no supplier with wallet, outage), violation (planner bug — fix first).

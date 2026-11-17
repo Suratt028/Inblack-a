@@ -24,7 +24,7 @@ Sources read: `challenge.pdf` (13 pages, Thai; Project A = pages 2–6) and the 
 | R13 | STRATEGY.md + 3 losing cases | `STRATEGY.md` | strategy-optimizer | T15 | T09 review |
 | R14 | MCP server, official SDK, Streamable HTTP `localhost:3000/mcp`, 3 tools with schemas/validation/logging | `mcp/server.js`, `mcp/tools/{run_scenario,score_plan,explain_order}.js` | backend-mcp | T08 | real SDK client: initialize, ping, tools/list, tools/call ×3 |
 | R15 | 2 Skills | `.claude/skills/game-queue-optimization/`, `.claude/skills/game-queue-quality-check/` | Lead | T10 | invoked in session, logged |
-| R16 | Plugin (manifest) with hook that blocks completion when tests fail; real block ≥1 | `plugins/inblack-guard/.claude-plugin/plugin.json` + `hooks/hooks.json` (Stop event) + `.claude/hooks/run-tests.sh` | Lead | T11 | `AGENT_LOG/hook-events.md` |
+| R16 | Plugin (manifest) with hook that blocks completion when tests fail; real block ≥1 | `plugins/inblack-guard/.claude-plugin/plugin.json` + `hooks/hooks.json` (Stop event) + `hooks/run-tests.js` (Node, works on Windows); local marketplace `.claude-plugin/marketplace.json` | Lead | T11 | `AGENT_LOG/hook-events.md` |
 | R17 | 3 sub-agents, separate worktrees, parallel, QA rejects ≥1 real change | `.claude/agents/*.md`, `harness/worktrees/<agent>`, branches `agent/<name>` | Lead | all | git history + `AGENT_LOG/rejected-work.md` |
 | R18 | GitHub Actions; REST API called in Actions for per-commit chart | `.github/workflows/ci.yml`, `pages.yml`; `GET /repos/{o}/{r}/actions/runs` + artifacts with `GITHUB_TOKEN` | backend-mcp | T12 | workflow logs |
 | R19 | Website 3 pages, real data, responsive, loading/error states, GitHub Pages | `site/index.html`, `replay.html`, `team.html` | Lead | T13 | open live site, compare numbers to benchmark JSON |
@@ -66,7 +66,7 @@ Each has my **recommended default** so you can just reply "accept all" or overri
 | **strategy-optimizer** | `agent/strategy` · `harness/worktrees/strategy` | `src/**`, `STRATEGY.md` |
 | **backend-mcp** | `agent/backend` · `harness/worktrees/backend` | `harness/generator.js`, `harness/validator.js`, `harness/scorer.js`, `harness/score.js`, `harness/benchmark.js`, `harness/lib/**`, `harness/scenarios/**`, `harness/benchmarks/**`, `harness/reports/**`, `mcp/**`, `.github/workflows/**`, `package.json` |
 | **qa-reviewer** | `agent/qa` · `harness/worktrees/qa` | `harness/tests/**`, `harness/WRONG_CASES.md`, `harness/reviews/**` |
-| **Lead (me)** | `main` | `CLAUDE.md`, `.mcp.json`, `.claude/**`, `plugins/**`, `site/**`, `HARNESS.md`, `README.md`, `AGENT_SETUP.md`, `AGENT_LOG/**`, `harness/DECISIONS_INPUT.md`, `PLAN.md` |
+| **Lead (me)** | `main` | `CLAUDE.md`, `.mcp.json`, `.claude/**`, `.claude-plugin/**`, `plugins/**`, `site/**`, `HARNESS.md`, `README.md`, `AGENT_SETUP.md`, `AGENT_LOG/**`, `harness/DECISIONS_INPUT.md`, `PLAN.md` |
 | **You** | — | `DECISIONS.md` (I only record your words verbatim, on request) |
 
 Task files `harness/tasks/Txx.md`: only the task's owner edits its file; Lead edits `status` on merge/reject.
