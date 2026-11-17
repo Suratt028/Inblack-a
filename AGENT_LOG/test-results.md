@@ -20,3 +20,6 @@ Result: 0 violations / 0 duplicates in all 20 runs. (Baseline only; no optimizat
 ## 2026-11-17 18:42 — Lead: full suite on main after merging agent/qa
 Command: `npm test` (= node --test harness/tests/*.test.js) · total 60 · passed 60 · failed 0 · 0.48 s
 Earlier QA runs (from harness/tasks/T04.md): run 1 = 59/60 (test bug #45: start −1 is two-cause BEFORE_PAID+OUT_OF_DAY → test corrected), run 2 = 60/60.
+
+## 2026-11-17 19:26 — Lead (session 2, local repo restored from bundle, HEAD 428dda2 + step-1 docs)
+Command: `npm test` · total 60 · passed 60 · failed 0 · 0.52 s
