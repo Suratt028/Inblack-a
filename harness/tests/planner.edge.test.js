@@ -161,15 +161,14 @@ for (const s of STRATS) {
 // integer wallet 117, cost_pct 0.9, values 51 and 79 -> costs 45.9 + 71.1 = 117 in exact arithmetic,
 // but sequential subtraction in D4b order gives 117 - 45.9 = 71.1 < 71.10000000000001, so the official
 // validator reports WALLET on the 2nd assignment. A planner that tolerates +1e-9 overspend fails here.
-// Fixed in agent/strategy 024f753 (T06 round 2, passes 6/6 there). Stays todo only until that fix is merged to
-// main, because main's fcfs still fails it and npm test must stay green; QA removes todo right after the merge.
+// Fixed in agent/strategy 024f753 (T06 round 2), merged to main 9ae146d; normal test since then.
 const W1 = {
   orders: [O('A', { arrive_minute: 10, paid_minute: 10, value_thb: 51 }), O('B', { arrive_minute: 20, paid_minute: 20, value_thb: 79 })],
   staff: [SH(0, 1440, 1)],
   suppliers: [S('S1', { cost_pct: 0.9, wallet_thb: 117 })],
 };
 for (const s of STRATS) {
-  test(`[${s}] D4/D4b wallet float exhaust (W1): no WALLET violation`, { todo: 'W1 fixed on agent/strategy 024f753; remove todo after merge to main' }, () => {
+  test(`[${s}] D4/D4b wallet float exhaust (W1): no WALLET violation`, () => {
     const r = runCli(W1, s);
     assert.equal(r.status, 0, r.stderr);
     gate(W1, r.plan);
