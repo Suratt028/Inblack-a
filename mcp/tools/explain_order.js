@@ -13,7 +13,7 @@ const config = {
     ...c.scenarioInput,
     order_id: z.string().min(1).describe('Order id to explain'),
     ...c.planInput,
-    strategy: z.string().min(1).default('fcfs').describe('Planner strategy used when no plan is given'),
+    strategy: z.string().min(1).default(c.DEFAULT_STRATEGY).describe(`Planner strategy used when no plan is given (default: planner default, currently ${c.DEFAULT_STRATEGY})`),
     ...c.slaInput,
   },
   outputSchema: {
@@ -49,7 +49,7 @@ async function compute(args) {
   let plan = c.resolvePlan(args, { required: false });
   let planSource = 'given', plannerReason = null;
   if (!plan) {
-    const out = c.plannerRun(scenario, args.strategy || 'fcfs');
+    const out = c.plannerRun(scenario, args.strategy || c.DEFAULT_STRATEGY);
     plan = { assignments: out.assignments };
     planSource = 'planner';
     plannerReason = out.reasons && out.reasons[o.id] ? out.reasons[o.id].reason || null : null;
