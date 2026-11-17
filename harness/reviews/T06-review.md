@@ -102,3 +102,55 @@ node --test harness/tests/planner.*.test.js
 node <scratch>/gate.js <scratch>/strat <strategy>      # planner per seed + score.js --json, 4 modes
 node <scratch>/eps.js <scratch>/strat                  # W1 probe, all strategies, validator
 ```
+
+---
+
+# Round 2 — agent/strategy `024f753` (fix F1)
+
+**VERDICT: APPROVE**
+
+## F1 fix verified
+Diff `4a3692f..024f753 -- src`: `WALLET_MARGIN = 1e-6`; accept only if `cost <= remaining - 1e-6` in
+`src/model/feasibility.js:62` (Model.check: fcfs and the emit re-check in D4b order) and
+`src/search/core.js:121` (decoder). The tolerance is now on the safe side. The budget-pass checks
+(`core.js:122-123`, `+ EPS`) only narrow choices inside the hard wallet check, so they cannot overspend.
+
+```
+# QA tests (W1 todo flag removed) on git archive 024f753
+node --test harness/tests/planner.*.test.js
+✔ [cheapest|edf|fcfs|hybrid|profit|vip] D4/D4b wallet float exhaust (W1): no WALLET violation   (6/6)
+ℹ tests 271  ℹ pass 271  ℹ fail 0  ℹ todo 0
+NODE_PATH=<repo>/node_modules npm test   ->  ℹ tests 342  ℹ pass 342  ℹ fail 0  ℹ todo 0
+
+# W1 + realistic probe (eps.js): every strategy now serves one order, validator OK
+tiny fcfs ["A"] OK ... tiny hybrid ["B"] OK ; real w=183.82 ... all OK
+
+# wallet-exhaust fuzz (wfuzz.js): 150 scenarios, 2 suppliers with wallets = exact sum of a random
+# subset of costs, 6 strategies x default/strict
+round 1 (4a3692f): 1800 validations, 96 with violations
+round 2 (024f753): 1800 validations, 0 with violations
+```
+
+## Gate re-run (harness/score.js --json, 20 seeds x paid/arrive x default/strict)
+| strategy | held-out median paid | held-out median arrive | tuning median paid | tuning median arrive | v+d |
+|---|---|---|---|---|---|
+| fcfs | 59.16 | 57.96 | 66.33 | 62.43 | 0 |
+| edf | 59.25 | 58.11 | 67.61 | 64.43 | 0 |
+| vip | 59.62 | 58.47 | 67.56 | 64.56 | 0 |
+| cheapest | 71.58 | 68.65 | 72.99 | 66.84 | 0 |
+| profit | 72.47 | 69.96 | 76.95 | 73.54 | 0 |
+| hybrid | **73.77** | **72.57** | 78.16 | 77.18 | 0 |
+
+All equal to round-2 `harness/tasks/T06.md` (spot check per seed: hybrid seed-6 47.01, seed-105 77.52, as claimed).
+The safer margin costs a little on tuning (hybrid 78.22→78.16 paid, 77.23→77.18 arrive), and held-out medians
+are unchanged. Hybrid seed-6 plan byte-identical over two CLI runs; the determinism tests in `planner.cli.test.js` pass for all 6.
+Ownership: the diff only touches `src/**` and `harness/tasks/T06.md`.
+
+## Remaining (non-blocking)
+- W2/W3 (1-minute D10 margin beyond strict): kept by user decision 2026-11-17, listed in WRONG_CASES.md.
+- W4 wallet-bound seeds below 65: structural.
+
+Note on the W1 test: with `todo` removed, `npm test` on agent/qa (main `ed4119b` planner) gives
+`ℹ tests 122 ℹ pass 121 ℹ fail 1` (`[fcfs] ... W1`), because the fix is not on main yet. To keep the
+commit gate green, the test stays `todo` on agent/qa until agent/strategy is merged. QA then removes the
+flag in a follow-up commit (it passes 6/6 on 024f753, see above).
