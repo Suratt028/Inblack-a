@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Usage: node src/planner.js scenario.json plan.json [--strategy fcfs|edf|vip|cheapest|profit|hybrid] [--explain reasons.json]
+// Usage: node src/planner.js scenario.json plan.json [--strategy hybrid(default)|fcfs|edf|vip|cheapest|profit] [--explain reasons.json]
 const fs = require('fs');
 const { Model } = require('./model/feasibility');
 const greedy = require('./strategies/greedy');
@@ -12,8 +12,12 @@ const STRATEGIES = {
   profit: greedy.profit,
   hybrid: require('./strategies/hybrid').hybrid,
 };
+// Default = best strategy on tuning seeds 101-110 that passes the gate (T06, T16).
+// RECOMMENDED_STRATEGY is an alias (single source) so the two can never drift.
+const DEFAULT_STRATEGY = 'hybrid';
+const RECOMMENDED_STRATEGY = DEFAULT_STRATEGY;
 
-function plan(scenario, { strategy = 'fcfs' } = {}) {
+function plan(scenario, { strategy = DEFAULT_STRATEGY } = {}) {
   const fn = STRATEGIES[strategy];
   if (!fn) throw new Error(`unknown strategy ${strategy}; available: ${Object.keys(STRATEGIES).join(',')}`);
   const { assignments, reasons } = fn(new Model(scenario));
@@ -28,16 +32,13 @@ function main(argv) {
     else if (argv[i] === '--explain') opt.explain = argv[++i];
     else pos.push(argv[i]);
   }
-  if (pos.length !== 2) { console.error('usage: node src/planner.js scenario.json plan.json [--strategy fcfs] [--explain reasons.json]'); process.exit(2); }
+  if (pos.length !== 2) { console.error('usage: node src/planner.js scenario.json plan.json [--strategy hybrid|fcfs|...] [--explain reasons.json]'); process.exit(2); }
   const scenario = JSON.parse(fs.readFileSync(pos[0], 'utf8'));
   const { assignments, reasons } = plan(scenario, { strategy: opt.strategy });
   fs.writeFileSync(pos[1], JSON.stringify({ assignments }, null, 2) + '\n');
   if (opt.explain) fs.writeFileSync(opt.explain, JSON.stringify(reasons, null, 2) + '\n');
-  console.error(`planner: strategy=${opt.strategy || 'fcfs'} assigned=${assignments.length} skipped=${Object.values(reasons).filter(r => r.skipped).length}`);
+  console.error(`planner: strategy=${opt.strategy || DEFAULT_STRATEGY} assigned=${assignments.length} skipped=${Object.values(reasons).filter(r => r.skipped).length}`);
 }
 
 if (require.main === module) main(process.argv.slice(2));
-// Best strategy on tuning seeds 101-110 that passes the gate (T06). The CLI/plan()
-// default stays 'fcfs' until the default switch is coordinated with mcp/ tests.
-const RECOMMENDED_STRATEGY = 'hybrid';
-module.exports = { plan, STRATEGIES, STRATEGY_NAMES: Object.keys(STRATEGIES), RECOMMENDED_STRATEGY };
+module.exports = { plan, STRATEGIES, STRATEGY_NAMES: Object.keys(STRATEGIES), DEFAULT_STRATEGY, RECOMMENDED_STRATEGY };
