@@ -34,3 +34,4 @@ _Real events only, appended as they happen._
 | 2026-11-17 | qa-reviewer | agent/qa | T06 + T07 round 2 | APPROVE d7deeb1 (T06), aa3abfa (T07) |
 | 2026-11-17 | code-reviewer | main (read-only) | step 4 merge gate | PASS: 3 branches merged in scratch, npm test 343 pass / 0 fail / 6 todo, benchmark hybrid held-out 73.77 / 72.57 |
 | 2026-11-17 | Lead | main | merge | agent/strategy 7939561, agent/backend b5a8be5, agent/qa 9ae146d (--no-ff); npm test 343 pass / 0 fail / 6 todo |
+| 2026-11-17 | Lead | main | history rewrite | user chose noreply e-mail before first push: `git filter-branch --env-filter` on main (49 commits, trees unchanged); backup branch backup/pre-email-rewrite + bundle; old→new hashes in AGENT_LOG/hash-map.md |

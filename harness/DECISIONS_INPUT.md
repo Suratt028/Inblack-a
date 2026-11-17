@@ -43,3 +43,4 @@ Tests must cite these IDs.
 - Approved: scorer/validator (T03), spec tests (T04), MCP (T08); `npm test` 71/71 on main 08795e6.
 - **Generator locked at commit `b073430`** (`harness/generator.js`, `harness/generator.config.json`, `harness/scenarios/seed-*.json`). Changing any of these after this point needs a new user decision.
 - Tuning seeds 101–110; held-out seeds 1–10 (report only, never tune on them).
+- 2026-11-17 note: after the user-approved author-email rewrite before the first push, the lock commit `b073430` is **`46d1736`** on the published history (same files, same content; see `AGENT_LOG/hash-map.md`). The lock itself is unchanged.
