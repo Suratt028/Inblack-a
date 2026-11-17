@@ -37,3 +37,9 @@ Tests must cite these IDs.
 | D13 | ties: priority desc, start asc, supplier cost asc, id asc |
 | D14 | negative score % reported as is |
 | D15 | generator config locked at Checkpoint 2 with commit hash; **tuning seed set** and separate **held-out seed set**, final report side by side |
+
+## Checkpoint 2 — approved (D15 lock)
+2026-11-17, user answer (verbatim): `Approve CP2`
+- Approved: scorer/validator (T03), spec tests (T04), MCP (T08); `npm test` 71/71 on main 08795e6.
+- **Generator locked at commit `b073430`** (`harness/generator.js`, `harness/generator.config.json`, `harness/scenarios/seed-*.json`). Changing any of these after this point needs a new user decision.
+- Tuning seeds 101–110; held-out seeds 1–10 (report only, never tune on them).

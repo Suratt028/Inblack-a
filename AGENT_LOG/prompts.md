@@ -11,3 +11,4 @@ Entries 1–3 above came from session 1 (cloud workspace). Its git history was c
 5. 2026-11-17 — "แปล" (asked for a Thai translation of the options).
 6. 2026-11-17 — Attached challenge PDF: "ทำตามโจทย์ ไปทางไหน" (asked which path follows the brief).
 7. 2026-11-17 — "กู้ bundle ทำต่อ" (restore the bundle and continue).
+8. 2026-11-17 — "1" (run the 3-agent wave for step 4); "Approve CP2".

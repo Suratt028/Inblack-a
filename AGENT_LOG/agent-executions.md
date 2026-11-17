@@ -22,3 +22,4 @@ _Real events only, appended as they happen._
 | 2026-11-17 | Lead | main | merge | agent/backend (fe928b3) + agent/qa (ea8ea47) merged --no-ff; npm test 71/71 |
 | 2026-11-17 12:56Z | headless Claude Code (`claude -p`) | demo/hook-block worktree | T10 + T11 demo | used skill game-queue-quality-check; Stop blocked by inblack-guard (9/60 failing, planted bug); agent restored D6 value, 60/60, stop allowed — see hook-events.md |
 | 2026-11-17 12:59Z | headless Claude Code (`claude -p`) | main | T08 demo | called run_scenario, explain_order, score_plan via inblack-queue MCP — see mcp-calls.md |
+| 2026-11-17 | User | — | Checkpoint 2 | approved; generator locked at b073430 (D15) |
