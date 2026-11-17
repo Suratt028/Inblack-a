@@ -11,7 +11,7 @@
  *   late = max(0, s+5 - (clock+sla)), w = 2 for VIP else 1.
  *   clock = paid (D1 default) / arrive, or "blend" = mean of both lateness costs.
  */
-const { DUR, DAY_END, MINUTES } = require('../model/feasibility');
+const { DUR, DAY_END, MINUTES, WALLET_MARGIN } = require('../model/feasibility');
 const { allocate } = require('./alloc');
 const EPS = 1e-9;
 const NOT_DONE = 0.05;
@@ -118,7 +118,7 @@ function decode(ctx, perm, { skip = null, pref = null, minGain = 0, useBudget = 
           const sp = p.cand[ci];
           if (sp.blocked[s]) continue;
           const c = p.costs[ci];
-          if (c > wallet[sp.k] + EPS) continue;
+          if (c > wallet[sp.k] - WALLET_MARGIN) continue; // D4: conservative, never rely on float equality
           if (pass === 0 && c > brem[sp.k][p.g] + EPS) continue;
           if (pass === 1 && c > wallet[sp.k] - bsum[sp.k] + EPS) continue;
           const gain = p.value - c + p.notDone - lc;
