@@ -40,6 +40,28 @@ test('T07: summarize computes median/mean/min/max and gate per basis', () => {
   assert.equal(s.arrive.gatePass, true);
 });
 
+test('T07 F1: summary aggregates unrounded per-seed values (median/mean of rounded values differ)', () => {
+  // Rounding first: median(66.34, 66.34)=66.34, but true median 66.3349.. rounds to 66.33.
+  const mk = (p) => ({
+    paid: { default: { scorePct: p, total: 0, violations: 0, duplicates: 0 }, strict: { scorePct: p, total: 0, violations: 0, duplicates: 0 } },
+    arrive: { default: { scorePct: p, total: 0, violations: 0, duplicates: 0 }, strict: { scorePct: p, total: 0, violations: 0, duplicates: 0 } },
+  });
+  const s = summarize([66.335, 66.3349, 60.001, 70.004].map((p, i) => ({ seed: i + 1, scores: mk(p) })));
+  assert.equal(s.paid.median, 66.33);
+  assert.equal(s.paid.mean, 65.67);
+  const t = summarize([1.004, 1.004, 1.004, 1.004].map((p, i) => ({ seed: i + 1, scores: mk(p) })));
+  assert.equal(t.paid.mean, 1, 'mean of 1.004 x4 = 1.004 -> 1.00');
+  const u = summarize([0.005, 0.0049].map((p, i) => ({ seed: i + 1, scores: mk(p) })));
+  assert.equal(u.paid.median, 0, 'true median 0.00495 -> 0.00; rounded-first gives (0.01+0)/2 = 0.005 -> 0.01');
+});
+
+test('T07 F1: per-seed scorePct is kept unrounded; summary median equals rounded exact median (fcfs held-out)', () => {
+  const res = runBenchmark({ strategies: ['fcfs'], seedSets: { heldout: SEED_SETS.heldout } });
+  const pct = res.fcfs.heldout.perSeed.map((r) => r.scores.paid.default.scorePct);
+  assert.ok(pct.some((p) => Math.round(p * 100) / 100 !== p), 'per-seed values are not pre-rounded');
+  assert.equal(res.fcfs.heldout.summary.paid.median, Math.round(median(pct) * 100) / 100);
+});
+
 test('T07 D1 D10: fcfs held-out numbers equal harness/score.js --json for seeds 1 and 2', () => {
   const res = runBenchmark({ strategies: ['fcfs'], seedSets: { heldout: [1, 2] } });
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'bench-t07-'));
@@ -55,8 +77,8 @@ test('T07 D1 D10: fcfs held-out numbers equal harness/score.js --json for seeds 
           const cli = JSON.parse(execFileSync(process.execPath, args, { encoding: 'utf8' }));
           const b = row.scores[basis][mode];
           const tag = `seed ${row.seed} ${basis} ${mode}`;
-          assert.equal(b.scorePct, Math.round(cli.scorePct * 100) / 100, tag);
-          assert.equal(b.total, Math.round(cli.total * 100) / 100, tag);
+          assert.equal(b.scorePct, cli.scorePct, tag);
+          assert.equal(b.total, cli.total, tag);
           assert.equal(b.violations, cli.violations.length, tag);
           assert.equal(b.duplicates, cli.duplicates.length, tag);
         }

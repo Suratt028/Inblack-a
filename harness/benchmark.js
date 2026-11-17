@@ -61,7 +61,8 @@ function scoreAll(scenario, plan) {
     out[basis] = {};
     for (const mode of MODES) {
       const r = score(scenario, plan, { slaBasis: basis, strict: mode === 'strict' });
-      out[basis][mode] = { scorePct: r2(r.scorePct), total: r2(r.total), violations: r.violations.length, duplicates: r.duplicates.length };
+      // Unrounded scorer values: aggregation must use these (rounding happens only in summaries and display).
+      out[basis][mode] = { scorePct: r.scorePct, total: r.total, violations: r.violations.length, duplicates: r.duplicates.length };
     }
   }
   return out;
@@ -83,8 +84,8 @@ function summarize(perSeed) {
     out[basis] = {
       median: r2(median(pct)),
       mean: r2(pct.reduce((a, b) => a + b, 0) / pct.length),
-      min: Math.min(...pct),
-      max: Math.max(...pct),
+      min: r2(Math.min(...pct)),
+      max: r2(Math.max(...pct)),
       violations: { default: sum('default', 'violations'), strict: sum('strict', 'violations') },
       duplicates: { default: sum('default', 'duplicates'), strict: sum('strict', 'duplicates') },
     };
