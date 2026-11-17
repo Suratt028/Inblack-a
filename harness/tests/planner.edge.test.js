@@ -156,3 +156,21 @@ for (const s of STRATS) {
     });
   }
 }
+
+// D4/D4b float exhaust (found in T06 review, harness/reviews/T06-review.md, WRONG_CASES W1):
+// integer wallet 117, cost_pct 0.9, values 51 and 79 -> costs 45.9 + 71.1 = 117 in exact arithmetic,
+// but sequential subtraction in D4b order gives 117 - 45.9 = 71.1 < 71.10000000000001, so the official
+// validator reports WALLET on the 2nd assignment. A planner that tolerates +1e-9 overspend fails here.
+// Marked todo until strategy-optimizer fixes the wallet tolerance; remove `todo` once fixed.
+const W1 = {
+  orders: [O('A', { arrive_minute: 10, paid_minute: 10, value_thb: 51 }), O('B', { arrive_minute: 20, paid_minute: 20, value_thb: 79 })],
+  staff: [SH(0, 1440, 1)],
+  suppliers: [S('S1', { cost_pct: 0.9, wallet_thb: 117 })],
+};
+for (const s of STRATS) {
+  test(`[${s}] D4/D4b wallet float exhaust (W1): no WALLET violation`, { todo: 'T06 REJECT W1: planner wallet check tolerates +1e-9 overspend' }, () => {
+    const r = runCli(W1, s);
+    assert.equal(r.status, 0, r.stderr);
+    gate(W1, r.plan);
+  });
+}
