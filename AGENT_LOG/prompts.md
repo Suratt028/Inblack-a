@@ -16,3 +16,4 @@ Entries 1–3 above came from session 1 (cloud workspace). Its git history was c
 10. 2026-11-17 — "Push first"; then "Merge it in" (merge the remote README-only Initial commit); then "Use noreply email" (rewrite author e-mail before first push).
 11. 2026-11-18 — "Change name first" (replace the session-1 author name before pushing).
 12. 2026-11-18 — "คงไว้ surat ไปขั้น 5" (keep author name surat; go to step 5).
+13. 2026-11-18 — "Push, then step 6"; then "Approve both" (Checkpoint 3 + enable GitHub Pages).

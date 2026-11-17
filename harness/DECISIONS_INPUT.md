@@ -45,3 +45,8 @@ Tests must cite these IDs.
 - Tuning seeds 101–110; held-out seeds 1–10 (report only, never tune on them).
 - 2026-11-17 note: after the user-approved author-email rewrite before the first push, the lock commit `b073430` is **`46d1736`** on the published history (same files, same content; see `AGENT_LOG/hash-map.md`). The lock itself is unchanged.
 - 2026-11-18 note: after the second user-approved metadata rewrite (author name), the lock commit is **`b2a5da2`** on the published history (`46d1736` above was the intermediate hash; same files, same content). The lock itself is unchanged.
+
+## Checkpoint 3 — approved
+2026-11-18, user answer (verbatim): `Approve both` (Checkpoint 3 benchmark + enabling GitHub Pages with the Actions source).
+- Approved benchmark: `harness/benchmarks/acb18ec.json` (main acb18ec, lock b2a5da2 intact). Planner default `hybrid`: held-out median 73.77 % (paid) / 72.57 % (arrive) vs FCFS 59.16 / 57.96; tuning 78.16 / 77.18; 0 violations / 0 duplicates default + strict on all 20 seeds.
+- GitHub Pages enabled (build_type workflow): https://suratt028.github.io/Inblack-a/
