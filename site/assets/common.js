@@ -30,7 +30,8 @@ const Site = (() => {
       await fn();
     } catch (err) {
       console.error(err);
-      el.innerHTML = `<div class="state error" role="alert">โหลดข้อมูลไม่สำเร็จ: ${esc(err.message)}</div>`;
+      el.innerHTML = `<div class="state error" role="alert"><p>โหลดข้อมูลไม่สำเร็จ: ${esc(err.message)}</p><button type="button" class="btn">ลองอีกครั้ง</button></div>`;
+      el.querySelector('button').addEventListener('click', () => location.reload());
     }
   }
 
