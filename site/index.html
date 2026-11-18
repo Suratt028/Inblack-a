@@ -106,7 +106,7 @@ load(document.getElementById('history'), async () => {
     return `<polyline fill="none" stroke="${s.color}" stroke-width="2" points="${p.join(' ')}"/>${dots}`;
   }).join('');
   const step = Math.max(1, Math.ceil(pts.length / 8));
-  const xl = pts.map((pt, i) => (i % step === 0 || i === pts.length - 1 ? `<a href="${/^https:\/\//.test(pt.runUrl || '') ? esc(pt.runUrl) : '#'}"><text x="${x(i)}" y="${H - B + 16}" text-anchor="middle">${esc(pt.shortSha)}</text></a>` : '')).join('');
+  const xl = pts.map((pt, i) => ((i % step === 0 && pts.length - 1 - i >= step) || i === pts.length - 1 ? `<a href="${/^https:\/\//.test(pt.runUrl || '') ? esc(pt.runUrl) : '#'}"><text x="${x(i)}" y="${H - B + 16}" text-anchor="${pts.length > 1 && i === 0 ? 'start' : pts.length > 1 && i === pts.length - 1 ? 'end' : 'middle'}">${esc(pt.shortSha)}</text></a>` : '')).join('');
   el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="คะแนน % ตาม commit">${g}${target}${lines}${xl}</svg>
     <div class="legend">${series.map((s) => `<span><i style="background:${s.color}"></i>${s.label}</span>`).join('')}</div>
     <p class="sub" style="margin:8px 0 0">${pts.length} commit · ดึงผล workflow ด้วย ${esc(h.source || 'GitHub REST API')}</p>`;
