@@ -92,24 +92,35 @@ load(document.getElementById('history'), async () => {
     { key: 'heldoutMedianArrive', label: 'ระบบของเรา (arrive)', color: 'var(--arrive)' },
     { key: 'fcfsHeldoutMedianPaid', label: 'FCFS (paid)', color: 'var(--fcfs)' },
   ];
-  const W = 760, H = 240, L = 40, R = 12, T = 12, B = 40;
-  const vals = pts.flatMap((p) => series.map((s) => p[s.key])).filter((v) => v != null);
-  const lo = Math.floor(Math.min(50, ...vals) / 10) * 10, hi = Math.ceil(Math.max(80, ...vals) / 10) * 10;
-  const x = (i) => L + (pts.length === 1 ? (W - L - R) / 2 : (i * (W - L - R)) / (pts.length - 1));
-  const y = (v) => T + ((hi - v) * (H - T - B)) / (hi - lo);
+  // Grouped bar chart: one group per commit (oldest → newest), one bar per series.
+  // Bars start at 0 so bar height is proportional to the score.
+  const MAX = 20;
+  const shown = pts.slice(-MAX);
+  const n = shown.length;
+  const W = 760, H = 240, L = 40, R = 12, T = 16, B = 40;
+  const y = (v) => T + ((100 - v) * (H - T - B)) / 100;
+  const slot = (W - L - R) / n;
+  const groupW = Math.min(slot * 0.72, 120);
+  const barW = groupW / series.length;
+  const cx = (i) => L + slot * (i + 0.5);
   let g = '';
-  for (let v = lo; v <= hi; v += 10) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
-  const target = `<line x1="${L}" x2="${W - R}" y1="${y(65)}" y2="${y(65)}" stroke="var(--warn)" stroke-dasharray="4 4"/><text x="${W - R}" y="${y(65) - 4}" text-anchor="end">เกณฑ์ 65%</text>`;
-  const lines = series.map((s) => {
-    const p = pts.map((pt, i) => (pt[s.key] == null ? null : `${x(i)},${y(pt[s.key])}`)).filter(Boolean);
-    const dots = pts.map((pt, i) => (pt[s.key] == null ? '' : `<circle cx="${x(i)}" cy="${y(pt[s.key])}" r="3" fill="${s.color}"><title>${esc(pt.shortSha)} · ${s.label}: ${pct(pt[s.key])}</title></circle>`)).join('');
-    return `<polyline fill="none" stroke="${s.color}" stroke-width="2" points="${p.join(' ')}"/>${dots}`;
-  }).join('');
-  const step = Math.max(1, Math.ceil(pts.length / 8));
-  const xl = pts.map((pt, i) => ((i % step === 0 && pts.length - 1 - i >= step) || i === pts.length - 1 ? `<a href="${/^https:\/\//.test(pt.runUrl || '') ? esc(pt.runUrl) : '#'}"><text x="${x(i)}" y="${H - B + 16}" text-anchor="${pts.length > 1 && i === 0 ? 'start' : pts.length > 1 && i === pts.length - 1 ? 'end' : 'middle'}">${esc(pt.shortSha)}</text></a>` : '')).join('');
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="คะแนน % ตาม commit">${g}${target}${lines}${xl}</svg>
-    <div class="legend">${series.map((s) => `<span><i style="background:${s.color}"></i>${s.label}</span>`).join('')}</div>
-    <p class="sub" style="margin:8px 0 0">${pts.length} commit · ดึงผล workflow ด้วย ${esc(h.source || 'GitHub REST API')}</p>`;
+  for (let v = 0; v <= 100; v += 20) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const bars = shown.map((pt, i) => series.map((s, k) => {
+    const v = pt[s.key];
+    if (v == null) return '';
+    const bx = cx(i) - groupW / 2 + k * barW;
+    const vv = Math.max(0, Math.min(100, Number(v))); // geometry only; labels show the real value
+    const label = n <= 5 ? `<text x="${bx + barW / 2}" y="${y(vv) - 4}" text-anchor="middle">${esc(Number(v).toFixed(2))}</text>` : '';
+    return `<rect x="${bx + 1}" y="${y(vv)}" width="${Math.max(1, barW - 2)}" height="${y(0) - y(vv)}" fill="${s.color}" rx="2"><title>${esc(pt.shortSha)} · ${s.label}: ${pct(v)}</title></rect>${label}`;
+  }).join('')).join('');
+  const target = `<line x1="${L}" x2="${W - R}" y1="${y(65)}" y2="${y(65)}" stroke="var(--warn)" stroke-dasharray="4 4"/><text x="${W - R}" y="${y(65) - 4}" text-anchor="end" style="paint-order:stroke;stroke:var(--surface);stroke-width:4px">เกณฑ์ 65%</text>`;
+  const step = Math.max(1, Math.ceil(n / 8));
+  const anchor = (i) => (n > 1 && i === 0 && slot < 50 ? 'start' : n > 1 && i === n - 1 && slot < 50 ? 'end' : 'middle');
+  const lx = (i) => (anchor(i) === 'start' ? cx(i) - groupW / 2 : anchor(i) === 'end' ? cx(i) + groupW / 2 : cx(i));
+  const xl = shown.map((pt, i) => ((i % step === 0 && n - 1 - i >= step) || i === n - 1 ? `<a href="${/^https:\/\//.test(pt.runUrl || '') ? esc(pt.runUrl) : '#'}"><text x="${lx(i)}" y="${H - B + 16}" text-anchor="${anchor(i)}">${esc(pt.shortSha)}</text></a>` : '')).join('');
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="คะแนน % ตาม commit (กราฟแท่ง)">${g}${bars}${target}${xl}</svg>
+    <div class="legend">${series.map((s) => `<span><i style="background:${s.color};height:10px;width:10px"></i>${s.label}</span>`).join('')}</div>
+    <p class="sub" style="margin:8px 0 0">${pts.length} commit${pts.length > MAX ? ` (แสดง ${MAX} ล่าสุด)` : ''} · ดึงผล workflow ด้วย ${esc(h.source || 'GitHub REST API')}</p>`;
 });
 </script>
 </body>
