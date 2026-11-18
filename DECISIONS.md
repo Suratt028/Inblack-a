@@ -1,1 +1,31 @@
-# DECISIONS (owned by the user — Agent does not write entries here)
+# DECISIONS — 3 จุดที่ไม่เชื่อ Agent
+
+---
+
+## 1. ไม่ให้ agent เห็นหรือปรับข้อมูลที่ใช้วัดผลจริง (ล็อก generator + แยกชุด held-out)
+
+- **ถ้าปล่อยให้ agent ทำเอง:** agent ที่มีเป้า "ค่ากลาง ≥ 65 %" สามารถทำให้ตัวเลขถึงเกณฑ์ได้ง่าย ๆ ด้วยการปรับตัวสุ่มข้อมูลให้ง่ายขึ้น หรือจูนกลยุทธ์จนเข้ากับข้อมูลชุดเดียวที่มันเห็น
+- **ทำไมไม่เชื่อ:** คะแนนที่ได้แบบนั้นสูงบนกระดาษแต่ใช้กับข้อมูลที่ไม่เคยเห็นไม่ได้ — เท่ากับให้คนทำการบ้านเป็นคนออกข้อสอบเอง
+- **ตรวจเจอได้อย่างไร:** ตอนอ่านแผนของ agent ที่ Checkpoint 1 (`PLAN.md` §2–§3) เห็นว่า agent เป็นคนสร้างทั้งตัวสุ่มข้อมูล ตัวคิดคะแนน และ planner เอง และแผนเดิมใช้ seed ชุดเดียวทั้งจูนและรายงานผล ("10 frozen seeds") — ไม่มีอะไรกันไม่ให้ตัวเลขถูกปรับให้ดูดี · ตรวจผลด้วยการดูตาราง Checkpoint 3 ที่แสดงชุดจูนกับชุด held-out คู่กัน และดูค่า `generatorLockIntact` ใน benchmark ทุกครั้ง
+- **ฉันสั่ง (ตามตัวอักษร, `harness/DECISIONS_INPUT.md`):** "lock generator config at Checkpoint 2 with a commit hash. Tune on one seed set and report final scores on a separate held-out seed set, showing both results side by side."
+- **ผล / หลักฐาน:** generator ล็อกที่ commit `b2a5da2` (benchmark ตรวจทุกครั้งว่า `generatorLockIntact: true`) · จูนบน seed 101–110 ได้ 78.16 % แต่ held-out 1–10 ที่ไม่เคยใช้จูนได้ **73.77 %** — ถ้าไม่แยกชุด เราจะรายงานตัวเลขที่สูงเกินจริงราว 4.4 จุด (`harness/benchmarks/latest.json`, `STRATEGY.md`)
+
+## 2. ไม่ให้ push ทั้งที่มีข้อมูลส่วนตัวในคอมมิท
+
+- **ถ้าปล่อยให้ agent ทำเอง:** agent พร้อม push ขึ้น GitHub สาธารณะทันทีเพราะเทสต์ผ่าน ทั้งที่ metadata ของคอมมิทมีอีเมลมหาวิทยาลัย (มีรหัสนักศึกษา) และชื่อบุคคลอยู่ — agent ถามว่าจะ "push ตามเดิม" ได้ไหม
+- **ทำไมไม่เชื่อ:** repo เป็นสาธารณะ สิ่งที่ push แล้วจะอยู่ใน history ถาวรและอาจถูกเก็บสำเนาไปแล้ว ลบทีหลังต้อง force-push ซึ่งยุ่งยากและเสี่ยง agent ดูแค่ว่าโค้ดทำงานได้ ไม่ได้ดูแลข้อมูลส่วนตัวของฉัน
+- **ตรวจเจอได้อย่างไร:** ก่อน push ครั้งแรก ให้ `code-reviewer` สแกนทุกอย่างที่จะขึ้น GitHub — รายงานพบอีเมลมหาวิทยาลัยใน author ของคอมมิท (`git log --format='%an %ae'`) และรอบถัดมาพบชื่อบุคคลใน commit ของเซสชันแรก · หลังแก้ ตรวจซ้ำด้วยคำสั่งเดิมจนเหลือแค่ `surat` + noreply และให้ reviewer ลอง clone ใหม่ค้นหาชื่อ/อีเมล/รหัสนักศึกษาแล้วไม่เจอ (`AGENT_LOG/agent-executions.md` แถว pre-push review / pre-push gate)
+- **ฉันสั่ง (ตามตัวอักษร, `AGENT_LOG/prompts.md` ข้อ 10–11):** "Use noreply email" แล้ว "Change name first"
+- **ผล / หลักฐาน:** ทุกคอมมิทที่เผยแพร่ใช้อีเมล noreply ของ GitHub ไม่มีอีเมลหรือชื่อส่วนตัว (คอมมิทของเราใช้ชื่อ `surat`; มีแค่ Initial commit ที่ GitHub สร้างเองซึ่งใช้ชื่อบัญชี) · ตาราง hash เดิม → hash ที่เผยแพร่: `AGENT_LOG/hash-map.md` · ระหว่างทาง gate ยังจับได้ว่า agent เผลอเขียนชื่อที่ต้องลบลงไปใน log อีกรอบ (`AGENT_LOG/agent-executions.md`)
+
+## 3. ไม่ให้ agent ตรวจและคอมมิทงานของตัวเอง (ประตูตรวจทุกขั้น)
+
+- **ถ้าปล่อยให้ agent ทำเอง:** agent ตัวเดียวเขียนโค้ด ตัดสินเองว่าถูก และคอมมิทเอง — เป็นทั้งคนทำและคนตรวจ
+- **ทำไมไม่เชื่อ:** คนที่ทำงานมักมองไม่เห็นความผิดของตัวเอง ความผิดพลาดจะหลุดเข้า repo และขึ้นเว็บสาธารณะโดยไม่มีใครเห็น
+- **ตรวจเจอได้อย่างไร:** ดูจากผลของ reviewer ที่แยกจากคนทำงาน — `qa-reviewer` รันเทสต์และทำให้บั๊กเกิดซ้ำได้เอง (เช่น wallet 117 บาท, cost_pct 0.9, ออเดอร์ 51 + 79 ทำให้ใช้เงินเกิน) และ `code-reviewer` ลอง merge ใน worktree ชั่วคราว รันเทสต์และ secret scan ก่อนทุกการคอมมิท และลอง clone ใหม่ก่อน push · ตรวจย้อนได้จากบรรทัด `Reviewed-by: code-reviewer (PASS)` ในทุกคอมมิทบน `main` ตั้งแต่ตั้ง gate (commit `d5fd510` เป็นต้นมา — คอมมิทบน branch ของ agent ตรวจตอน merge) และบันทึกรอบที่ได้ FAIL ใน `AGENT_LOG/agent-executions.md`
+- **ฉันสั่ง:** ทุกขั้นต้องผ่าน sub-agent `code-reviewer` (อ่านอย่างเดียว) ให้ `VERDICT: PASS` ก่อน แล้ว `committer` จึงคอมมิทได้ และ push เฉพาะเมื่อฉันสั่ง (`CLAUDE.md` หัวข้อ Commit gate; ชุดคำสั่งที่ฉันวางไว้ `AGENT_LOG/prompts.md` ข้อ 4) · บอกให้ "ทำต่อไป" ทุกขั้น
+- **ผล / หลักฐาน:** ประตูนี้จับปัญหาจริงได้หลายครั้งก่อนถึง GitHub —
+  - secret scan จะทำให้ deploy เว็บพังตั้งแต่ครั้งแรก (ไฟล์รีวิวมีตัวอย่างหัวคีย์)
+  - คำสั่ง worktree ใน `AGENT_SETUP.md` ใช้ไม่ได้บน clone ใหม่
+  - ชื่อบุคคลหลุดเข้า log
+  - และ QA ตีกลับบั๊กจริง 3 งาน: wallet ใช้เกินเพราะ float (T06), median คำนวณจากค่าที่ปัดแล้ว (T07), MCP ไม่เขียน log ทุก call (T08) — `AGENT_LOG/rejected-work.md`, `harness/reviews/`
