@@ -3,6 +3,19 @@
 เอกสารนี้บอกวิธีตั้งค่าเครื่องมือ agent ทั้งหมดที่ใช้ในงานนี้ ให้คนอื่นทำซ้ำได้: sub-agent, git worktree, skill, plugin (Stop hook), MCP server และขั้นตอนตรวจก่อนคอมมิท
 กติกาการทำงานของทีมอยู่ใน [`HARNESS.md`](HARNESS.md) · คำสั่งถาวรสำหรับ agent อยู่ใน [`CLAUDE.md`](CLAUDE.md)
 
+## สรุป: เครื่องมือ AI ที่ใช้ และตำแหน่งของแต่ละส่วน
+
+| ส่วน | ตำแหน่ง | รายละเอียด |
+|---|---|---|
+| **เครื่องมือ AI** | Claude Code (desktop app + CLI `claude -p` สำหรับเดโม hook/MCP) | ข้อ 1 |
+| **Sub-agent** (5) | [`.claude/agents/`](.claude/agents/) — `strategy-optimizer.md`, `backend-mcp.md`, `qa-reviewer.md`, `code-reviewer.md`, `committer.md` | ข้อ 2 |
+| **Skill** (2) | [`.claude/skills/game-queue-optimization/SKILL.md`](.claude/skills/game-queue-optimization/SKILL.md), [`.claude/skills/game-queue-quality-check/SKILL.md`](.claude/skills/game-queue-quality-check/SKILL.md) | ข้อ 5 |
+| **Plugin** (Stop hook) | [`plugins/inblack-guard/`](plugins/inblack-guard/) — manifest `.claude-plugin/plugin.json`, `hooks/hooks.json`, `hooks/run-tests.js` · marketplace [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) · เปิดใช้ใน [`.claude/settings.json`](.claude/settings.json) | ข้อ 6 |
+| **MCP server** | [`mcp/server.js`](mcp/server.js) (Streamable HTTP, `http://localhost:3000/mcp`, `npm run mcp`) · ลงทะเบียนใน [`.mcp.json`](.mcp.json) · เทสต์ [`mcp/test/mcp.test.js`](mcp/test/mcp.test.js) | ข้อ 7 |
+| **Tools** (MCP, 3) | [`mcp/tools/run_scenario.js`](mcp/tools/run_scenario.js), [`mcp/tools/score_plan.js`](mcp/tools/score_plan.js), [`mcp/tools/explain_order.js`](mcp/tools/explain_order.js) (ส่วนกลาง: [`mcp/tools/common.js`](mcp/tools/common.js)) | ข้อ 7 |
+| **API** (GitHub REST) | [`harness/reports/build-site-data.js`](harness/reports/build-site-data.js) เรียก `GET /repos/{owner}/{repo}/actions/workflows/{file}/runs` และ `/actions/runs/{id}/artifacts` · รันใน [`.github/workflows/pages.yml`](.github/workflows/pages.yml) ด้วย `GITHUB_TOKEN` | ข้อ 8 |
+| **Log** | [`AGENT_LOG/`](AGENT_LOG/) | ข้อ 9 |
+
 ## 1. สิ่งที่ต้องมี
 
 - Node.js 20 ขึ้นไป · Git · [Claude Code](https://claude.com/claude-code) (CLI หรือ desktop app) ที่ล็อกอินแล้ว
