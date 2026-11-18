@@ -19,3 +19,4 @@ Entries 1–3 above came from session 1 (cloud workspace). Its git history was c
 13. 2026-11-18 — "Push, then step 6"; then "Approve both" (Checkpoint 3 + enable GitHub Pages).
 14. 2026-11-18 — "Push and deploy".
 15. 2026-11-18 — "ทำ README กับ AGENT_SETUP ต่อ".
+16. 2026-11-18 — "สรุปงานทั้งหมดให้หน่อยก่อนส่ง รีวิวโค้ดให้ด้วย"; then "Fix the two items".
