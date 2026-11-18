@@ -20,13 +20,14 @@ jobs:
       contents: read # checkout
       actions: read # REST API: workflow runs + bench-summary artifacts
     steps:
-      - uses: actions/checkout@v4
+      # All actions below run on Node.js 24 (runs.using: node24); Node 20 actions are deprecated.
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0 # benchmark.js reads HEAD and diffs the generator lock commit
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - run: npm ci
@@ -61,15 +62,16 @@ jobs:
           node harness/reports/build-site-data.js --bench "$RUNNER_TEMP/bench/latest.json" --out _site/data
           find _site -maxdepth 2 -type f | sort
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6 # v5 still defaulted to Node 20
         with:
           name: bench-summary
           path: _site/data/bench-summary.json
           retention-days: 90
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          include-hidden-files: true # v4+ drops dotfiles by default; keep _site/.nojekyll
 
   deploy:
     needs: build
@@ -82,4 +84,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
