@@ -51,7 +51,10 @@ load(document.getElementById('rejected'), async () => {
   document.getElementById('rejected').innerHTML = t.rejections.length ? `<div class="table-wrap"><table>
     <tr><th>งาน</th><th>Agent</th><th>ผู้ตีกลับ</th><th>วันที่</th><th>เหตุผล</th><th>บันทึกรีวิว</th></tr>
     ${t.rejections.map((r) => {
-      const why = String(r.body || '').split(/\r?\n/).filter((l) => /^- /.test(l) && !/^- Action:/i.test(l)).map((l) => esc(plain(l.slice(2)))).join('<br>') || esc(plain(r.summary));
+      const lines = String(r.body || '').split(/\r?\n/);
+      const shortLine = (lines.find((l) => /^Short:\s*/.test(l)) || '').replace(/^Short:\s*/, '');
+      const detail = lines.filter((l) => /^- /.test(l) && !/^- Action:/i.test(l)).map((l) => esc(plain(l.slice(2)))).join('<br>');
+      const why = `${esc(plain(shortLine || r.summary))}${detail ? `<details class="more"><summary>ดูรายละเอียด</summary><div>${detail}</div></details>` : ''}`;
       return `<tr><td>${esc(r.task)}<br><span class="sub">${esc(plain(r.summary))}</span></td><td>${esc(r.agent)}</td><td>${esc(r.reviewer)}</td><td>${esc(r.date)}</td><td class="wrapc">${why}</td><td>${esc(plain(r.review || ''))}</td></tr>`;
     }).join('')}
     </table></div>` : '<div class="state">ยังไม่มีงานที่ถูกตีกลับ</div>';
