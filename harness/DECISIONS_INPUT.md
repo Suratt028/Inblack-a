@@ -50,3 +50,4 @@ Tests must cite these IDs.
 2026-11-18, user answer (verbatim): `Approve both` (Checkpoint 3 benchmark + enabling GitHub Pages with the Actions source).
 - Approved benchmark: `harness/benchmarks/acb18ec.json` (main acb18ec, lock b2a5da2 intact). Planner default `hybrid`: held-out median 73.77 % (paid) / 72.57 % (arrive) vs FCFS 59.16 / 57.96; tuning 78.16 / 77.18; 0 violations / 0 duplicates default + strict on all 20 seeds.
 - GitHub Pages enabled (build_type workflow): https://suratt028.github.io/Inblack-a/
+- 2026-11-19 note: at the user's request the repo was renamed `Inblack-a` → `inblack-a` (the name the brief requires, p.13); the site is now **https://suratt028.github.io/inblack-a/** (GitHub Pages paths are case-sensitive, so the old `/Inblack-a/` URL no longer serves the latest deploy).

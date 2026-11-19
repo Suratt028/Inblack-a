@@ -3,7 +3,7 @@
 ระบบตัดสินว่าออเดอร์เติมเกมที่ชำระเงินแล้วตัวไหนจะได้ทำ เริ่มเมื่อไร และใช้ supplier เจ้าไหน เพื่อให้ได้คะแนนตามสูตรของโจทย์สูงที่สุด
 งานทั้งหมดสร้างโดยทีม AI agent (Claude Code sub-agents) ภายใต้กติกาใน [`HARNESS.md`](HARNESS.md) และ [`CLAUDE.md`](CLAUDE.md)
 
-**เว็บ:** https://suratt028.github.io/Inblack-a/ — ผลการจัดคิว · replay · ทีม agent (ข้อมูลสร้างโดย GitHub Actions จากการรันจริง)
+**เว็บ:** https://suratt028.github.io/inblack-a/ — ผลการจัดคิว · replay · ทีม agent (ข้อมูลสร้างโดย GitHub Actions จากการรันจริง)
 
 ## ผลลัพธ์
 
